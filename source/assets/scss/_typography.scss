@@ -1,0 +1,212 @@
+/* ==========================================================================
+https://zellwk.com/blog/viewport-based-typography/
+
+1.Pick a scale(http://www.modularscale.com/)
+1.1 http://www.modularscale.com/?1&em&1.618 Golden Ratio
+2.
+========================================================================== */
+
+/* ==========================================================================
+TYPOGRAPHY ATTRIBUTES INCLUDES THE FOLLOWING RULES:
+1. Font Size
+2. Font Family
+3. Text Align
+4. Text Transform
+========================================================================== */	
+
+html { 
+	font-size: 							calc(13px + 0.2vw);
+}
+
+body{
+	font-family: 						_font(family);
+	font-weight: 						_font(weight);
+	letter-spacing: 					_font(kerning);
+	line-height:						_font(line-height) * 1;
+	@include font-smoothing;
+}
+
+
+@include headings {
+	font-family: 						_font(family-alt);
+	font-weight: 						_font(weight-bold);
+	letter-spacing: 					_font(kerning);
+	text-transform: 					_font(header-text-transform);
+	hyphens: 							none;
+	a{
+		font-family: 					_font(family-alt);
+	}
+}
+
+.entry-content{
+	@include headings {
+		font-weight: 					_font(weight-bold);
+	}
+}
+
+h1{
+	font-size: 							_font(line-height) * 2;
+	line-height:						_font(line-height) * 2.3;
+	margin: 							(_font(line-height) * 2) 0;
+	&.entry-title{
+		font-size: 						_font(line-height) * 2;
+		line-height:					_font(line-height) * 2.3;
+		margin: 						(_font(line-height) * 2) 0;	
+		font-weight: 					_font(weight-bold);
+	}
+}
+
+
+.entry-content h1{
+	font-size: 							_font(line-height) * 2;
+	line-height:						_font(line-height) * 2.3;
+	margin: 							(_font(line-height) * 2) 0;	
+}
+
+h2{
+	font-size: 							_font(line-height) * 1.8;
+	line-height:						_font(line-height) * 2.2;
+	margin: 							(_font(line-height) * 1.8) 0;
+}
+
+.entry-content h2{
+	font-size: 							_font(line-height) * 1.8;
+	line-height:						_font(line-height) * 2.2;
+	margin: 							(_font(line-height) * 1.8) 0;
+}
+
+h3{
+	font-size: 							_font(line-height) * 1.5;
+	line-height:						_font(line-height) * 1.9;
+	margin: 							(_font(line-height) * 1.5) 0;
+
+}
+
+.entry-content h3{
+	font-size: 							_font(line-height) * 1.5;
+	line-height:						_font(line-height) * 1.9;
+	margin: 							(_font(line-height) * 1.5) 0;	
+}
+
+h4{
+	font-size:							_font(line-height) * 1.3;
+	line-height:						_font(line-height) * 1.6;
+	margin: 							(_font(line-height) * 1.3) 0;
+}
+
+.entry-content h4{
+	font-size:							_font(line-height) * 1.3;
+	line-height:						_font(line-height) * 1.6;
+	margin: 							(_font(line-height) * 1.3) 0;
+}
+
+h5{
+	font-size: 							_font(line-height) * 1.2;
+	line-height:						_font(line-height) * 1.5;
+	margin: 							(_font(line-height) * 1.2) 0;
+}
+
+.entry-content h5{
+	font-size: 							_font(line-height) * 1.2;
+	line-height:						_font(line-height) * 1.5;
+	margin: 							(_font(line-height) * 1.2) 0;
+}
+
+
+h6{
+	font-size: 							_font(line-height) * 1;
+	line-height:						_font(line-height) * 1.3;
+	margin: 							(_font(line-height) * 1) 0;
+}
+
+.entry-content h6{
+	font-size: 							_font(line-height) * 1;
+	line-height:						_font(line-height) * 1.3;
+	margin: 							(_font(line-height) * 1) 0;
+}
+
+p{
+	margin: 							_font(line-height) 0;
+	hyphens: 							none;
+}
+
+.site-title,
+#site-header-menu li,
+.comment-form label,
+input,
+select,
+textarea{
+	font-family: 						_font(family);
+}
+
+
+.hero .mega-header,
+.entry-header .mega-header,
+.entry-content .mega-header{
+	font-size: 							_font(mega-small);
+	@include MQ(MW){
+		font-size: 						_font(mega-medium);
+	}
+	@include MQ(LW){
+		font-size: 						_font(mega-large);
+	}
+}
+
+
+strong, b {
+	font-weight: 						_font(weight-bold);
+}
+
+em, i {
+	font-style: 						italic;
+}
+
+
+//use <pre><code> for block code that must not wrap
+pre {
+	white-space: 						pre-wrap;
+	line-height: 						_font(line-height);
+	margin-bottom: 						1em;
+	
+}
+
+//use <code> for inline code that can wrap
+code{
+	white-space:						normal;
+}
+
+blockquote{
+	font-family: 						_font(family-contrast);
+	font-weight: 						_font(weight);
+	font-style: 						italic;
+	font-size: 							_font(size-large);
+	letter-spacing: 					-.014em;
+	text-align: 						right;
+	cite{
+		font-size: 						_font(size-large);
+	}
+	footer cite a{
+		font-size: 						1rem
+	}
+
+}
+
+sub,sup {
+	font-size: 							_font(size-small);
+	
+}
+u{
+	text-decoration-skip: 				ink;
+}
+
+.site-title p{
+	font-size: calc(16px + 0.2vw);
+	font-weight: normal;
+}
+
+
+figure.imghvr-fade{
+	h6{
+		font-size: 						_font(small);
+	}
+}

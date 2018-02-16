@@ -1,0 +1,22 @@
+/* ==========================================================================
+VISUAL PROPERTIES INCLUDES THE FOLLOWING RULES:
+1. Color
+2. Background Color
+3. Border
+4. Box-Shadow
+5. Media Queries
+========================================================================== */	
+.media{
+	border: 1px solid transparentize(_palette(activetheme,color-z),0.5);
+}
+
+@include MQ(SW){
+	.media .footer {
+		background-color: _palette(activetheme,color-a);
+		border:1px solid transparentize(_palette(activetheme,color-z),0.9);
+	}
+	/* OVERRIDE */
+	@supports(display: grid) {}
+}
+@include MQ(MW){}
+@include MQ(LW){}

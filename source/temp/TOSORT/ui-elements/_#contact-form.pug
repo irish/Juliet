@@ -1,0 +1,13 @@
+form.contact-form.floating-labels
+	fieldset
+		.icon
+			label.contact-label(for='contact-name') Name
+			input#contact-name.user(type='text', name='contact-name', required='')
+		.icon
+			label.contact-label(for='contact-email') Email
+			input#contact-email(type='email', name='contact-email', required='')
+		.icon
+			label.contact-label(for='contact-textarea') Message
+			textarea#contact-textarea.message(name='contact-textarea', required='')
+		div
+			input(type='submit', value='Send Message')

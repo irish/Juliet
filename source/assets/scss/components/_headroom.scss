@@ -1,0 +1,25 @@
+/* ==========================================================================
+HEADROOM
+========================================================================== */	
+.headroom{
+	position: 			fixed;//HEADROOM WONK
+	border-bottom:		none;
+
+}
+
+.headroom{
+	will-change: 		transform;
+	transition: 		transform 400ms linear, background-color 1000ms linear;
+}
+
+.headroom--pinned {
+	transform: 			translateY(0%);
+}
+
+.headroom--unpinned {
+	transform: 			translateY(-100%);
+}
+
+.headroom--not-top{
+	// border-bottom:		1px solid lighten(_palette(activetheme,color4),40%);//WONK
+}

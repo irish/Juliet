@@ -1,0 +1,72 @@
+title: Buttons
+status: ready
+context:
+  theme: foo
+  modifier: button
+  text: Default Button
+variants:
+- name: disabled
+  status: ready
+  context:
+    modifier: disabled
+    text: Button Disabled
+- name: success
+  status: ready
+  context:
+    modifier: button button-success
+    text: Button Success
+- name: secondary
+  status: ready
+  context:
+    modifier: button button-secondary
+    text: Button Secondary
+- name: alert
+  status: ready
+  context:
+    modifier: button button-alert
+    text: Button Alert
+- name: information
+  status: ready
+  context:
+    modifier: button button-information
+    text: Button Information
+- name: bordered button
+  status: ready
+  context:
+    modifier: button button-border
+    text: Button Border
+- name: bordered success button
+  status: ready
+  context:
+    modifier: button-success-border
+    text: Button Bordered Success
+- name: bordered secondary button
+  status: ready
+  context:
+    modifier: button-secondary-border
+    text: Button Bordered Secondary
+- name: bordered alert button
+  status: ready
+  context:
+    modifier: button-alert-border
+    text: Button Bordered Alert
+- name: bordered information button
+  status: ready
+  context:
+    modifier: button-information-border
+    text: Button Bordered Information
+- name: button mini
+  status: ready
+  context:
+    modifier: button-mini
+    text: Button Mini
+- name: button rounded
+  status: ready
+  context:
+    modifier: button-rounded
+    text: Button Rounded
+- name: button glossy
+  status: ready
+  context:
+    modifier: button-glossy
+    text: Button Glossy

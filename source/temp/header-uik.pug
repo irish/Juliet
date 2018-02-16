@@ -1,0 +1,16 @@
+.uk-container
+    nav.uk-navbar-container.uk-navbar-transparent(uk-navbar='')
+        .uk-navbar-left
+            a.uk-navbar-item.uk-logo(class='uk-visible@l', href='#') Brand
+            ul.uk-navbar-nav(class='uk-visible@l')
+                li.uk-active
+                    a(href='') Home
+                li.uk-parent
+                    a(href='') About
+                li
+                    a(href='') Contact
+                // This is an anchor toggling the off-canvas
+            a.uk-navbar-item.uk-logo.uk-navbar-center(class='uk-hidden@l', href='#') Brand
+            a.uk-navbar-toggle(class='uk-hidden@l', href='#my-id', uk-toggle='')
+                span(uk-navbar-toggle-icon='')
+                span.uk-margin-small-left Menu

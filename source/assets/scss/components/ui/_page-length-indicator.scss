@@ -1,0 +1,14 @@
+//'foo', 'bar', 'baz', 'qux', 'quux', 'corge', 'grault', 'garply', 'waldo', 'fred', 'plugh', 'xyzzy', 'thud', 'huhu', 'lala', 'keke', 'koko', 'kuku', 'fifi', 'bubu', 'wibble', 'wobble', 'wubble', 'flob', 'toto', 'titi', 'tata', 'tutu', 'truc', 'bidule', 'machin', 'azerty'
+.progresscont{
+	position:						fixed;
+	bottom:							0px;
+	left:							0px;
+	height:							3px;
+	width:							100%;
+	z-index:						_misc(z-index-base);
+}
+
+.progressbar{
+	height:							100%;
+	background:						_palette(activetheme,color5);
+}

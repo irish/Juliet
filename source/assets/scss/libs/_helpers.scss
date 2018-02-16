@@ -1,0 +1,103 @@
+.align-left {
+	text-align: 					left;
+}
+
+.align-center {
+	text-align: 					center;
+}
+
+.align-right {
+	text-align: 					right;
+}
+
+.thin{
+	font-weight: 					300;
+}
+
+.opaque{
+	opacity: 						0;
+}
+
+.hidden{
+	display:						none;
+}
+
+.centered{
+	text-align: 					center;
+}
+
+.not-on-phone{
+	display: 						none;
+	@include MQ(MW){
+		display:					block;
+	}
+}
+
+//dev mode
+.region{
+	background-color:transparentize(red,0.9);
+}
+.partial{
+	background-color:green;
+}
+
+//system cursor
+.is-loading{
+	cursor:				wait;
+}
+
+//strip colors
+.desaturate{
+	-webkit-filter: 	grayscale(1);
+	-webkit-filter: 	grayscale(100%);
+	filter: 			grayscale(100%);
+	filter: 			gray;
+}
+
+//exaggerated shadow
+.mega-shadow{
+	box-shadow:			0 2px 8px 2px rgba(68, 73, 76, 0.2);
+	overflow: 			visible;
+	z-index: 			9998;
+	position: 			relative;
+}
+
+[class^="imghvr-"] figcaption, [class*=" imghvr-"] figcaption{
+	background: #ee1a3e;
+    background: linear-gradient(to right, #F66B00, #FF9401);
+}
+
+[class^="imghvr-"] figcaption h1, [class^="imghvr-"] figcaption h2, [class^="imghvr-"] figcaption h3, [class^="imghvr-"] figcaption h4, [class^="imghvr-"] figcaption h5, [class^="imghvr-"] figcaption h6, [class*=" imghvr-"] figcaption h1, [class*=" imghvr-"] figcaption h2, [class*=" imghvr-"] figcaption h3, [class*=" imghvr-"] figcaption h4, [class*=" imghvr-"] figcaption h5, [class*=" imghvr-"] figcaption h6{
+	&::after{
+			background: #fff none repeat scroll 0 0;
+			content: " ";
+			display: block;
+			height: 2px;
+			margin-top: 15px;
+			width: 30px;
+		}
+}
+
+.res{
+	position: fixed;
+	bottom:0;
+	left:0;
+	padding: 4px;
+	background-color: _palette(activetheme,color4);
+	color:_palette(activetheme,color3);
+	font-size: 1em;
+	font-family: _font(family-fixed);
+	font-weight: _font(weight-bold);
+}
+
+#scroll-percent{
+	position: fixed;
+	bottom:1.5em;
+	left:0;
+	padding: 4px;
+	background-color: _palette(activetheme,color4);
+	color:_palette(activetheme,color3);
+	font-size: 1em;
+	font-family: _font(family-fixed);
+	font-weight: _font(weight-bold);
+}

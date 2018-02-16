@@ -1,0 +1,14 @@
+title: Navigation component
+notes: <p>TODO</p>
+context:
+  theme: foo
+  modifier: primary-navi
+# variants:
+# - name: breadcrumb-greater-than
+#   status: ready
+#   context:
+#     modifier: breadcrumb-greater-than
+# - name: breadcrumb-tilda
+#   status: ready
+#   context:
+#     modifier: breadcrumb-tilda

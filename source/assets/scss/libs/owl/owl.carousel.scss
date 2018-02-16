@@ -1,0 +1,23 @@
+@import 'core';
+@import 'animate';
+@import 'autoheight';
+@import 'lazyload';
+@import 'video';
+@import 'owl.theme.default';
+
+
+/*ADDITIONS*/
+.owl-stage{
+	cursor:grab;
+	p{
+		font-family: 						_font(family-contrast)!important;
+		font-style: 						italic;
+	}
+	
+
+}
+
+.owl-item:active{
+	cursor:grabbing;	
+}
+

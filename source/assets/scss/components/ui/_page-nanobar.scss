@@ -1,0 +1,12 @@
+.nanobar {
+	width:							100%;
+	height:							3px;
+	z-index:						_misc(z-index-base);
+	top:							0;
+}
+
+.bar {
+	width:							0;
+	height:							100%;
+	background:						_palette(activetheme,color-z);
+}

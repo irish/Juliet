@@ -1,0 +1,64 @@
+/* ==========================================================================
+BOX MODEL PROPERTIES INCLUDES THE FOLLOWING RULES:
+1. Width
+2. Height
+3. Margin
+4. Padding
+5. Media Queries
+========================================================================== */
+.media {
+	margin-bottom:	$theme-gutter * 2;
+	padding: 		$theme-gutter * 0.7;
+	.img{
+		margin-bottom: $theme-gutter;
+	}
+	p{
+		margin: 	0 0 $theme-gutter 0;
+	}
+	> .title{
+		margin: 	0 0 $theme-gutter 0;
+	}
+	.footer p{
+		margin: 0;
+	}
+}
+
+@include MQ(SW){
+	.media > .media {
+		margin-left: $theme-gutter * 10;
+	}
+	.media .img {
+		margin: 0 10px 0;
+		width: 150px;
+	}
+	.media .footer {
+		padding: 10px;
+	}
+	.media.media-flip .img {
+		margin: 0 0 0 10px;
+	}
+	.media > * {
+		margin: $theme-gutter * 10;
+	}
+	.media.media-flip > * {
+		margin: 0 $theme-gutter 0 0;
+	}
+	/* OVERRIDE */
+	@supports(display: grid) {
+		.media > *, .media.media-flip > * {
+			margin: 0;
+		}
+		.media .img,
+		.media.media-flip .img {
+			width: auto;
+			margin: 0;
+		}
+		.media > .media {
+			margin: 0;
+			/* OVERRIDE */
+			margin-top: 1em;
+		}
+	}
+}
+@include MQ(MW){}
+@include MQ(LW){}

@@ -1,0 +1,551 @@
+/* ==========================================================================
+VISUAL PROPERTIES INCLUDES THE FOLLOWING RULES:
+1. Color
+2. Background Color
+3. Border
+4. Box-Shadow
+5. Media Queries
+========================================================================== */	
+
+/* ==========================================================================
+BACKGROUND COLOR
+========================================================================== */
+
+::selection {
+	background-color:				_palette(activetheme,color-z);
+	color: 							_palette(activetheme,color-a);
+	text-shadow: 					none;
+}
+
+body {
+	background-color: 				_palette(activetheme,color-a);
+	color:							_palette(activetheme,color-z);
+	&.custom-background{
+		background-color: 			lighten(_palette(activetheme,color-a),10%);
+	}
+}
+
+.site-header,
+.site-footer {
+	//background-color: 				lighten(_palette(activetheme,color-a),10%);	
+}
+
+.site-content{
+	outline: 						1px dashed darken(_palette(activetheme,color-a),30%);
+	#primary{
+		outline: 					1px dotted _palette(activetheme,color1);
+	}
+	#secondary{
+		outline: 					1px dotted _palette(activetheme,color2);
+	}
+}
+
+.intro{
+	background-color: 				_palette(activetheme,color-a);
+}
+
+hr{
+	background-color: 				_palette(activetheme,color3);
+}
+
+code,pre{
+	background-color: 				transparentize(_palette(activetheme,color-a),0.2);
+	border-left:					2px solid;
+}
+
+
+.pagination:before,
+.pagination:after,
+.pagination .prev,
+.pagination .next,
+.page-links a {
+	background-color: 				_palette(activetheme,color2);
+}
+
+.bridge{
+	background: 					rgba(0, 0, 0, 0) linear-gradient(79deg, 
+									rgb(149, 178, 184) 0%, 
+									rgb(104, 151, 171) 40%, 
+									rgb(79, 109, 135) 100%) repeat scroll 0 0;
+}
+
+.bridge-alt{
+	background-color: 				darken(_palette(activetheme,color-z),5%);
+}
+
+.bridge-standout{
+	background: 					rgba(0, 0, 0, 0) linear-gradient(to right, #f66b00, #ff9401) repeat scroll 0 0;
+}
+
+
+#colophon{
+	background-color: 				_palette(activetheme,color-a);
+}
+
+
+.headroom{
+	background-color: 				transparentize(_palette(activetheme,color-a),1);
+}
+
+.headroom--not-top{
+	background-color: 				_palette(activetheme,color-a);
+}
+
+/* ==========================================================================
+PRIMARY TEXT COLOR
+========================================================================== */
+@include headings {
+	//color: 							_palette(activetheme,color3);
+	a{
+		color: 							_palette(activetheme,color1);	
+	}
+}
+
+p,
+ol,
+ul,
+em,
+li,
+dl,
+dt,
+dd,
+i,
+blockquote,
+figure,
+fieldset,
+legend,
+textarea,
+pre,
+iframe,
+hr,
+blockquote cite,
+blockquote small,
+address,
+strong,
+table,
+.site-description,
+.page-links > .page-links-title,
+.comment-author{
+	color: 							_palette(activetheme,colora);
+}
+
+.site-title{
+	//color: 							_palette(activetheme,color3);	
+}
+
+#bridge-standout{
+	h1 {
+		color: 						_palette(activetheme,color-a);
+	}
+}
+
+blockquote{
+	border-left:					2px solid;
+	box-shadow: 					0px 0px 2px rgba(0,0,0,0.3) inset;
+	background-color: 				transparentize(_palette(activetheme,color2),0.9);
+}
+
+/* ==========================================================================
+LINK COLORS
+========================================================================== */
+a{
+	color: 							_palette(activetheme, color1);
+	text-shadow: 					none;
+	text-decoration-skip: 			ink;
+	transition:						.2s;
+	text-decoration: 				none;
+	&:hover{
+		color: 						lighten(_palette(activetheme, color1),10%);
+		text-decoration: 			underline;
+	}
+	&:focus{
+		color: 						_palette(activetheme,color3);
+	}
+	&:active{					
+		color: 						darken(_palette(activetheme,color1),2%);
+		border-color: 				darken(_palette(activetheme, color1),2%);
+	}
+	&.unstyled{
+		text-decoration: none;
+	}
+
+}
+a[href*="//"]:not([href*="mysite.com"]) {}
+
+
+// .menu-toggle:hover,
+// .menu-toggle:focus,
+.dropdown-toggle:hover,
+.dropdown-toggle:focus,
+.social-navigation a:hover:before,
+.social-navigation a:focus:before,
+.post-navigation a:hover .post-title,
+.post-navigation a:focus .post-title,
+.tagcloud a:hover,
+.tagcloud a:focus,
+.site-branding .site-title a:hover,
+.site-branding .site-title a:focus,
+.entry-title a:hover,
+.entry-title a:focus,
+.entry-footer a:hover,
+.entry-footer a:focus,
+.comment-metadata a:hover,
+.comment-metadata a:focus,
+.pingback .comment-edit-link:hover,
+.pingback .comment-edit-link:focus,
+.comment-reply-link,
+.comment-reply-link:hover,
+.comment-reply-link:focus,
+.required,
+.site-info a:hover,
+.site-info a:focus,
+.social-navigation a,
+.post-navigation a,
+.pagination a:hover,
+.pagination a:focus,
+.widget-title a,
+.site-branding .site-title a,
+.entry-title a {
+	color: 							_palette(activetheme,color1);
+}
+
+.site-branding a p{
+	color: 							_palette(activetheme,color-5);
+}
+
+mark,
+ins,
+.pagination .prev:hover,
+.pagination .prev:focus,
+.pagination .next:hover,
+.pagination .next:focus,
+.widget_calendar tbody a,
+.page-links a:hover,
+.page-links a:focus,
+input[type="date"]:focus,
+input[type="time"]:focus,
+input[type="datetime-local"]:focus,
+input[type="week"]:focus,
+input[type="month"]:focus,
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="password"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="number"]:focus,
+textarea:focus,
+.tagcloud a:hover,
+.tagcloud a:focus{
+	color: 							_palette(activetheme,color-z);
+	
+}
+
+
+
+.post-navigation a:hover .post-title,
+.post-navigation a:focus .post-title,
+.entry-footer a:hover,
+.entry-footer a:focus,
+a.post-thumbnail:hover,
+a.post-thumbnail:focus {
+	color: 							_palette(activetheme,color-5);
+	border-bottom: 					1px solid _palette(activetheme,color-5);
+}
+
+.comment-metadata a{
+	color: 							_palette(activetheme,color-5);
+	border-bottom: 					1px dashed _palette(activetheme,color-5);
+	&:hover{
+		color: 						_palette(activetheme,color-5);
+		border-bottom: 				1px solid _palette(activetheme,color-5);
+	}
+}
+
+.pagination a:hover,
+.pagination a:focus{
+	color: 							_palette(activetheme,color-5);
+	border-bottom: 					1px solid _palette(activetheme,color2);
+}
+
+.nav-previous a,
+.nav-next a{
+	border-bottom: 					0px dashed _palette(activetheme,color2);
+}
+
+
+
+
+.site-branding .site-title a:hover,
+.site-branding .site-title a:focus{
+	color: 							_palette(activetheme,color-5);
+	border-bottom: 					0px solid _palette(activetheme,color2);
+}
+
+
+.entry-content a, 
+.entry-summary a, 
+.taxonomy-description a, 
+.logged-in-as a, 
+.comment-content a, 
+.pingback .comment-body > a, 
+.textwidget a, 
+.entry-footer a:hover, 
+.site-info a:hover{
+	box-shadow: 					none;
+}
+
+.comment-metadata a,
+.entry-footer a,
+.site-info a,
+.widget_calendar tbody a:hover,
+.widget_calendar tbody a:focus {
+	// background-color: 				_palette(activetheme,color3);
+}
+
+.comment-reply-title small a:hover,
+.comment-reply-title small a:focus {
+	color: 							_palette(activetheme,color3);
+	@include headings {
+		color: 						_palette(activetheme,color3);
+	}
+}	
+
+
+
+.post-navigation a:hover .post-title,
+.post-navigation a:focus .post-title,
+.entry-footer a:hover,
+.entry-footer a:focus,
+a.post-thumbnail:hover,
+a.post-thumbnail:focus {
+	color: 							_palette(activetheme,color-5);
+	border-bottom: 					1px solid _palette(activetheme,color-5);
+}
+
+.comment-metadata a{
+	color: 							_palette(activetheme,color-5);
+	border-bottom: 					1px dashed _palette(activetheme,color-5);
+	&:hover{
+		color: 						_palette(activetheme,color-5);
+		border-bottom: 				1px solid _palette(activetheme,color-5);
+	}
+}
+
+.pagination a:hover,
+.pagination a:focus{
+	color: 							_palette(activetheme,color-5);
+	border-bottom: 					1px solid _palette(activetheme,color2);
+}
+
+.nav-previous a,
+.nav-next a{
+	border-bottom: 					0px dashed _palette(activetheme,color2);
+}
+
+.site-branding .site-title a:hover,
+.site-branding .site-title a:focus{
+	color: 							_palette(activetheme,color-5);
+	border-bottom: 					0px solid _palette(activetheme,color2);
+}
+
+
+.entry-content a, 
+.entry-summary a, 
+.taxonomy-description a, 
+.logged-in-as a, 
+.comment-content a, 
+.pingback .comment-body > a, 
+.textwidget a, 
+.entry-footer a:hover, 
+.site-info a:hover{
+	box-shadow: 					none;
+}
+
+.comment-metadata a,
+.entry-footer a,
+.site-info a,
+.widget_calendar tbody a:hover,
+.widget_calendar tbody a:focus {
+	// background-color: 				_palette(activetheme,color3);
+}
+
+.comment-reply-title small a:hover,
+.comment-reply-title small a:focus {
+	color: 							_palette(activetheme,color3);
+	@include headings {
+		color: 						_palette(activetheme,color3);
+	}
+}
+
+.main-navigation li:hover > a, .main-navigation li.focus > a{
+	color: 						lighten(_palette(activetheme, color1),10%);
+}
+
+
+
+/* ==========================================================================
+SECONDARY TEXT COLOR
+========================================================================== */
+
+/**
+ * IE8 and earlier will drop any block with CSS3 selectors.
+ * Do not combine these styles with the next block.
+ */
+
+code,
+pre,
+mark,
+ins,
+cite{
+	color: 							_palette(activetheme,color-z);
+}
+
+body:not(.search-results) .entry-summary,
+blockquote,
+.post-password-form label,
+.post-navigation .meta-nav,
+.image-navigation,
+.comment-navigation,
+.widget_recent_entries .post-date,
+.widget_rss .rss-date,
+.widget_rss cite,
+.author-bio,
+.entry-footer,
+.sticky-post,
+.taxonomy-description,
+.entry-caption,
+.comment-metadata,
+.pingback .edit-link,
+.pingback .comment-edit-link,
+.comment-form label,
+.comment-notes,
+.comment-awaiting-moderation,
+.logged-in-as,
+.form-allowed-tags,
+.site-info,
+.wp-caption .wp-caption-text,
+.gallery-caption,
+.widecolumn label,
+.widecolumn .mu_register label {
+	//color: 							_palette(activetheme,color3);
+}
+
+/* ==========================================================================
+BORDER COLOR
+========================================================================== */
+
+blockquote,
+abbr,
+acronym,
+.post-navigation,
+.post-navigation div + div,
+.pagination,
+.widget,
+.page-header,
+.page-links a,
+.comments-title,
+.comment-reply-title,
+.dropdown-toggle:after,
+.social-navigation a,
+.image-navigation,
+.comment-navigation,
+.tagcloud a,
+.entry-content,
+.entry-summary,
+.page-links a,
+.page-links > span,
+.comment-list article,
+.comment-list .pingback,
+.comment-list .trackback,
+.comment-reply-link,
+.no-comments,
+.widecolumn .mu_register .mu_alert {
+	border-color:					_palette(activetheme,color-z); /* Fallback for IE7 and IE8 */
+}
+
+.comment-metadata a{
+	border-bottom: 					none;
+	&:hover{
+		border-bottom: 				none;
+	}
+}
+
+.menu-toggle{
+	color: 							_palette(activetheme,color-z);
+	border-color:					_palette(activetheme,color-z);
+	&:hover,
+	&:focus{
+		cursor:						pointer;
+		color: 						lighten(_palette(activetheme, color1),10%);
+		border-color:				lighten(_palette(activetheme,color1),10%);
+	}
+	&:active{					
+		color: 						darken(_palette(activetheme,color1),2%);
+		border-color: 				darken(_palette(activetheme, color1),2%);
+	}
+}
+
+
+
+code,pre{
+	border-color: 					_palette(activetheme,color4);
+	color: 							_palette(activetheme,color-z);
+	border-left:					2px solid;
+	background-color: 				transparentize(_palette(activetheme,color2),0.9);
+	border-top:						none;
+	border-right:					none;
+	border-bottom:					none;
+}
+
+.main-navigation {
+	.primary-menu{
+		border-bottom:				0;
+	}
+	li{
+		border-color: 				_palette(activetheme,color-z);
+		border-top: 				1px solid transparentize(_palette(activetheme,color-z),0.5);
+	}
+	a{
+		color:						_palette(activetheme,color1);
+	}
+}
+
+
+ul.unstyled{
+	margin-left: 0;
+	li{
+		list-style-type: none;
+	}
+}
+
+ul.horizontal{
+	li{
+		display: inline-block;
+	}
+}
+
+@include MQ(MW){
+	.main-navigation ul ul li {
+		background-color: 			_palette(activetheme,color-z);
+	}
+	.main-navigation ul ul,
+	.main-navigation ul ul li {
+		border-color: 				_palette(activetheme,color2);
+	}
+
+	.main-navigation ul ul:before { /*Sub Menu Triangle*/
+		border-top-color: 			_palette(activetheme,color2);
+		border-bottom-color: 		_palette(activetheme,color2);
+	}
+
+	.main-navigation ul ul:after {
+		border-top-color: 			_palette(activetheme,color-a);
+		border-bottom-color: 		_palette(activetheme,color-a);
+	}
+}
+@include MQ(WP){
+	.main-navigation ul ul:before { /*Sub Menu Triangle*/
+		border-width:				0 10px 12px;
+	}
+}

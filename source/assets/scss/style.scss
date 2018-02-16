@@ -1,0 +1,56 @@
+/*
+Theme Name:   Twenty Sixteen Child Theme
+Theme URI:    https//:idealpositions.com
+Description:  A Twenty Sixteen child theme
+Author:       Brian Murray
+Author URI:   http://idealpositions.com/products-services/web-development/
+Template:     twentysixteen
+Version:      1.0.0
+License:      GNU General Public License v2 or later
+License URI:  http://www.gnu.org/licenses/gpl-2.0.html
+Tags:         light, dark, two-columns, right-sidebar, responsive-layout, accessibility-ready
+Text Domain:  twenty-sixteen-child
+*/
+
+/* 
+To retain and build on top of the original styles from the parent theme, bring in the parent theme styles using ONE of these two methods:
+- @import rule in the stylesheet (as seen below)
+- enqueue style in child theme functions.php file (see https://gist.github.com/mor10/f2ec3d344331b0789942636248a7ef53)
+*/
+
+
+// @import 'libs/reset';
+// @import 'libs/normalize';
+
+@import             'libs/vars';
+@import             'libs/functions';
+@import             'libs/mixins';
+
+
+
+@import 'libs/wordpress-mod/2016/style';
+// @import 'libs/genericons';
+
+//@import 'layout';
+
+
+// 1. Your custom variables and variable overwrites.
+$global-background: #000;
+$global-color:      rgb(230, 230, 230) !default;
+
+// 2. Import default variables and available mixins.
+@import             'ui/variables-theme';
+@import             'ui/mixins-theme';
+
+// 3. Your custom mixin overwrites.
+@mixin              hook-text-lead() { color: rgb(36, 78, 196); }
+
+// 4. Import UIkit.
+@import             'ui/uikit-theme';
+
+html {
+    font-size:      calc(13px + 0.2vw);
+}
+@include headings {
+    font-family:    serif;
+}

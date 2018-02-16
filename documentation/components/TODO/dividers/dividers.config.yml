@@ -1,0 +1,14 @@
+title: Dividers
+status: ready
+context:
+  theme: foo
+  modifier: divider
+variants:
+- name: divider-right
+  status: ready
+  context:
+    modifier: divider-right
+- name: divider-center
+  status: ready
+  context:
+    modifier: divider-center

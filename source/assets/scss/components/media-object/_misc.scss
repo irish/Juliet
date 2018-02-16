@@ -1,0 +1,15 @@
+/* ==========================================================================
+MISC PROPERTIES INCLUDES THE FOLLOWING RULES:
+1. Cursor
+2. Overflow
+3. z-index
+4. etc...
+5. Media Queries
+========================================================================== */	
+@include MQ(SW){
+	@supports(display: grid) {
+		.media:after {
+			content: none;
+		}
+	}
+}

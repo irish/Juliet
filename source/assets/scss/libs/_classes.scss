@@ -1,0 +1,92 @@
+@keyframes fa-spin{
+	0%{
+		transform:rotate(0deg)
+	}
+	100%{
+		transform:rotate(359deg)
+	}
+}
+
+.absolute-center{
+	@include centerer;
+}
+
+.is-loading{
+	cursor:				wait;
+}
+
+.desaturate{
+	-webkit-filter: 	grayscale(1);
+	-webkit-filter: 	grayscale(100%);
+	filter: 			grayscale(100%);
+	filter: 			gray;
+}
+
+.mega-shadow{
+	box-shadow:			0 2px 8px 2px rgba(68, 73, 76, 0.2);
+	overflow: 			visible;
+	z-index: 			9998;
+	position: 			relative;
+}
+.tint {
+	position: 			relative;
+	cursor: 			pointer;
+	background-color:	#000;
+	&:before{
+		content: 		"";
+		display: 		block;
+		position: 		absolute;
+		top: 			0;
+		bottom: 		0;
+		left: 			0;
+		right: 			0;
+		background: 	rgba(0, 0, 0, 0) radial-gradient(_palette(primary-color-dark), _palette(primary-color-dark)) repeat scroll 0 0;
+		transition: 	opacity 0.6s ease 0s;
+		z-index: 		1;
+		opacity:		0.5;
+
+	}
+}
+
+.tint--with-hover:hover{
+	cursor: 			default;
+	&:before{
+		opacity:		0.1;
+	}
+}
+
+.bordered{
+	border: 			10px solid _palette(primary-color-text);
+	border-radius: 		3px;
+}
+
+.bg-white-angle{
+	position: 			relative;
+	z-index: 			5;
+}
+.bg-white-angle::before {
+	background-color: 	#f8f8f8;
+	bottom: 			0;
+	content: 			"";
+	display: 			block;
+	left: 				-100vw;
+	position: 			absolute;
+	right: 				-100vw;
+	top: 				0;
+	transform: 			skewX(-29deg);
+	z-index: 			-1;
+	height: 			250px;
+}
+.bg-white-angle::before {
+	left: 				-100vw;
+	right: 				-103px;
+}
+
+.vertical-text {
+	transform: 			rotate(90deg);
+	transform-origin: 	left top 0;
+	float:				left;
+}
+
+
+

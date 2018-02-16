@@ -1,0 +1,28 @@
+/* ==========================================================================
+LAYOUT PROPERTIES INCLUDES THE FOLLOWING RULES:
+1. Position
+2. Float
+3. Clear
+4. Display
+5. Media Queries
+========================================================================== */	
+@include MQ(SW){
+	.media{
+			@include clearfix;
+			> .media {
+				clear: both;
+			}
+		}
+	.media .img {
+		float: left;
+	}
+	.media.media-flip .img {
+		float: right;
+	}
+	/* OVERRIDE */
+	@supports(display: grid) {
+		
+	}
+}
+@include MQ(MW){}
+@include MQ(LW){}

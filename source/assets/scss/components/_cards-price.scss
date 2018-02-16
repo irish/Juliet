@@ -1,0 +1,58 @@
+.price_card{
+	background: rgb(255, 255, 255);
+	display: inline-table;
+	top: 0;
+}
+.price_card:not(:last-child){
+	margin-right: 40px;
+}
+.header{
+	color:_palette(activetheme,color-z);
+	background-color: _palette(activetheme,color3);
+}
+// .alpha .header{
+// 	background: rgb(245, 166, 35);
+// }
+// .bravo .header{
+// 	background: rgb(246, 77, 77);
+// }
+// .charlie .header{
+// 	background: rgb(48, 219, 181);
+// }
+.price{
+	font-size: 1em;
+	font-weight: 300;
+	display: block;
+	text-align: center;
+	padding: 10px;
+}
+.name{
+	font-size: 1em;
+	font-weight: 700;
+	display: block;
+	text-align: center;
+	padding: 10px;
+}
+.features{
+	list-style: none;
+	text-align: center;
+	color: rgb(138, 138, 138);
+	margin: 0;
+	padding: 0;
+}
+.features li{
+	margin: 0 35px;
+	padding: 20px 15px;
+}
+.features li:not(:last-child){
+	border: 1px solid lighten(_palette(activetheme,color4),40%);
+	border-top: 0;
+	border-left: 0;
+	border-right: 0;
+}
+
+.tip{
+	position: absolute;
+	color: _palette(activetheme,color-a);
+	margin: 10px 5px;
+}

@@ -1,0 +1,26 @@
+title: Pagination component
+notes: <p>TODO</p>
+context:
+  theme: barTheme
+  modifier: pagination
+variants:
+- name: pagination-no-space
+  status: ready
+  context:
+    modifier: no-space
+- name: pagination-move-buttons
+  status: ready
+  context:
+    modifier: move-buttons
+- name: pagination-no-space-move-buttons
+  status: ready
+  context:
+    modifier: no-space move-buttons
+- name: pagination-custom-buttons
+  status: ready
+  context:
+    modifier: custom-buttons
+- name: pagination-no-space-custom-buttons
+  status: ready
+  context:
+    modifier: no-space custom-buttons

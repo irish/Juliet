@@ -1,0 +1,13 @@
+title: Accordions
+notes: <p>An <code>accordion</code> UI element allows us to reduce the amount of space required for content by hiding this content until it is needed. A user can then "expand" and accordion to reveal the hidden content.</p><p> With the default accordion "bellows" can be expanded and collapsed independantly of each other i.e. all open, all closed or independantly opened and closed.</p>
+status: ready
+context:
+  theme: foo
+  modifier: default
+  text: Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+variants:
+- name: dark
+  status: ready
+  context:
+    modifier: dark
+    text: Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.

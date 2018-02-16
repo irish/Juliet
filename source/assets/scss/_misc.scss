@@ -1,0 +1,73 @@
+/* ==========================================================================
+MISC PROPERTIES INCLUDES THE FOLLOWING RULES:
+1. Cursor
+2. Overflow
+3. z-index
+4. etc...
+5. Media Queries
+========================================================================== */	
+*, *::after, *::before {}
+
+::selection {}
+
+// MSIE: Prevents scrollbar from overlapping content.
+body {
+	-ms-overflow-style:					scrollbar;
+	-webkit-overflow-scrolling:			touch;
+	&.custom-background{
+		background-attachment: 			scroll;
+		background-image: 				url("TODO");
+		background-position: 			left top;
+		background-repeat: 				no-repeat;
+		background-size: 				contain;
+	}
+}
+
+.supported, .unsupported {
+	display:none;
+}
+.supported {
+	@supports (display:grid) {
+		display:inline-block;
+	}
+}
+.unsupported {
+	@supports not (display:grid) {
+		display:inline-block;
+	}
+}
+
+.dev-outline{
+	outline:							1px solid red;
+}
+
+.browser{
+	display: 							none;
+}
+
+.hidden{
+	display:							none;
+}
+
+.vendor-edge #vendor-edge,
+.vendor-ie-11 #vendor-ie-11,
+.vendor-ie-10 #vendor-ie-10,
+.vendor-ie-9 #vendor-ie-9,
+.vendor-ie-8 #vendor-ie-8,
+.vendor-ie-7 #vendor-ie-7,
+.vendor-khtml #vendor-khtml,
+.vendor-mozilla #vendor-mozilla,
+.vendor-opera #vendor-opera,
+.vendor-opera-mini #vendor-opera-mini,
+.vendor-webkit #vendor-webkit,
+.browser-android #browser-android,
+.browser-chrome #browser-chrome,
+.browser-safari #browser-safari,
+.browser-safari-ios #browser-safari-ios,
+.browser-wiiu #browser-wiiu {
+	display: inline-block;
+}
+
+video:hover{
+	cursor:pointer;
+}

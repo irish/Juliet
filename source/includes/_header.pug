@@ -1,0 +1,36 @@
+//- The template for displaying the header
+//- Displays all of the head element and everything up until the "site-content" div
+doctype html
+html.no-js
+head
+    meta(charset="")
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    link(rel="profile" href="http://gmpg.org/xfn/11")
+    link(rel="pingback" href="#")
+    link(rel="stylesheet" href="style.css")
+//head
+body
+    #page.site
+        .site-inner
+            a.skip-link.screen-reader-text(href="#content")
+                |Skip to content
+            header#masthead.site-header(role-banner)
+                .site-header-main
+                    .site-branding
+                        h1.site-title
+                            a(href="#")|The Site Name
+                        //h1.site-title
+                        p.site-description|A website
+                        //p.site-description
+                    //.site-branding
+                    button#menu-toggle.menu-toggle|Menu
+                    //button#menu-toggle.menu-toggle
+                    nav#site-header-menu.site-header-menu(role="navigation" aria-label="Primary Menu")
+                    //nav#site-header-menu.site-header-menu
+                //.site-header-main
+                .header-image
+                    a(href="#")
+                        img(src="img/medium/image-0.jpg")
+                //.header-image
+            //.site-header
+            #content.site-content

@@ -1,0 +1,74 @@
+//'foo', 'bar', 'baz', 'qux', 'quux', 'corge', 'grault', 'garply', 'waldo', 'fred', 'plugh', 'xyzzy', 'thud', 'huhu', 'lala', 'keke', 'koko', 'kuku', 'fifi', 'bubu', 'wibble', 'wobble', 'wubble', 'flob', 'toto', 'titi', 'tata', 'tutu', 'truc', 'bidule', 'machin', 'azerty'
+.arrow-wrap{
+	display:						block;
+	left:							50%;
+	position:						absolute;
+	transform:						translate(-50%,-10%);
+	position:						absolute;
+	z-index:						9999;
+	bottom:							1rem;
+	border-radius:					50px;
+	text-decoration:				none;
+	border-bottom:					0;
+	border:							2px solid _palette(activetheme,color2);
+	background-color:				darken(black,0.9);
+	&:hover{
+		border:						2px solid darken(_palette(activetheme,color2), 10%);
+		cursor:						pointer;
+	}
+	.arrow{
+		display:					inline-block;
+		height:						30px;
+		width:						35px;
+		opacity:					1;
+		white-space:				nowrap;
+		text-align:					center;
+		img{
+			@include centerer;
+			height:					30px;
+			width:					30px;
+
+		}
+	}
+}
+
+@-webkit-keyframes arrows {
+	0% {
+		top:						0;
+	}
+	10% {
+		top:						12%;
+	}
+	20% {
+		top:						0;
+	}
+	30% {
+		top:						12%;
+	}
+	40% {
+		top:						-12%;
+	}
+	50% {
+		top:						12%;
+	}
+	60% {
+		top:						0;
+	}
+	70% {
+		top:						12%;
+	}
+	80% {
+		top:						-12%;
+	}
+	90% {
+		top:						12%;
+	}
+	100% {
+		top:						0;
+	}
+}
+
+.arrow-wrap .arrow{
+	-webkit-animation:				arrows 2.8s 0.4s;
+	-webkit-animation-delay:		3s;
+}

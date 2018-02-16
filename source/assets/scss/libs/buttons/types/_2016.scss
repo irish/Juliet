@@ -1,0 +1,27 @@
+/*
+* 2016 Dwfinitions
+*
+*/
+
+button,
+button[disabled]:hover,
+button[disabled]:focus,
+input[type="button"],
+input[type="button"][disabled]:hover,
+input[type="button"][disabled]:focus,
+input[type="reset"],
+input[type="reset"][disabled]:hover,
+input[type="reset"][disabled]:focus,
+input[type="submit"],
+input[type="submit"][disabled]:hover,
+input[type="submit"][disabled]:focus,
+
+.menu-toggle.toggled-on,
+.menu-toggle.toggled-on:hover,
+.menu-toggle.toggled-on:focus{
+	background-color: 				_palette(activetheme,color2);
+}
+
+.menu-toggle{
+  color:_palette(activetheme,color2);
+}

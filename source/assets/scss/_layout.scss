@@ -1,0 +1,113 @@
+/* ==========================================================================
+LAYOUT PROPERTIES INCLUDES THE FOLLOWING RULES:
+1. Position
+2. Float
+3. Clear
+4. Display
+5. Media Queries
+========================================================================== */	
+.constrainer{
+	display: 								grid;
+	max-width: 								1440px;
+	margin: 								0 auto;
+}
+#content.site-content{
+	// display: 						grid;
+	// grid-template-columns:			1fr;
+	.sidebar{
+		padding: 0;
+	}
+}
+
+// @include MQ(MW){
+// 	#content.site-content-sidebar{
+// 		&:before{
+// 			display:none;
+// 		}
+// 		display: 							grid;
+// 		grid-template-columns:				3fr 1fr;
+// 		grid-gap:							$theme-gutter*5;
+// 	}
+// }
+
+// .site-inner{
+// 	margin: 								0;
+// 	max-width: 								100%;
+// }
+
+// .site-header{
+// 	top:									0;
+// }
+
+// .header-image{
+// 	grid-column: 							1;
+// 	top:									0;
+// }
+
+// .main-navigation{
+// 	position: 								relative;
+// }
+
+// .widget-area{
+// 	display:								grid;
+// 	grid-template-columns:					1fr;
+// }
+
+
+// #content.site-content{
+// 	&:before{
+// 		display:none;
+// 	}
+// 	@supports (display:grid) {
+// 		display:							grid;
+// 		grid-template-columns:				1fr;
+// 		grid-gap:							$theme-gutter*5;
+// 	}
+// 	@supports not (display:grid) {
+// 		display:							block;
+// 		#primary {
+// 			margin-bottom:					$theme-gutter*5;
+// 		}
+// 		#secondary {
+// 			// flex:							0 0 calc(100%);
+// 		}
+// 	}
+// }
+
+// sub{
+// 	top: 									$theme-gutter;
+// }
+
+// sup{
+// 	top: 									-0.5em;
+// }
+
+// sub,sup {
+// 	position: relative;
+// }
+
+// .site-description{
+// 	margin-left:							0;
+// 	display:								none;
+// }
+
+
+// 	.site-description{
+// 		display:							block;
+// 	}
+
+// 	.site-header-menu{
+// 		margin-top:							-4px;	
+// 	}
+	
+// 	.grid{
+// 		@supports (display:grid) {
+// 			display: 						grid;
+// 			grid-template-columns:			1fr 1fr 1fr 1fr;
+// 			grid-gap:						$theme-gutter;
+// 		}
+// 		@supports not (display:grid) {
+// 			display:						flex;
+// 			flex-flow:						row wrap;
+// 		}
+// 	}

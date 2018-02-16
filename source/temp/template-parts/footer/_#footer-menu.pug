@@ -1,0 +1,44 @@
+//- footer-widgets.php
+	Displays footer widgets if assigned
+
+footer#colophon.site-footer(role="contentinfo")
+		section#recent-posts-2.widget.widget_recent_entries
+				h2.widget-title Recent Posts
+				ul
+					li
+						a(href='/hello-world/') Hello world!
+					li
+						a(href='/hello-world/') Goodbye world!
+		section#recent-comments-2.widget.widget_recent_comments
+			h2.widget-title Recent Comments
+			ul#recentcomments
+				li.recentcomments
+					span.comment-author-link
+						a.url(href='https://wordpress.org/', rel='external nofollow') A WordPress Commenter
+					|  on 
+					a(href='/hello-world/#comment-1') Hello world!
+		section#archives-2.widget.widget_archive
+			h2.widget-title Archives
+			ul
+				li
+					a(href='/2017/02/') February 2017
+		section#categories-2.widget.widget_categories
+			h2.widget-title Categories
+			ul
+				li.cat-item.cat-item-1
+					a(href='/category/uncategorized/') Uncategorized
+		section#meta-2.widget.widget_meta
+			h2.widget-title Meta
+			ul
+				li
+					a(href='/wp-login.php') Log in
+				li
+					a(href='/feed/')
+						| Entries 
+						abbr(title='Really Simple Syndication') RSS
+				li
+					a(href='/comments/feed/')
+						| Comments 
+						abbr(title='Really Simple Syndication') RSS
+				li
+					a(href='https://wordpress.org/', title='Powered by WordPress, state-of-the-art semantic personal publishing platform.') WordPress.org

@@ -1,0 +1,56 @@
+// TOC
+// 1.Gets a duration value.
+// 2.Gets a font value.
+// 3.Gets a misc value.
+// 4.Gets a palette value.
+// 5.Gets a brand value.
+// 6.Gets a size value.
+
+// 1.Gets a duration value.
+// @param {string} $keys Key(s).
+// @return {string} Value.
+@function _duration($keys...) {
+	@return val($duration, $keys...);
+}
+
+// 2.Gets a font value.
+// @param {string} $keys Key(s).
+// @return {string} Value.
+@function _font($keys...) {
+	@return val($font, $keys...);
+}
+
+// 3.Gets a misc value.
+// @param {string} $keys Key(s).
+// @return {string} Value.
+@function _misc($keys...) {
+	@return val($misc, $keys...);
+}
+
+// 4.Gets a palette value.
+// @param {string} $keys Key(s).
+// @return {string} Value.
+@function _palette($keys...) {
+	@return val($palette, $keys...);
+}
+
+// 4.Gets a utility color value.
+// @param {string} $keys Key(s).
+// @return {string} Value.
+@function _palette-utility($keys...) {
+	@return val($palette-utility, $keys...);
+}
+
+// 5.Gets a brand value.
+// @param {string} $keys Key(s).
+// @return {string} Value.
+@function _brand($keys...) {
+	@return val($brand, $keys...);
+}
+
+// 6.Gets a size value.
+// @param {string} $keys Key(s).
+// @return {string} Value.
+@function _size($keys...) {
+	@return val($size, $keys...);
+}

@@ -1,0 +1,389 @@
+// TOC
+// 1.rem fallback
+// 2.center vertically and/or horizontally an absolute positioned element
+// 3.Border radius
+// 4.Anti-aliasing mode font rendering
+// 5.Media queries
+// 6.Gets a value from a map.
+// 7.Clearfix
+// 8.Color tint and shade
+// 9.Target all headers
+// 10.Wraps @content in vendorized keyframe blocks.
+// 11.Vendorizes a declaration's property and/or value(s).
+
+// 1.rem fallback - credits: http://zerosixthree.se/8-sass-mixins-you-must-have-in-your-toolbox/
+@function calculateRem($size) {
+	$remSize: $size / 16px;
+	@return $remSize * 1rem;
+}
+
+@mixin font-size($size) {
+	font-size: $size;
+	font-size: calculateRem($size);
+}
+// usage
+// p {
+//  @include font-size(14px)
+// }
+
+
+//Declare font in REM's, and will compile with PX fallback
+
+// 2.center vertically and/or horizontally an absolute positioned element
+@mixin centerer($horizontal: true, $vertical: true) {
+	position: absolute;
+
+	@if ($horizontal and $vertical) {
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+
+	} @else if ($horizontal) {
+		left: 50%;
+		transform: translate(-50%, 0);
+
+	} @else if ($vertical) {
+		top: 50%;
+		transform: translate(0, -50%);
+	}
+}
+//E.G.
+// .site-logo{
+	// 2.center vertically and/or horizontally an absolute positioned element
+//        @include center(true, false);
+// }
+
+// 3.Border radius
+@mixin border-radius($radius) {
+	-webkit-border-radius: $radius;
+	border-radius: $radius;
+	background-clip: padding-box;  /* stops bg color from leaking outside the border: */
+}
+
+// Single side border-radius
+
+@mixin border-top-radius($radius) {
+	-webkit-border-top-right-radius: $radius;
+	border-top-right-radius: $radius;
+	-webkit-border-top-left-radius: $radius;
+	border-top-left-radius: $radius;
+	background-clip: padding-box;
+}
+@mixin border-right-radius($radius) {
+	-webkit-border-bottom-right-radius: $radius;
+	border-bottom-right-radius: $radius;
+	-webkit-border-top-right-radius: $radius;
+	border-top-right-radius: $radius;
+	background-clip: padding-box;
+}
+@mixin border-bottom-radius($radius) {
+	-webkit-border-bottom-right-radius: $radius;
+	border-bottom-right-radius: $radius;
+	-webkit-border-bottom-left-radius: $radius;
+	border-bottom-left-radius: $radius;
+	background-clip: padding-box;
+}
+@mixin border-left-radius($radius) {
+	-webkit-border-bottom-left-radius: $radius;
+	border-bottom-left-radius: $radius;
+	-webkit-border-top-left-radius: $radius;
+	border-top-left-radius: $radius;
+	background-clip: padding-box;
+}
+
+// E.G.
+// .button{
+//     @include border-radius;
+// }
+
+// 4.Antialiasing mode font rendering
+@mixin font-smoothing {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+// E.G.
+// h1{
+//     @include font-smoothing;
+// }
+
+// 5.Media queries
+@mixin MQ($canvas) {
+	@if $canvas == SW {
+		@media only screen and (min-width: $SW) { @content; }
+	}
+	@else if $canvas == MW {
+		@media only screen and (min-width: $MW) { @content; }
+	}
+	@else if $canvas == LW {
+		@media only screen and (min-width: $LW) { @content; }
+	}
+	@else if $canvas == WP {
+		@media only screen and (min-width: $WP) { @content; }
+	}
+
+	@if $canvas == SWM {
+		@media only screen and (max-width: $SWM) { @content; }
+	}
+	@else if $canvas == MWM {
+		@media only screen and (max-width: $MWM) { @content; }
+	}
+	@else if $canvas == LWM {
+		@media only screen and (max-width: $LWM) { @content; }
+	}
+	@else if $canvas == WPM {
+		@media only screen and (max-width: $WPM) { @content; }
+	}
+}
+// E.G.
+// .foo{
+//        @include MQ(SW) {
+//            color: red;
+//        }
+//        @include MQ(MW) {
+//            color: green;
+//        }
+//        @include MQ(L#) {
+//            color: blue;
+//        }
+// }
+
+// 6.Gets a value from a map.
+// @author Hugo Giraudel
+// @param {map} $map Map.
+// @param {string} $keys Key(s).
+// @return {string} Value.
+@function val($map, $keys...) {
+
+	@if nth($keys, 1) == null {
+		$keys: remove-nth($keys, 1);
+	}
+
+	@each $key in $keys {
+		$map: map-get($map, $key);
+	}
+
+	@return $map;
+
+}
+
+// 7.Clearfix
+@mixin clearfix {
+	&:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+}
+
+
+// 8.Color tint and shade
+@function shade(
+	$color,
+	$percent
+	) {
+
+	@return mix(#000, $color, $percent);
+}
+@function tint(
+	$color,
+	$percent
+	) {
+
+	@return mix(#fff, $color, $percent);
+}
+
+// 9.Target all headers
+@mixin headings {
+	h1, h2, h3,
+	h4, h5, h6 {
+		@content;
+	}
+}
+
+@mixin heading-links {
+	h1 a, h2 a, h3 a,
+	h4 a, h5 a, h6 a {
+		@content;
+	}
+}
+
+
+// 10.Wraps @content in vendorized keyframe blocks.
+// @param {string} $name Name.
+@mixin keyframes($name) {
+
+	@-moz-keyframes #{$name} { @content; }
+	@-webkit-keyframes #{$name} { @content; }
+	@-ms-keyframes #{$name} { @content; }
+	@keyframes #{$name} { @content; }
+
+}
+
+// 11.Vendorizes a declaration's property and/or value(s).
+// @param {string} $property Property.
+// @param {mixed} $value String/list of value(s).
+@mixin vendor($property, $value) {
+
+	// Determine if property should expand.
+		$expandProperty: index($vendor-properties, $property);
+
+	// Determine if value should expand (and if so, add '-prefix-' placeholder).
+		$expandValue: false;
+
+		@each $x in $value {
+			@each $y in $vendor-values {
+				@if $y == str-slice($x, 1, str-length($y)) {
+
+					$value: set-nth($value, index($value, $x), '-prefix-' + $x);
+					$expandValue: true;
+
+				}
+			}
+		}
+
+	// Expand property?
+		@if $expandProperty {
+			@each $vendor in $vendor-prefixes {
+				#{$vendor}#{$property}: #{str-replace-all($value, '-prefix-', $vendor)};
+			}
+		}
+
+	// Expand just the value?
+		@elseif $expandValue {
+			@each $vendor in $vendor-prefixes {
+				#{$property}: #{str-replace-all($value, '-prefix-', $vendor)};
+			}
+		}
+
+	// Neither? Treat them as a normal declaration.
+		@else {
+			#{$property}: #{$value};
+		}
+
+}
+
+
+
+
+
+
+
+
+
+
+/// Makes an element's :before pseudoelement a FontAwesome icon.
+/// @param {string} $content Optional content value to use.
+/// @param {string} $where Optional pseudoelement to target (before or after).
+@mixin icon($content: false, $where: before) {
+
+	text-decoration: none;
+
+	&:#{$where} {
+
+		@if $content {
+			content: $content;
+		}
+
+		-moz-osx-font-smoothing: grayscale;
+		-webkit-font-smoothing: antialiased;
+		font-family: FontAwesome;
+		font-style: normal;
+		font-weight: normal;
+		text-transform: none !important;
+
+	}
+
+}
+
+/// Applies padding to an element, taking the current element-margin value into account.
+/// @param {mixed} $tb Top/bottom padding.
+/// @param {mixed} $lr Left/right padding.
+/// @param {list} $pad Optional extra padding (in the following order top, right, bottom, left)
+/// @param {bool} $important If true, adds !important.
+@mixin padding($tb, $lr, $pad: (0,0,0,0), $important: null) {
+
+	@if $important {
+		$important: '!important';
+	}
+
+	padding: ($tb + nth($pad,1)) ($lr + nth($pad,2)) max(0.1em, $tb - _size(element-margin) + nth($pad,3)) ($lr + nth($pad,4)) #{$important};
+
+}
+
+/// Encodes a SVG data URL so IE doesn't choke (via codepen.io/jakob-e/pen/YXXBrp).
+/// @param {string} $svg SVG data URL.
+/// @return {string} Encoded SVG data URL.
+@function svg-url($svg) {
+
+	$svg: str-replace($svg, '"', '\'');
+	$svg: str-replace($svg, '<', '%3C');
+	$svg: str-replace($svg, '>', '%3E');
+	$svg: str-replace($svg, '&', '%26');
+	$svg: str-replace($svg, '#', '%23');
+	$svg: str-replace($svg, '{', '%7B');
+	$svg: str-replace($svg, '}', '%7D');
+	$svg: str-replace($svg, ';', '%3B');
+
+	@return url("data:image/svg+xml;charset=utf8,#{$svg}");
+
+}
+
+/// Wraps @content in vendorized keyframe blocks.
+/// @param {string} $name Name.
+@mixin keyframes($name) {
+
+	@-moz-keyframes #{$name} { @content; }
+	@-webkit-keyframes #{$name} { @content; }
+	@-ms-keyframes #{$name} { @content; }
+	@keyframes #{$name} { @content; }
+
+}
+
+//Fade Text
+@mixin fadeText($text-color, $direction : top, $offset : 2em, $transition: 0.5s ease-out) {  
+  // text-color : dark
+  $color: #fff;
+
+  // direction : top
+  $deg: 180deg;
+  $pos: bottom;
+  
+  @if($text-color == 'light') {
+    $color: #000;
+    mix-blend-mode: screen;
+  } @else {
+    mix-blend-mode: multiply;
+  }
+  
+  @if($direction == 'left') {
+    $deg: 90deg;
+    $pos: right;
+  } @elseif ($direction == 'right') {
+    $deg: -90deg;
+    $pos: left;
+  } @elseif ($direction == 'bottom') {
+    $deg: 0deg;
+    $pos: top;
+  }
+  
+  position: relative;
+
+  &::after {
+    background: linear-gradient($deg, transparent, $color $offset) no-repeat $pos center / 100% 100%;
+    
+    content: '';
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    pointer-events: none;
+    transition: $transition;
+  }
+  
+  &:hover::after {
+    @if($direction == 'left' or $direction == 'right') {
+      background-size: 0% 100%;  
+    } @else {
+      background-size: 100% 0%;
+    }
+  }
+  
+}

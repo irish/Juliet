@@ -1,0 +1,154 @@
+/* ==========================================================================
+LAYOUT AND MEDIA QUERY RULES
+========================================================================== */	
+
+body{
+	margin:								0;
+	padding:							0;
+	&:not(.custom-background-image)::before,
+	&:not(.custom-background-image)::after{
+		height: 						0;
+	}
+}
+
+img{
+	width: 100%;
+	height: auto;
+}
+
+video{
+	width: 								100%;
+}
+
+pre{
+	padding:							$theme-gutter * 0.5;
+	margin-bottom:						$theme-gutter;
+}
+code{
+	padding:							$theme-gutter * 0.5;
+	margin-bottom:						$theme-gutter;
+}
+
+
+.constrainer{
+	max-width: $constrainer-width;
+	margin: 0 auto;
+	display: grid;
+	padding: $theme-gutter;
+}
+
+.site-header{
+	width:								100%;//WONK HEADER IS FIXED
+	top:								0;
+	padding: 							0 $theme-gutter;
+}
+
+.site-branding {
+	margin: 0.875em auto 0.875em 0;
+}
+
+.site-branding,
+.menu-toggle{
+	margin-top: 						$theme-gutter;
+	margin-bottom: 						$theme-gutter;
+}
+
+.site-header-menu{
+	margin-top: 						0.68em;	
+}
+
+.site-branding a{
+	margin-left:						0;
+}
+
+#site-header-menu li{
+	padding-right:						$theme-gutter;
+}
+
+.header-image{
+	grid-column: 						1;
+	top:								0;
+}
+
+.subtitle{
+	display:none;
+}
+
+.main-navigation{
+	position: 							relative;
+}
+
+
+.site-content{
+	padding:							0;
+	margin-top:							60px;
+}
+
+.content-area{
+	width:								100%;
+}
+
+.entry-content{
+	margin: 0;
+}
+
+#colophon{
+	padding:							0;
+}
+
+.widget-area{
+	display:grid;
+	grid-template-columns: 1fr;
+}
+
+.intro-constrainer {
+	max-width: $constrainer-width;
+	margin: 0 auto;
+	display: grid;
+	padding: $theme-gutter;
+	grid-gap: $theme-gutter*2;
+	grid-template-columns: 1fr;
+}
+
+.grid-constrainer {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
+
+.checkerboard-constrainer{
+	display: grid;
+	grid-template-columns: 1fr 1fr;	
+}
+
+@include MQ(MW){
+	.site-description{
+		display:block;
+	}
+	.site-content{
+		margin-top:							81px;
+	}
+	.site-header-menu{
+		margin-top: 						-4px;	
+	}
+	.grid-constrainer {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+	}	
+	.widget-area{
+		display:grid;
+		grid-template-columns: 2fr 2fr;
+		grid-gap: $theme-gutter;
+	}
+	.intro-constrainer {
+		grid-template-columns: 1fr 1fr;
+	}
+}
+
+@include MQ(WP){
+	.site-content{
+		margin-top:							111px;
+	}
+	.site-header-menu{
+		margin: 						$theme-gutter*2 0;
+	}
+}	

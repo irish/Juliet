@@ -1,0 +1,88 @@
+ul{
+	&.icons {
+		cursor: default;
+		list-style: none;
+		padding-left: 0;
+
+		li {
+			display: inline-block;
+			padding: 0 1em 0 0;
+			line-height: 1;
+
+			&:last-child {
+				padding-right: 0;
+			}
+
+			.icon {
+				color: _palette(activetheme,color2);
+
+				&:before {
+					font-size: 1.5em;
+				}
+			}
+		}
+	}
+}
+
+ul.unstyled{
+	padding-left: 0;
+	margin-left: 0;
+	li{
+		list-style-type: none;}}
+ul.inline{
+	li{
+		display:inline;
+		margin-right: 10px;
+		float:left;}}
+/* Styled Lists which require FontAwesome
+---------------------------------*/
+.iconlist{
+	list-style-type: none;
+	padding-left: 0;
+	li{
+		line-height: 2;
+		&:before{
+			font-family: "FontAwesome";
+			display: inline-block;
+			color:_palette(secondary-text-color);
+			padding-right: 5px;
+			vertical-align: middle;
+			left: 2px;
+			top: -2px;}}}
+
+.iconlist__star{
+	li{
+		&:before{
+			color:_palette(secondary-text-color);
+			content: "\f005";}}}
+
+.iconlist__check{
+	li{
+		&:before{
+			content: "\f05d";}}}
+
+.iconlist__chevron-right-circle{
+	li{
+		&:before{
+			content: "\f138";}}}
+
+.iconlist__arrow-circle-o-down{
+	li{
+		&:before{
+			content: "\f01a";}}}
+
+.iconlist__inbox{
+	li{
+		&:before{
+			content: "\f01c";}}}
+
+.iconlist__angle-double-right{
+	li{
+		&:before{
+			content: "\f101";}}}
+
+ul.social-links{
+	i{
+		font-size:3em;
+	}
+}

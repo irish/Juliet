@@ -1,0 +1,45 @@
+/* ==========================================================================
+SITE HEADER
+========================================================================== */	
+.site-header{
+	z-index:			_misc(z-index-base);
+}
+
+.subtitle {
+	font-size:			11px;
+	display:			none;
+	margin-top:			6px;
+	text-align: 		center;
+	opacity:			0;
+	bottom:				-11px;
+	position: 			relative;
+	transition: 		all 100ms linear;
+	font-style: 		italic;
+}
+
+#site-header-menu li{
+	padding: 			0 1em;
+}
+
+.menu-toggle {
+	color:				_palette(activetheme,color-z);
+	&:hover{
+		cursor:			pointer;
+		color: 			darken(_palette(activetheme,color4), 10%);
+		border-color: 	darken(_palette(activetheme,color4), 10%);
+	}
+	&:focus {
+		color:			_palette(activetheme,color4);
+		border-color:	_palette(activetheme,color4);
+	}
+}
+
+
+.toggled-on .main-navigation{
+	background-color: 	darken(_palette(activetheme,color-a),5%);
+	border-radius: 		0px 0px 2px 2px;
+}
+
+.dropdown-toggle:hover{
+	cursor:				pointer;
+}

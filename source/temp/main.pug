@@ -1,0 +1,23 @@
+#content.site-content
+	#primary.content-area
+		main#main.site-main(role="main")
+			article#post-1.post.type-post.status-publish.format-standard.hentry.category-uncategorized
+				header.entry-header
+					h2.entry-title
+						a(href="#")|Hello World
+				.entry-content
+					p|Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			include accordion.pug
+			include article.pug
+				footer.entry-footer
+					span.posted-on
+						span.screen-reader-text Posted on 
+						a(href='single-blog-entry.html', rel='bookmark')
+							time.entry-date.published.updated(datetime='2018-01-10T17:28:13+00:00') January 10, 2018
+					span.comments-link
+						a(href="single-blog-entry.html#comments")|1 Comment
+							span.screen-reader-text|on Hello world!
+					span.edit-link
+						a.post-edit-link(href="http://localhost:8888/local/Juliet/wordpress/wp-admin/post.php?post=1&amp;action=edit")|Edit
+							span.screen-reader-text|"Hello world!"
+	//include aside.pug

@@ -1,0 +1,172 @@
+$theme-center:								1200px;
+$constrainer-width:							1200px;
+$theme-gutter:								1em;
+
+
+//	Media Queries
+$SW:										44.375em;	//710px
+$MW:										56.3125em;	//901px
+$LW:										66.5625em;	//1065px
+$WP:										79em;		//1264px
+$HD:										120em;		//1264px
+
+$SWM:										44.375em;	//710px
+$MWM:										56.3125em;	//901px
+$LWM:										66.5625em;	//1065px
+$WPM:										79em;		//1264px
+$HDM:										120em;		//1264px
+
+//	Serif
+$serif: 									'Georgia', serif;
+$sans: 										'Trebuchet MS', Trebuchet MS, sans-serif;
+
+//	Sans-Serif.
+$apple:										-apple-system, '.SFNSText-Regular', 'San Francisco', 'Roboto', 'Segoe UI', 'Helvetica Neue', 'Lucida Grande', 'sans-serif';
+$microsoft:									'Calibri', 'Candara', 'Segoe', 'Segoe UI', 'Optima', 'Arial', 'sans-serif';
+$google:									'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans';
+$candara:									'Candara', 'Calibri', 'Segoe', 'Segoe UI', 'Optima', 'Arial', 'sans-serif';
+$courier:									'Courier New', 'Courier', 'Lucida Sans Typewriter', 'Lucida Typewriter', 'monospace';
+$franklin:									'Franklin Gothic Medium', 'Arial', 'sans-serif';
+$futura:									'Futura', 'Trebuchet MS', 'Arial', 'sans-serif';
+$geneva:									'Geneva', 'Tahoma', 'Verdana', 'sans-serif';
+$gill-sans:									'Gill Sans', 'Gill Sans MT', 'Calibri', 'sans-serif';
+$helvetica:									'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif';
+$lucida-grande:								'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', 'Geneva', 'Verdana', 'sans-serif';
+$optima:									'Optima', 'Segoe', 'Segoe UI', 'Candara', 'Calibri', 'Arial', 'sans-serif';
+$segoe:										'Segoe', 'Segoe UI', 'Helvetica Neue', 'Arial', 'sans-serif';
+$tahoma:									'Tahoma', 'Geneva', 'Verdana', 'sans-serif';
+$trebuchet:									'Trebuchet MS', 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', 'Tahoma', 'sans-serif';
+$verdana:									'Verdana', 'Geneva', 'sans-serif';
+$ptsans:									'PT Sans', sans-serif;
+
+//	Serif.
+$serif:										'Georgia', serif;
+$antiqua:									'Book Antiqua', 'Palatino', 'Palatino Linotype', 'Palatino LT STD', 'Georgia', 'serif';
+$baskerville:								'Baskerville', 'Baskerville old face', 'Hoefler Text', 'Garamond', 'Times New Roman', 'serif';
+$bodoni:									'Bodoni MT', 'Didot', 'Didot LT STD', 'Hoefler Text', 'Garamond', 'Times New Roman', 'serif';
+$cambria:									'Cambria', 'Georgia', 'serif';
+$caslon:									'Big Caslon', 'Book Antiqua', 'Palatino Linotype', 'Georgia', 'serif';
+$constantia:								'Constantia', 'Palatino', 'Palatino Linotype', 'Palatino LT STD', 'Georgia', 'serif';
+$didot:										'Didot', 'Didot LT STD', 'Hoefler Text', 'Garamond', 'Times New Roman', 'serif';
+$garamond:									'Garamond', 'Baskerville', 'Baskerville Old Face', 'Hoefler Text', 'Times New Roman', 'serif';
+$goudy:										'Goudy Old Style', 'Garamond', 'Big Caslon', 'Times New Roman', 'serif';
+$hoefler:									'Hoefler Text', 'Baskerville old face', 'Garamond', 'Times New Roman', 'serif';
+$lucida-bright:								'Lucida Bright', 'Georgia', 'serif';
+$merriweather:								'Merriweather', 'Georgia', 'serif';
+$palatino:									'Palatino', 'Palatino Linotype', 'Palatino LT STD', "Book Antiqua", 'Georgia', 'serif';
+$ptserif:									'PT Serif', serif;
+
+//Icons
+$icon: 										'FontAwesome';
+$brand:										'Allerta';
+
+//	Font Map:typography
+//	File: _typography.scss
+$font: (
+	
+	family:									($sans),
+	family-fixed:							('Menlo Regular','Courier New',monospace),
+	family-alt:								($sans),
+	family-contrast:						($serif),
+	letter-spacing:							0.01rem,
+	letter-spacing-alt:						0.5rem,
+	
+	header-text-transform:					none,
+	
+	weight-light:							100,
+	weight:									400,
+	weight-bold:							600,
+	weight-extrabold:						700,
+	weight-megabold:						900,
+	
+	kerning:								0.01rem,
+	kerning-alt:							0.1rem,
+	
+	line-height:							1.6rem,
+	
+	size-small:								90%,
+	size-medium:							95%,
+	size:									1em,
+	size-large:								105%,
+
+	mega-small:								200%,
+	mega-medium:							350%,
+	mega-large:								500%
+
+);
+
+//	Markup Elements Colors.
+$tagColors:(
+	header:									#1498FC,
+	nav:									#11DAE3,
+	figure:									#7BDB45,
+	main:									#E8A432,
+	article:								#D45954,
+	section:								#FF41FF,
+	aside:									#FFFB02,
+	footer:									#8882F0
+);
+
+//	Duration
+$duration: (
+	menu:									0.35s
+);
+
+//	Size
+$size: (
+	Accent-radius:							2px,
+	margin:									1em,
+	margin-bottom:							1em,
+	margin-top:								1em,
+	padding:								1em,
+	padding-bottom:							1em,
+	padding-top:							1em
+);
+
+//	Brand Color Map
+$brand: (
+	twitter:								#55acee,
+	facebook:								#3b5998,
+	github:									#999999,
+	googleplus:								#dd4b39,
+	linkedin:								#0077b5,
+	pinterest:								#bd081c,
+	reddit:									#5f99cf,
+	instagram:								#e1306c,
+	youtube:								#bd081c
+);
+
+//	Palette Maps
+//See http://jackiebalzer.com/color to apply manipulation functions
+//See https://colorme.io/ for live manipulation
+//Black and White are function colors only. Avoid using in the $palette() function
+
+//page.scss
+$palette:(
+	activetheme: (	
+		color-a:							#FCFCFC,
+		color-z:							#171C28,
+		color1: 							#05668D,
+		color2: 							#427AA1,
+		color3: 							#EBF2FA,
+		color4: 							#679436,
+		color5: 							#A5BE00
+	)
+);
+
+$palette-utility:(
+	plain:									#1B9AF7,
+	action:									#A5DE37,
+	highlight:								#FEAE1B,
+	caution:								#FF4351,
+);
+
+// Misc
+$misc: (
+	z-index-base:							10000,
+	box-shadow: 							0 2px 2px 0 rgba(0,0,0,0.36),
+	border:									2px solid,
+	border-alt:								2px dashed
+);
+
+

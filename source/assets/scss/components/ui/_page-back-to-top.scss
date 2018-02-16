@@ -1,0 +1,59 @@
+//'foo', 'bar', 'baz', 'qux', 'quux', 'corge', 'grault', 'garply', 'waldo', 'fred', 'plugh', 'xyzzy', 'thud', 'huhu', 'lala', 'keke', 'koko', 'kuku', 'fifi', 'bubu', 'wibble', 'wobble', 'wubble', 'flob', 'toto', 'titi', 'tata', 'tutu', 'truc', 'bidule', 'machin', 'azerty'
+.top {
+	display:						inline-block;
+	height:							40px;
+	width:							40px;
+	position:						fixed;
+	bottom:							40px;
+	right:							10px;
+	overflow:						hidden;
+	border:							2px solid _palette(activetheme,color2);
+	white-space:					nowrap;
+	visibility:						hidden;
+	opacity:						0;
+	transition:						opacity .3s 0s, visibility 0s .3s;
+	z-index:						9999;
+	background-color:				darken(black,0.9);	
+
+	&:hover{
+		border:						2px solid darken(_palette(activetheme,color2), 10%);
+		cursor:						pointer;
+	}
+	span{
+		@include centerer;
+		top:						50%;
+		color:						_palette(activetheme,color2);
+	}
+	&.is-visible, &.fade-out, .no-touch &:hover {
+		transition:					opacity .3s 0s, visibility 0s 0s;
+	}
+	/* the button becomes visible */
+	&.is-visible {
+		visibility:					visible;
+		opacity:					0.95;
+	}
+	/* if the user keeps scrolling down, the button is out of focus and becomes less visible */
+	&.fade-out {
+		opacity:					.9;
+	}
+
+	.no-touch &:hover {
+		opacity:					1;
+		cursor:						pointer;
+	}
+	.no-touch &:active {
+		transform:					scale(0.97);
+	}
+
+	@include MQ(M) {
+		right:						20px;
+		bottom:						20px;
+	}
+
+	@include MQ(L) {
+		height:						60px;
+		width:						60px;
+		right:						30px;
+		bottom:						30px;
+	}
+}

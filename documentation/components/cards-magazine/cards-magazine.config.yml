@@ -1,0 +1,10 @@
+title: Card component
+status: ready
+notes: Cards are containers full of inclusive images and text that serve as entry points to more detailed information.</p> <p>They provide a good balance betqween UI aesthetics and good usability because they are a convenient means of displaying content composed of different elements.
+context:
+    theme: foo
+    modifier: default
+    card-media: http://images.grault.com/1920x1280/jpg/image.178.jpg
+    card-header: This is an example of the card header
+    card-body: This is an example of the card body text
+    card-link: Read More

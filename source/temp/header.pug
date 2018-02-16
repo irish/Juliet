@@ -1,0 +1,24 @@
+- var siteTitle 		= "Juliet"
+- var siteDescription 	= "Just another website"
+header#masthead.site-header(role="banner")
+	.site-header-main
+		.site-branding
+			h1.site-title
+				a(href="#")|#{siteTitle}
+			p.site-description|#{siteDescription}
+		button#menu-toggle.menu-toggle|Menu
+		#site-header-menu.site-header-menu
+			#site-navigation.main-navigation(role="navigation" aria-label="Primary Menu")
+				.menu-primary-menu-container
+					ul#menu-primary-menu.primary-menu
+						li.menu-item.menu-item-type-post_type.menu-item-object-page.menu-item-4
+							a(href="#")|Home
+							li#menu-item-1698.menu-item.menu-item-type-post_type.menu-item-object-page.menu-item-has-children.menu-item-1698(aria-haspopup='true')
+								a(href='http://localhost:8888/local/Juliet/wordpress/about/') About The Tests
+								button.dropdown-toggle(aria-expanded='false')
+									span.screen-reader-text expand child menu
+								ul.sub-menu
+									li#menu-item-1699.menu-item.menu-item-type-post_type.menu-item-object-page.menu-item-1699
+										a(href='http://localhost:8888/local/Juliet/wordpress/about/page-markup-and-formatting/') Page Markup And Formatting
+									li#menu-item-1700.menu-item.menu-item-type-post_type.menu-item-object-page.menu-item-1700
+										a(href='http://localhost:8888/local/Juliet/wordpress/about/page-image-alignment/') Page Image Alignment

@@ -1,0 +1,77 @@
+h1| Forms
+form.contact-form.floating-labels
+	fieldset
+		legend Account Info
+		.error-message
+			p Please enter a valid email address
+		.icon
+			label.contact-label(for='contact-name') Name
+			input#contact-name.user(type='text', name='contact-name', required='')
+		.icon
+			label.contact-label(for='contact-company') Company
+			input#contact-company.company(type='text', name='contact-company')
+		.icon
+			label.contact-label(for='contact-email') Email
+			input#contact-email.email(type='email', name='contact-email', required='')
+	fieldset
+		legend Project Info
+		div
+			textarea#contact-textarea.message(name='contact-textarea', required='')
+			.control-group
+				h3 Checkboxes
+				label.control.control--checkbox
+					| First checkbox
+					input(type='checkbox', checked='checked')
+					.control__indicator
+				label.control.control--checkbox
+					| Second checkbox
+					input(type='checkbox')
+					.control__indicator
+				label.control.control--checkbox
+					| Disabled
+					input(type='checkbox', disabled='disabled')
+					.control__indicator
+				label.control.control--checkbox
+					| Disabled & checked
+					input(type='checkbox', disabled='disabled', checked='checked')
+					.control__indicator
+			.control-group
+				h3 Radio buttons
+				label.control.control--radio
+					| First radio
+					input(type='radio', name='radio', checked='checked')
+					.control__indicator
+				label.control.control--radio
+					| Second radio
+					input(type='radio', name='radio')
+					.control__indicator
+				label.control.control--radio
+					| Disabled
+					input(type='radio', name='radio2', disabled='disabled')
+					.control__indicator
+				label.control.control--radio
+					| Disabled & checked
+					input(type='radio', name='radio2', disabled='disabled', checked='checked')
+					.control__indicator
+			.control-group
+				h3 Select boxes
+				.select
+					select
+						option First select
+						option Option
+						option Option
+					.select__arrow
+				.select
+					select
+						option Second select
+						option Option
+						option Option
+					.select__arrow
+				.select
+					select(disabled='disabled')
+						option Disabled
+						option Option
+						option Option
+					.select__arrow
+		div
+			input(type='submit', value='Send Message')

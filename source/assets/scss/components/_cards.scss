@@ -1,0 +1,28 @@
+.card{
+	background-color: _palette(activetheme,color-z);
+	transition: width .1s ease-in-out,box-shadow 300ms ease-in-out 0s;
+	position: relative;
+	.card__copy{
+		h3{
+			&:first-child{
+				margin-top: 0;
+			}
+		}
+		p{
+			&:last-child{
+				margin-bottom: 0;
+			}
+		}
+	}
+}
+
+
+.card__media{
+	margin-right: 0!important;
+	margin-bottom: 1em;
+	img{
+		position: relative;
+		display: block;
+	}
+}
+

@@ -1,0 +1,61 @@
+/* ==========================================================================
+SITE HEADER MENU
+========================================================================== */
+
+#site-header-menu{
+	.main-navigation a{
+		color:			_palette(activetheme, color2);
+	}
+	.main-navigation a:hover, .main-navigation a:focus{
+		color:			_palette(activetheme, color-5);
+	}
+}
+
+#site-header-menu a{
+	border-bottom:		none;
+}
+
+
+nav#site-navigation a {
+	text-decoration:	none;
+	color:				#fff;
+	display:			inline-block;
+	position:			relative;
+
+}
+
+nav#site-navigation a::before {
+		height:			1px;
+		opacity:		0.4;
+		content:		' ';
+		width:			100%;
+		display:		block;
+		position: 		absolute;
+		transition: 	all 100ms linear
+}
+
+nav#site-navigation a:hover::before {
+	height:				4px;
+	opacity:			1;
+}
+
+nav#site-navigation a:hover .subtitle {
+	opacity:			0.6;
+	bottom:				0px;
+}
+@include MQ(WP){
+	nav#site-navigation a {
+		text-align:		center;
+	}
+	.subtitle {
+		display:		block
+	}	
+}
+
+@media screen and (min-width: 79em) {
+	.main-navigation li:hover > ul, 
+	.main-navigation li.focus > ul {
+		left: 			auto;
+		right: 			1em;
+	}
+}

@@ -1,0 +1,24 @@
+/* ==========================================================================
+http://tablesorter.com/docs/
+========================================================================== */	
+
+#myTable {
+	.tablesorter-headerUnSorted{
+		background-image: url(assets/images/icons/bg.gif);
+		background-repeat: no-repeat;
+		background-position: center right;
+		cursor: pointer;
+	}
+	.tablesorter-headerAsc {
+		background-image: url(assets/images/icons/asc.gif);
+		background-repeat: no-repeat;
+		background-position: center right;
+		cursor: pointer;
+}	
+	.tablesorter-headerDesc {
+		background-image: url(assets/images/icons/desc.gif);
+		background-repeat: no-repeat;
+		background-position: center right;
+		cursor: pointer;
+	}
+}

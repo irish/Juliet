@@ -1,0 +1,21 @@
+title: Grids
+status: ready
+notes: A grid is a set of components grouped together is a layout. By default, a grid will start as a 1xn, where n is the number of rows and expand to a maximum of 4xn. The defaut grid each item item has a margin to provide spacing between elements.<br/> Note that by default, the layout of the grid is based on the element queries, not the viewport queries. This allows for much more refined control over how it rendered in varous layouts such as fullwidth to 2/3-1/3 as opposed to just the browser viewport
+context:
+    theme: foo
+    modifier: grid
+    grid-item-media: http://images.grault.com/1920x1280/jpg/image.189.jpg
+    grid-item-media-alt: http://images.grault.com/1920x1280/jpg/image.180.jpg
+variants:
+  - name: metro
+    status: prototype
+    context:
+      modifier: metro
+  - name: magazine
+    status: prototype
+    context:
+      modifier: magazine
+  - name: squared
+    status: prototype
+    context:
+      modifier: squared

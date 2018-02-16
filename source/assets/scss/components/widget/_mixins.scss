@@ -1,0 +1,12 @@
+/*
+* Clearfix
+*
+* Clears floats inside the container
+*/
+@mixin clearfix {
+	&:after {
+		content: " ";
+		display: block;
+		clear: both;
+	}
+}

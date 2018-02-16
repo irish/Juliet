@@ -1,0 +1,98 @@
+.breadcrumb--default,
+.breadcrumb--custom-separator,
+.breadcrumb--custom-separator-custom-icons,
+.multi-steps--default {
+	margin:							0;
+	background-color:				lighten(_palette(activetheme,color-a),1%);
+	@include clearfix;		
+	box-shadow:						0 0px 1px _palette(activetheme,color-z) inset;
+	li {
+		display:					inline-block;
+		float:						left;
+		margin:						0.5em 0;
+		&::after {
+			/* this is the separator between items */
+			display:				inline-block;
+			content:				'\00bb';
+			margin:					0 .6em;
+			color:					tint(_palette(activetheme,color3), 10%);
+		}
+
+		&:last-of-type::after {
+			/* hide separator after the last item */
+			display:				none;
+		}
+	}
+
+	li > * {
+		/* single step */
+		display:					inline-block;
+		color:						_palette(activetheme,header);
+	}
+
+	li.current > * {
+		/* selected step */
+		color:						_palette(activetheme,color-z);
+	}
+
+	.no-touch & a:hover {
+		/* steps already visited */
+		color:						darken(_palette(activetheme,color2), 30%);
+		border-bottom:				1px dashed darken(_palette(activetheme,color2), 30%);
+	}
+}
+
+.breadcrumb--custom-separator-custom-icons li > *::before {
+	/* add a custom icon before each item */
+	font-family:					"FontAwesome";
+	display:						inline-block;
+	width:							20px;
+	margin-right:					0.4em;
+	margin-top: 					-2px;
+	vertical-align:					middle;
+	content:						"\f006";
+}
+
+.breadcrumb--custom-separator-custom-icons li:not(.current):nth-of-type(2) > *::before {
+	/* change custom icon using image sprites */
+	background-position:			0px 0;
+}
+
+.breadcrumb--custom-separator-custom-icons li:not(.current):nth-of-type(3) > *::before {
+	background-position: 			-40px 0;
+}
+
+.breadcrumb--custom-separator-custom-icons li:not(.current):nth-of-type(4) > *::before {
+	background-position: 			-60px 0;
+}
+
+.breadcrumb--custom-separator-custom-icons li.current:first-of-type > *::before {
+	/* change custom icon for the current item */
+	background-position: 			0 -20px;
+}
+
+.breadcrumb--custom-separator-custom-icons li.current:nth-of-type(2) > *::before {
+	background-position: 			-20px -20px;
+}
+
+.breadcrumb--custom-separator-custom-icons li.current:nth-of-type(3) > *::before {
+	background-position: 			-40px -20px;
+}
+
+.breadcrumb--custom-separator-custom-icons li.current:nth-of-type(4) > *::before {
+	background-position: 			-60px -20px;
+}
+
+.breadcrumb--default,
+.breadcrumb--custom-separator,
+.breadcrumb--custom-separator-custom-icons{
+	@include MQ(MW) {
+		li {
+			margin: 				1.2em 0;
+
+			&::after {
+				margin: 			0 1em;
+			}
+		}
+	}
+}

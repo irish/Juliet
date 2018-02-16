@@ -1,0 +1,15 @@
+title: Media Object Component
+status: ready
+notes: TODO
+context:
+    theme: foo
+    modifier: default
+    media-object-media: http://grault.com/images.grault.com/1920x1280/jpg/image.237.jpg
+    media-object-header: This is an example of the media object header
+    media-object-body: This is an example of the card body text. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    media-object-link: Read More
+variants:
+  - name: dark
+    status: prototype
+    context:
+      modifier: dark

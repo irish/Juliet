@@ -1,0 +1,11 @@
+//TODO
+.pagination .prev,
+.pagination .next,
+.pagination .prev:hover,
+.pagination .prev:focus,
+.pagination .next:hover,
+.pagination .next:focus,
+.pagination .nav-links:before,
+.pagination .nav-links:after{
+	color:_palette(activetheme,color-x);
+}
