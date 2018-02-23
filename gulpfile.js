@@ -77,6 +77,7 @@ gulp.task('copytowp', function() {
 gulp.task('connect', function() {
 	connect.server({
 		root: 'build/',
+		host: '10.10.17.141',
 		port: 8080,
 		livereload: true
 	});

@@ -24,34 +24,50 @@ To retain and build on top of the original styles from the parent theme, bring i
 
 //@import             'libs/vars';
 
-$font: (
-	letter-spacing:							0.01rem,
-	letter-spacing-alt:						0.5rem,
-	
-	header-text-transform:					none,
-	
-	weight-light:							100,
-	weight:									400,
-	weight-bold:							600,
-	weight-extrabold:						700,
-	weight-megabold:						900,
-	
-	kerning:								0.01rem,
-	kerning-alt:							0.1rem,
-	
-	line-height:							1.6rem
-);
+:root{
+    --black:                    #000000;
+    --charcoal:                 #1a1a1a;
+    --carbon:                   #686868;
+    --white:                    #ffffff;
+    --red:                      #E74C3C;
+    --orange:                   #dd9933;
+    --navy:                     #2C3E50;
+    --pale:                     #ECF0F1;
+    --light-blue:               #007acc;
+    --blue:                     #ECF0F1;
+    --green:                    #46B29D;
+    --gradientA:                linear-gradient(to top,#000 0%, #09203f 50%, #537895 100%);
+    --gradientB:                linear-gradient(to top, #30cfd0 0%, #330867 100%);
+
+    --background-color:             var(--charcoal);
+    --custom-background-color:      var(--red);
+    --page-background-color:        var(--white);
+    --custom-page-background-color: var(--red);
+    --global-link-color:            var(--light-blue);
+    --main-text-color:              var(--charcoal);
+    --secondary-text-color:         var(--carbon);
+
+    --letter-spacing:			    0.01rem;
+    --letter-spacing-alt:		    0.5rem;
+    --header-text-transform:	    none;
+    --weight-light:			        100;
+	--weight:					    400;
+	--weight-bold:				    600;
+	--weight-extrabold:			    700;
+    --weight-megabold:			    900;
+    --kerning:					    0.01rem;
+    --kerning-alt:				    0.1rem;
+    --line-height:				    1.6rem;
+}
+
 @import             'libs/functions';
 @import             'libs/mixins';
 @import             'libs/wordpress-mod/2016/style';
-// @import 'libs/genericons';
-//@import 'layout';
 
 
-// 1. Add your custom variables and variable overwrites.
-$base-body-background:  pink;
+// 1. CUSTOM VARIABLES AND VARIABLE OVERWRITES
 $base-body-background:  transparent;
-$global-link-color:     red;
+$global-link-color:     var(--global-link-color);
 
 // 2. Import default variables and available mixins.
 @import             'ui/variables-theme';
@@ -63,41 +79,29 @@ $global-link-color:     red;
 // 4. Import UIkit.
 @import             'ui/uikit-theme';
 
-
-
-.hidden{
-    display: none;
-}
+.hidden{display: none;}
 
 html {
-    font-size:calc(13px + 0.2vw);
-    background-image: linear-gradient(to top,#000 0%, #09203f 50%, #537895 100%);    
-    //background: transparent;
+    font-size:              calc(13px + 0.2vw);
+    //background:             #000000;//≤IE11
+    // background:             var(--black);
 }
 
-
 body{
-	font-weight:_font(weight);
-	letter-spacing:_font(kerning);
-    line-height:_font(line-height) * 1;
-    background: none;
-    &.custom-background{//THEME CUSTOMIZER(NEED TO OVERIDE INLINE STYLE BY WP)
-        background-color: orange;
+    font-weight:            400;//≤IE11
+    font-weight:            var(--weight);
+    letter-spacing:         0.01rem;//IE11
+    letter-spacing:         var(--kerning);
+    line-height:            1.6rem;//≤IE11
+    line-height:            calc(var(--line-height)*1);
+    &.custom-background{//THEME CUSTOMIZER(NEED TO OVERIDE INLINE STYLE CREATED BY WP uSING !important )
+        background-color: var(--custom-background-color)!important;
     }
     @include            font-smoothing;
     &:not(.custom-background-image)::before,
     &:not(.custom-background-image)::after{
-        content:unset;
+        content:            unset;
     }
-}
-
-@include headings {
-    font-family:serif;
-}
-
-.site{
-    background:#fff;
-    margin: 10rem;
 }
 
 //  COLORS
@@ -107,18 +111,32 @@ body{
 //  4.Main Text Color
 //  5.Secondary Text Color
 
-.site-branding{}
+.site{
+    background:             #ECF0F1;//≤IE11
+    background:             var(--page-background-color);
+    margin:                 2rem;
+}
+
+//WP MAIN TEXT SELECTOR
+body, blockquote cite, blockquote small, .main-navigation a, .menu-toggle, .dropdown-toggle, .social-navigation a, .post-navigation a, .pagination a:hover, .pagination a:focus, .widget-title a, .site-branding .site-title a, .entry-title a, .page-links > .page-links-title, .comment-author, .comment-reply-title small a:hover, .comment-reply-title small a:focus{
+    color: var( --main-text-color);
+}
+
+//WP SECONDARY TEXT SELECTOR
+blockquote, .post-password-form label, a:hover, a:focus, a:active, .post-navigation .meta-nav, .image-navigation, .comment-navigation, .widget_recent_entries .post-date, .widget_rss .rss-date, .widget_rss cite, .site-description, .author-bio, .entry-footer, .entry-footer a, .sticky-post, .taxonomy-description, .entry-caption, .comment-metadata, .pingback .edit-link, .comment-metadata a, .pingback .comment-edit-link, .comment-form label, .comment-notes, .comment-awaiting-moderation, .logged-in-as, .form-allowed-tags, .site-info, .site-info a, .wp-caption .wp-caption-text, .gallery-caption, .widecolumn label, .widecolumn .mu_register label{
+    color: var( --secondary-text-color);
+}
 
 .custom-logo-link {
-    display:inline-block;
+    display:        inline-block;
     img{
-        display: inline-block;
-        width: 2em;
+        display:    inline-block;
+        width:      2em;
     }
 }
 .wp-custom-logo .site-title{//THEME CUSTOMIZER
-    display: inline-block;
-    position: relative;
-    top: 0.2em;
-    left: 0.1em;
+    display:    inline-block;
+    position:   relative;
+    top:        0.2em;
+    left:       0.1em;
 }
