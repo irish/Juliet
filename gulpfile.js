@@ -77,9 +77,12 @@ gulp.task('copytowp', function() {
 gulp.task('connect', function() {
 	connect.server({
 		root: 'build/',
+		port: 8080,
 		livereload: true
 	});
 });
+
+
 
 gulp.task('watch', function(){
 	gulp.watch(paths.sassSource + '**/*.scss', 	['sass','copytowp']);

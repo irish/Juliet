@@ -1,36 +1,16 @@
-//- The template for displaying the header
-//- Displays all of the head element and everything up until the "site-content" div
-doctype html
-html.no-js
-head
-    meta(charset="")
-    meta(name="viewport" content="width=device-width, initial-scale=1")
-    link(rel="profile" href="http://gmpg.org/xfn/11")
-    link(rel="pingback" href="#")
-    link(rel="stylesheet" href="style.css")
-//head
-body
-    #page.site
-        .site-inner
-            a.skip-link.screen-reader-text(href="#content")
-                |Skip to content
-            header#masthead.site-header(role-banner)
-                .site-header-main
-                    .site-branding
-                        h1.site-title
-                            a(href="#")|The Site Name
-                        //h1.site-title
-                        p.site-description|A website
-                        //p.site-description
-                    //.site-branding
-                    button#menu-toggle.menu-toggle|Menu
-                    //button#menu-toggle.menu-toggle
-                    nav#site-header-menu.site-header-menu(role="navigation" aria-label="Primary Menu")
-                    //nav#site-header-menu.site-header-menu
-                //.site-header-main
-                .header-image
-                    a(href="#")
-                        img(src="img/medium/image-0.jpg")
-                //.header-image
-            //.site-header
-            #content.site-content
+header#masthead.site-header(role-banner)
+    .site-header-main
+        .site-branding
+            <a href="http://localhost:8888/local/Juliet/wordpress/" class="custom-logo-link" rel="home" itemprop="url"><img src="http://localhost:8888/local/Juliet/wordpress/wp-content/uploads/2018/02/cropped-juliet-logo-1.png" class="custom-logo" alt="Juliet" itemprop="logo" srcset="http://localhost:8888/local/Juliet/wordpress/wp-content/uploads/2018/02/cropped-juliet-logo-1.png 240w, http://localhost:8888/local/Juliet/wordpress/wp-content/uploads/2018/02/cropped-juliet-logo-1-150x150.png 150w" sizes="(max-width: 240px) 85vw, 240px" width="240" height="240"></a>
+            h1.site-title
+                a(href="#")|Juliet
+            p.site-description|Just another WordPress site
+        //site-branding
+        #site-header-menu.site-header-menu
+            nav#site-navigation.main-navigation(role="navigation" aria-label="Primary Menu")
+                .menu-primary-menu-container
+                    ul#menu-primary-menu.primary-menu
+                        li#menu-item-1697.menu-item.menu-item-type-post_type.menu-item-object-page.menu-item-1697
+                            a(href="#")|Front Page
+        //site-header-menu.site-header-menu
+    //site-header-main

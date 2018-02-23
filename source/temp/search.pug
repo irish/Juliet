@@ -1,32 +1,5 @@
-//- home.pug
-	The template for displaying the home
-
-	This is the template that displays all pages by default.
-	Please note that this is the WordPress construct of pages
-	and that other 'pages' on your WordPress site may use a
-	different template.
-doctype html
-html(lang="en")
-	head
-		title#output Juliete: Search
-		meta(charset='utf-8')
-		meta(http-equiv='x-ua-compatible', content='ie=edge')
-		meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
-		include data/_#meta.pug
-		link(rel="apple-touch-icon", sizes="180x180", href="assets/favicons/apple-touch-icon.png")
-		link(rel="icon", type="image/png", sizes="32x32", href="assets/favicons/favicon-32x32.png")
-		link(rel="icon", type="image/png", sizes="16x16", href="assets/favicons/favicon-16x16.png")
-		link(rel="manifest", href="assets/favicons/manifest.json")
-		link(rel="mask-icon", href="assets/favicons/safa805ri-pinned-tab.svg", color="#5bbad5")
-		meta(name="theme-color", content="#ffffff")
-		link(rel='stylesheet', href='style.css')
-	body.home
-		div#page.site.animsation
-			.site-inner
-				.site-stripe
-				include template-parts/header/_#header-fixed.pug
-				#content.site-content
-					#primary
-						main#main
-							include content/_#typography.pug
-				include footer.pug
+//- The template for displaying search results pages
+section#primary.content-area
+    main#main.site-main(role="main")
+    //main#main.site-main(role="main")
+//section#primary.content-area

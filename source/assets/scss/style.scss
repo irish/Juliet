@@ -1,5 +1,5 @@
 /*
-Theme Name:   Twenty Sixteen Child Theme
+Theme Name:   Juliet?
 Theme URI:    https//:idealpositions.com
 Description:  A Twenty Sixteen child theme
 Author:       Brian Murray
@@ -22,21 +22,36 @@ To retain and build on top of the original styles from the parent theme, bring i
 // @import 'libs/reset';
 // @import 'libs/normalize';
 
-@import             'libs/vars';
+//@import             'libs/vars';
+
+$font: (
+	letter-spacing:							0.01rem,
+	letter-spacing-alt:						0.5rem,
+	
+	header-text-transform:					none,
+	
+	weight-light:							100,
+	weight:									400,
+	weight-bold:							600,
+	weight-extrabold:						700,
+	weight-megabold:						900,
+	
+	kerning:								0.01rem,
+	kerning-alt:							0.1rem,
+	
+	line-height:							1.6rem
+);
 @import             'libs/functions';
 @import             'libs/mixins';
-
-
-
-@import 'libs/wordpress-mod/2016/style';
+@import             'libs/wordpress-mod/2016/style';
 // @import 'libs/genericons';
-
 //@import 'layout';
 
 
-// 1. Your custom variables and variable overwrites.
-$global-background: #000;
-$global-color:      rgb(230, 230, 230) !default;
+// 1. Add your custom variables and variable overwrites.
+$base-body-background:  pink;
+$base-body-background:  transparent;
+$global-link-color:     red;
 
 // 2. Import default variables and available mixins.
 @import             'ui/variables-theme';
@@ -48,9 +63,62 @@ $global-color:      rgb(230, 230, 230) !default;
 // 4. Import UIkit.
 @import             'ui/uikit-theme';
 
-html {
-    font-size:      calc(13px + 0.2vw);
+
+
+.hidden{
+    display: none;
 }
+
+html {
+    font-size:calc(13px + 0.2vw);
+    background-image: linear-gradient(to top,#000 0%, #09203f 50%, #537895 100%);    
+    //background: transparent;
+}
+
+
+body{
+	font-weight:_font(weight);
+	letter-spacing:_font(kerning);
+    line-height:_font(line-height) * 1;
+    background: none;
+    &.custom-background{//THEME CUSTOMIZER(NEED TO OVERIDE INLINE STYLE BY WP)
+        background-color: orange;
+    }
+    @include            font-smoothing;
+    &:not(.custom-background-image)::before,
+    &:not(.custom-background-image)::after{
+        content:unset;
+    }
+}
+
 @include headings {
-    font-family:    serif;
+    font-family:serif;
+}
+
+.site{
+    background:#fff;
+    margin: 10rem;
+}
+
+//  COLORS
+//  1.Background Color
+//  2.Page Background Color
+//  3.Link Color
+//  4.Main Text Color
+//  5.Secondary Text Color
+
+.site-branding{}
+
+.custom-logo-link {
+    display:inline-block;
+    img{
+        display: inline-block;
+        width: 2em;
+    }
+}
+.wp-custom-logo .site-title{//THEME CUSTOMIZER
+    display: inline-block;
+    position: relative;
+    top: 0.2em;
+    left: 0.1em;
 }

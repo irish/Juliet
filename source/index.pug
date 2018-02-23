@@ -1,1 +1,20 @@
-include includes/_header.pug
+doctype html
+html(lang="en")
+	head
+		meta(charset="")
+		meta(name="viewport" content="width=device-width, initial-scale=1")
+		link(rel="profile" href="http://gmpg.org/xfn/11")
+		link(rel="pingback" href="#")
+		link(rel="stylesheet" href="style.css")
+		title| Home
+	//- body.wp-custom-logo
+	//- body
+	//body.wp-custom-logo.custom-background
+	body
+		#page.site
+			.site-inner
+				include includes/_header.pug
+				//header.pug
+				include includes/_main.pug
+				//main.pug
+				include includes/_footer.pug
