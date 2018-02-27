@@ -5,109 +5,64 @@ LAYOUT PROPERTIES INCLUDES THE FOLLOWING RULES:
 3. Clear
 4. Display
 5. Media Queries
-========================================================================== */	
-.constrainer{
-	display: 								grid;
+========================================================================== */
+
+.site-inner{
+    display:                                grid;
+    grid-template-columns:                  repeat(12, 1fr);
 	max-width: 								1440px;
 	margin: 								0 auto;
 }
-#content.site-content{
-	// display: 						grid;
-	// grid-template-columns:			1fr;
-	.sidebar{
-		padding: 0;
-	}
+
+.site-header,.site-content,.site-footer{
+    grid-column: span 12;
 }
 
-// @include MQ(MW){
-// 	#content.site-content-sidebar{
-// 		&:before{
-// 			display:none;
-// 		}
-// 		display: 							grid;
-// 		grid-template-columns:				3fr 1fr;
-// 		grid-gap:							$theme-gutter*5;
-// 	}
-// }
-
-// .site-inner{
-// 	margin: 								0;
-// 	max-width: 								100%;
-// }
-
-// .site-header{
-// 	top:									0;
-// }
-
-// .header-image{
-// 	grid-column: 							1;
-// 	top:									0;
-// }
-
-// .main-navigation{
-// 	position: 								relative;
-// }
-
-// .widget-area{
-// 	display:								grid;
-// 	grid-template-columns:					1fr;
-// }
+.duo,.trio,.quad{
+    display:grid;
+    grid-template-columns:1fr;
+    grid-gap: 1em;
+}
 
 
-// #content.site-content{
-// 	&:before{
-// 		display:none;
-// 	}
-// 	@supports (display:grid) {
-// 		display:							grid;
-// 		grid-template-columns:				1fr;
-// 		grid-gap:							$theme-gutter*5;
-// 	}
-// 	@supports not (display:grid) {
-// 		display:							block;
-// 		#primary {
-// 			margin-bottom:					$theme-gutter*5;
-// 		}
-// 		#secondary {
-// 			// flex:							0 0 calc(100%);
-// 		}
-// 	}
-// }
+@media screen and (min-width: 56.875em) {
+    .duo{     
+        display:grid;
+        grid-template-columns:1fr 1fr;
+        grid-gap: 1em;
+    }
+    .trio{
+        display:grid;
+        grid-template-columns:repeat(3, [column] auto);
+        grid-gap: 1em;
+    }
+    .quad{
+        display:grid;
+        grid-template-columns:repeat(4, [column] auto);
+        grid-gap: 1em;
+    }
+}
 
-// sub{
-// 	top: 									$theme-gutter;
-// }
+ //REVERSE SIDEBAR LAYOUT
+.content-reversed{
+    details, main {
+        display: block;
+    }
+    article, aside, details, figcaption, figure, footer, header, main, menu, nav, section, summary{
+        display: block;
+    }
+    @media screen and (min-width: 56.875em) {
+        .content-area {
+            float: right;
+            margin-right: 0;
+            width: 70%;
+        }
 
-// sup{
-// 	top: 									-0.5em;
-// }
-
-// sub,sup {
-// 	position: relative;
-// }
-
-// .site-description{
-// 	margin-left:							0;
-// 	display:								none;
-// }
-
-
-// 	.site-description{
-// 		display:							block;
-// 	}
-
-// 	.site-header-menu{
-// 		margin-top:							-4px;	
-// 	}
-	
-// 	.grid{
-// 		@supports (display:grid) {
-// 			display: 						grid;
-// 			grid-template-columns:			1fr 1fr 1fr 1fr;
-// 			grid-gap:						$theme-gutter;
-// 		}
-// 		@supports not (display:grid) {
-// 			display:						flex;
-// 			flex-flow:						row wrap;
-// 		}
-// 	}
+        .sidebar {
+            float: left;
+            margin-left: 0;
+            padding: 0;
+            width: 25%;
+        }
+    }
+}

@@ -6,9 +6,9 @@ html(lang="en")
 		link(rel="profile" href="http://gmpg.org/xfn/11")
 		link(rel="pingback" href="#")
 		link(rel="stylesheet" href="style.css")
-		title| Home
+		title| Contact
 	//- body.wp-custom-logo
-	body.page-template-default.page.wp-custom-logo.group-blog.no-sidebar
+	body.page-template-default.page.wp-custom-logo.group-blog.custom-background
 		#page.site
 			.site-inner
 				a.skip-link.screen-reader-text(href="#content")|Skip to content
@@ -16,7 +16,12 @@ html(lang="en")
 				//.site-header
 				#content.site-content
 					#primary.content-area
-						include includes/_main.pug
+						include includes/_main-contact.pug
+					aside#secondary.sidebar.widget-area(role='complementary')
+						section#text-4.widget.widget_text
+							h2.widget-title Sidebar
+							.textwidget
+								p|Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 				//.site-content
 				include includes/_footer.pug
 			//.site-inner
