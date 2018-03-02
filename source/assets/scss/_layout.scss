@@ -10,35 +10,61 @@ LAYOUT PROPERTIES INCLUDES THE FOLLOWING RULES:
 .site-inner{
     display:                                grid;
     grid-template-columns:                  repeat(12, 1fr);
-	max-width: 								1440px;
+	max-width: 								1200px;
 	margin: 								0 auto;
 }
 
-.site-header,.site-content,.site-footer{
-    grid-column: span 12;
+.site-header,
+.site-content,
+.site-footer,
+.site-hero,
+.site-feedback,
+.contact-duo,
+.secondary-nav{
+    grid-column:                            span 12;
 }
 
 .duo,.trio,.quad{
-    display:grid;
-    grid-template-columns:1fr;
-    grid-gap: 1em;
+    display:                                grid;
+    grid-template-columns:                  1fr;
+    grid-gap:                               1em;
 }
 
 
 @media screen and (min-width: 56.875em) {
     .duo{     
-        display:grid;
-        grid-template-columns:1fr 1fr;
-        grid-gap: 1em;
+        display:                            grid;
+        grid-template-columns:              1fr 1fr;
+        grid-gap:                           1em;
     }
     .trio{
         display:grid;
-        grid-template-columns:repeat(3, [column] auto);
+        grid-template-columns:repeat(2, [column] auto);
         grid-gap: 1em;
     }
     .quad{
         display:grid;
-        grid-template-columns:repeat(4, [column] auto);
+        grid-template-columns:repeat(2, [column] auto);
+        grid-gap: 1em;
+    }
+    .page-template-menu{
+        .site-main{
+            display:                            grid;
+            grid-template-columns:              3fr 9fr;
+            grid-gap:                           1em;
+        }
+    }
+}
+
+@media screen and (min-width: 70em) {
+    .trio{
+        display:grid;
+        grid-template-columns:1fr 1fr 1fr;
+        grid-gap: 1em;
+    }
+    .quad{
+        display:grid;
+        grid-template-columns:1fr 1fr 1fr 1fr;
         grid-gap: 1em;
     }
 }

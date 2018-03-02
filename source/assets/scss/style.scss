@@ -25,23 +25,23 @@ To retain and build on top of the original styles from the parent theme, bring i
 //@import             'libs/vars';
 
 :root{
-    --black:                    #000000;
-    --charcoal:                 #1a1a1a;
-    --carbon:                   #686868;
-    --white:                    #ffffff;
-    --red:                      #710000;
-    --orange:                   #dd9933;
-    --navy:                     #2C3E50;
-    --pale:                     #ECF0F1;
-    --light-blue:               #007acc;
-    --blue:                     #ECF0F1;
-    --green:                    #46B29D;
-    --gradientA:                linear-gradient(to top,#000 0%, #09203f 50%, #537895 100%);
-    --gradientB:                linear-gradient(to top, #30cfd0 0%, #330867 100%);
+    --black:                      #000000;
+    --charcoal:                   #1a1a1a;
+    --carbon:                     #686868;
+    --white:                      #ffffff;
+    --red:                        #710000;
+    --yellow:                     #FDC70B;
+    --navy:                       #2C3E50;
+    --pale:                       #ECF0F1;
+    --light-blue:                 #007acc;
+    --blue:                       #ECF0F1;
+    --green:                      #48D665;
+    --gradientA:                    linear-gradient(to top,#000 0%, #09203f 50%, #537895 100%);
+    --gradientB:                    linear-gradient(to top, #30cfd0 0%, #330867 100%);
 
     --background-color:             var(--charcoal);
     --custom-background-color:      var(--red);
-    --page-background-color:        var(--white);
+    --page-background-color:        var(--red);
     --custom-page-background-color: var(--red);
     --global-link-color:            var(--light-blue);
     --main-text-color:              var(--charcoal);
@@ -60,16 +60,22 @@ To retain and build on top of the original styles from the parent theme, bring i
     --line-height:				    1.6rem;
 }
 
-@import                     'libs/functions';
-@import                     'libs/mixins';
-@import                     'libs/wordpress-mod/2016/style';
+@import                             'libs/functions';
+@import                             'libs/mixins';
+@import                             'libs/wordpress-mod/2016/style';
 
-@import                     'wp-overides';
+@import                              'wp-overides';
 
 
 // 1. CUSTOM VARIABLES AND VARIABLE OVERWRITES
-$base-body-background:      transparent;
-$global-link-color:         var(--global-link-color);
+$base-body-background:          transparent;
+$global-link-color:             var(--global-link-color);
+$navbar-nav-item-color:         #fff;
+$navbar-nav-item-padding-horizontal:        10px;
+$navbar-nav-item-height:        40px;
+$iconnav-margin-horizontal:     0px;
+// $overlay-padding-vertical: 100px;
+// $overlay-padding-horizontal: 100px;
 
 // 2. Import default variables and available mixins.
 @import                     'ui/variables-theme';
@@ -77,6 +83,39 @@ $global-link-color:         var(--global-link-color);
 
 // 3. Your custom mixin overwrites.
 @mixin                      hook-text-lead() { color: rgb(36, 78, 196); }
+@mixin                      hook-overlay-default() {background:rgba(0,0,0,0.6) }
+@mixin                      hook-navbar-nav-item-active(){
+    color:var(--white);
+    font-weight: 900;
+    text-decoration: underline;
+}
+
+@mixin hook-navbar-nav-item-hover(){
+    text-decoration: underline;
+    color:var(--white);
+}
+@mixin hook-card-badge(){
+    top:    auto;
+    bottom: 10px;
+    right:  10px;
+}
+
+@mixin hook-card-title(){
+    font-size: 1.2em;
+}
+
+@mixin hook-card-default(){
+    background: rgba(250,250,250,0.97);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
+    &:hover
+    {box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);}
+}
+
+@mixin hook-label{
+    background: var(--green);
+}
+
+
 
 // 4. Import UIkit.
 @import                     'ui/uikit-theme';
@@ -101,12 +140,38 @@ $global-link-color:         var(--global-link-color);
     }
 }
 
-.hidden{display: none;}
+.box-shadow{
+    box-shadow: -40px 40px 160px 0 rgba(0,0,0,0.08),
+                -8px 8px 15px 0 rgba(120,120,120,0.04),
+                3px 3px 30px 0 rgba(0,0,0,0.04);
+}
+
+.hidden{
+    display: none;
+}
+
+.lazyload {
+	opacity: 0;
+}
+
+.lazyloading {
+	opacity: 1;
+	transition: opacity 1500ms;
+	background: #f7f7f7 url("img/loading.gif") no-repeat center;
+}
 
 html {
     font-size:              calc(13px + 0.2vw);
     background:             #000000;//≤IE11
-    background:             var(--charcoal);
+    background:             var(--white);
+}
+
+body{
+    background:             var(--white);
+    @include                headings{
+        text-transform:     uppercase;
+        font-weight:        bold;
+    }
 }
 
 body, button, input, select, textarea{
@@ -122,6 +187,162 @@ body, button, input, select, textarea{
 code{
     word-wrap:              break-word;
 }
+
+.site-header{
+    padding-bottom: 0;
+    [class*="uk-align"]{
+        margin-bottom: 0;
+    }
+}
+
+#content{
+    background-image: url(img/branding/bamboo-2-red.svg),url(img/branding/bamboo-red.svg);background-repeat: no-repeat, no-repeat;background-position:  -5% 101%,  105% 101%;background-size: 30%, 30%;
+}
+
+.site-hero,
+.site-feedback{
+    //background-color: var(--red);
+    @media screen and (min-width: 92.1em) {
+        background-color: var(--white);
+    }
+    padding:            1em;
+}
+
+.uk-slider-items{
+    @include                headings{
+        color:              var(--white);
+        text-transform:     uppercase;
+        font-weight:        bold;
+        font-size:          2em;
+    }
+}
+
+.secondary-nav{
+    padding:                1em;
+    @media screen and (min-width: 56.875em) {
+        padding:            0em;
+        margin-top:         1em;
+    }
+    @include                headings{
+        color:              var(--white);
+        text-transform:     uppercase;
+        font-weight:        bold;
+        font-size: 1em;
+    }
+}
+
+.secondary-nav{
+    // margin-top: 1em;
+}
+
+.site-content{
+    background-color:              var(--white);
+    margin-top:                     1em;
+}
+
+.site-feedback > div{
+    margin-top: 1em;
+    padding: 1em;
+}
+
+.contact-duo{
+    margin-top: 1em;
+    .duo{
+        div{
+            background-color:              var(--white);
+            padding: 1em;
+        }
+    }
+}
+
+
+
+.blur-up {
+    filter: blur(5px);
+    transition: filter 400ms;
+}
+
+.blur-up.lazyloaded {
+    filter: blur(0);
+}
+
+aside.tertiary-navigation{
+    padding: 1em;
+    background: rgba(255,255,255,0.98);
+    @media screen and (min-width: 56.875em) {
+        border-right: 1px solid #e5e5e5;
+    }
+}
+
+
+.site-footer{
+    margin-top:                     1em;
+    .site-info{
+        margin: 0 auto;
+    }
+    a{
+        color:#fff;
+        &:hover{
+            color:#fff;
+            text-decoration: underline;
+        }
+    }
+    a#back-to-top{
+        position: relative;
+        right:1em;
+    }
+}
+
+.uk-iconnav li{
+    &:hover{
+        background-color: rgba(0,0,0,0.5);
+        a{
+            text-shadow: 0px 1px 21px #000;
+        }
+    }
+    &.active{
+        //background-color: rgba(0,0,0,0.5);
+        box-shadow: inset 0px 0px 2px rgba(0,0,0,0.7);
+        background-color: rgba(0,0,0,0.2);
+        a{
+            color: rgba(255,255,0,0.6)
+        }
+    }
+}
+
+body.home .home-link{
+    box-shadow: inset 0px 0px 2px rgba(0,0,0,0.7);
+    background-color: rgba(0,0,0,0.2);
+    a{
+        color: rgba(255,255,0,0.6)
+    }
+}
+
+body.about .about-link{
+    box-shadow: inset 0px 0px 2px rgba(0,0,0,0.7);
+    background-color: rgba(0,0,0,0.2);
+    a{
+        color: rgba(255,255,0,0.6)
+    }
+}
+
+body.menu .menu-link{
+    box-shadow: inset 0px 0px 2px rgba(0,0,0,0.7);
+    background-color: rgba(0,0,0,0.2);
+    a{
+        color: rgba(255,255,0,0.6)
+    }
+}
+
+body.contact .contact-link{
+    box-shadow: inset 0px 0px 2px rgba(0,0,0,0.7);
+    background-color: rgba(0,0,0,0.2);
+    a{
+        color: rgba(255,255,0,0.6)
+    }
+}
+
+
 //  COLORS
 //  1.Background Color
 //  2.Page Background Color

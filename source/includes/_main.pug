@@ -1,94 +1,93 @@
 main#main.site-main
-    article.type-page
-        header.entry-header
-            h1.entry-title|Header H1
-        .post-thumbnail
-            img(src="img/full/image-0.jpg")
-        .quad
-            .uk-background-cover.uk-height-medium.uk-panel.uk-flex.uk-flex-center.uk-flex-middle(style="background-image: url(img/medium/image-0.jpg);")
-            .uk-background-cover.uk-height-medium.uk-panel.uk-flex.uk-flex-center.uk-flex-middle(style="background-image: url(img/medium/image-0.jpg);")
-            .uk-background-cover.uk-height-medium.uk-panel.uk-flex.uk-flex-center.uk-flex-middle(style="background-image: url(img/medium/image-0.jpg);")
-            .uk-background-cover.uk-height-medium.uk-panel.uk-flex.uk-flex-center.uk-flex-middle(style="background-image: url(img/medium/image-0.jpg);")
-        .entry-content
-            h2
-                a|Header Link H2
-            h2|Header H2
-            p|Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            hr
-            .trio
+    article
+        header.uk-text-center
+            h2.uk-heading-line.uk-text-center
+                span
+                    |Our Menu
+            h4|Categories
+        .content
+            .quad
                 .uk-card.uk-card-default
                     .uk-card-media-top
-                        img(src="img/medium/image-0.jpg" alt="")
-                    .uk-card-body
-                        h3.uk-card-title|Media Top
-                        p|Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
+                        a(href="menu.html")
+                            img(src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src='img/small/image-1.jpg',  class="lazyload" width="480" height="270" alt="Appetizers")
+                    .uk-card-body.uk-text-center
+                        h3.uk-card-title Appetizers / Khai Vis
+                        a.uk-button.uk-button-default(href='menu.html') View
                 .uk-card.uk-card-default
                     .uk-card-media-top
-                        img(src="img/medium/image-0.jpg" alt="")
-                    .uk-card-body
-                        h3.uk-card-title|Media Top
-                        p|Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
+                        a(href="salads.html")
+                            img(src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src='img/small/image-2.jpg',  class="lazyload" width="480" height="270" alt="Salad")
+                    .uk-card-body.uk-text-center
+                        h3.uk-card-title Salad
+                        a.uk-button.uk-button-default(href='salads.html') View
                 .uk-card.uk-card-default
                     .uk-card-media-top
-                        img(src="img/medium/image-0.jpg" alt="")
-                    .uk-card-body
-                        h3.uk-card-title|Media Top
-                        p|Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
-            hr
-            .duo
-                .uk-background-cover.uk-height-medium.uk-panel.uk-flex.uk-flex-center.uk-flex-middle(style="background-image: url(img/medium/image-0.jpg);")
-                    p.uk-h4|Cover
-                .uk-background-cover.uk-height-medium.uk-panel.uk-flex.uk-flex-center.uk-flex-middle(style="background-image: url(img/medium/image-0.jpg);")
-                    form(action="")
-                        fieldset.uk-fieldset
-                            .uk-margin
-                                input.uk-input(type="text" placeholder="Your Name")
-                            .uk-margin
-                                input.uk-input(type="email" placeholder="Email")
-                            .uk-margin
-                                textarea.uk-textarea(rows="5" placeholder="Comments")
-                            .uk-margin
-
-    #comments.comments-area
-        #respond.comment-respond
-            h2#reply-title.comment-reply-title
-                | Leave a Reply 
-                small
-                    a#cancel-comment-reply-link(rel='nofollow', href='#', style='display:none;') Cancel reply
-            form#commentform.comment-form(action='#', method='post', novalidate='')
-                p.comment-notes
-                    span#email-notes Your email address will not be published.
-                    |  Required fields are marked 
-                    span.required *
-                p.comment-form-comment
-                    label(for='comment') Comment
-                    textarea#comment(name='comment', cols='45', rows='8', maxlength='65525', aria-required='true', required='required')
-                p.comment-form-author
-                    label(for='author')
-                        | Name 
-                        span.required *
-                    input#author(name='author', value='', size='30', maxlength='245', aria-required='true', required='required', type='text')
-                p.comment-form-email
-                    label(for='email')
-                        | Email 
-                        span.required *
-                    input#email(name='email', value='', size='30', maxlength='100', aria-describedby='email-notes', aria-required='true', required='required', type='email')
-                p.comment-form-url
-                    label(for='url') Website
-                    input#url(name='url', value='', size='30', maxlength='200', type='url')
-                p.form-submit
-                    input#submit.submit(name='submit', value='Post Comment', type='submit')
-                    input#comment_post_ID(name='comment_post_ID', value='701', type='hidden')
-                    input#comment_parent(name='comment_parent', value='0', type='hidden')
-        // #respond
-aside#content-bottom-widgets.content-bottom-widgets(role="complementary")
-    .widget-area
-        section#text-2.widget.widget_text
-            h2.widget-title|Content Bottom 1
-            .textwidget
-                p|Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-    .widget-area
-        section#text-2.widget.widget_text
-            h2.widget-title|Content Bottom 1
-            .textwidget
-                p|Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        a(href="addons.html")
+                            img(src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src='img/small/image-3.jpg',  class="lazyload" width="480" height="270" alt="Add Ons")
+                    .uk-card-body.uk-text-center
+                        h3.uk-card-title Add Ons
+                        a.uk-button.uk-button-default(href='addons.html') View
+                .uk-card.uk-card-default
+                    .uk-card-media-top
+                        a(href="beef-noodle-soup.html")
+                            img(src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src='img/small/image-4.jpg',  class="lazyload" width="480" height="270" alt="Beef Noodle Soup")
+                    .uk-card-body.uk-text-center
+                        h3.uk-card-title Beef Noodle Soup/Pho
+                        a.uk-button.uk-button-default(href='beef-noodle-soup.html') View
+                .uk-card.uk-card-default
+                    .uk-card-media-top
+                        a(href="chicken-noodle-soup.html")
+                            img(src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src='img/small/image-5.jpg',  class="lazyload" width="480" height="270" alt="Chicken Noodle Soup")
+                    .uk-card-body.uk-text-center
+                        h3.uk-card-title Chicken Noodle Soup / Pho Ga
+                        a.uk-button.uk-button-default(href='chicken-noodle-soup.html') View
+                .uk-card.uk-card-default
+                    .uk-card-media-top
+                        a(href="seafood-noodle-soup.html")
+                            img(src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src='img/small/image-6.jpg',  class="lazyload" width="480" height="270" alt="Seafood Noodle Soup")
+                    .uk-card-body.uk-text-center
+                        h3.uk-card-title Seafood Noodle Soup / Hu Tiu Mi
+                        a.uk-button.uk-button-default(href='seafood-noodle-soup.html') View
+                .uk-card.uk-card-default
+                    .uk-card-media-top
+                        a(href="rice-plates.html")
+                            img(src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src='img/small/image-7.jpg',  class="lazyload" width="480" height="270" alt="Rice Plates")
+                    .uk-card-body.uk-text-center
+                        h3.uk-card-title Rice Plate / Com
+                        a.uk-button.uk-button-default(href='rice-plates.html') View
+                .uk-card.uk-card-default
+                    .uk-card-media-top
+                        a(href="vermicelli.html")                    
+                            img(src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src='img/small/image-8.jpg',  class="lazyload" width="480" height="270" alt="Vermicelli Noodle Dish")
+                    .uk-card-body.uk-text-center
+                        h3.uk-card-title Vermicelli / Bun
+                        a.uk-button.uk-button-default(href='vermicelli.html') View
+                .uk-card.uk-card-default
+                    .uk-card-media-top
+                        a(href="vegetarian.html")
+                            img(src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src='img/small/image-9.jpg',  class="lazyload" width="480" height="270" alt="Vegetarian")
+                    .uk-card-body.uk-text-center
+                        h3.uk-card-title Vegetarian / Do Chay
+                        a.uk-button.uk-button-default(href='vegetarian.html') View
+                .uk-card.uk-card-default
+                    .uk-card-media-top
+                        a(href="menu.html" width="480" height="270")
+                            img(src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src='img/small/image-10.jpg',  class="lazyload" width="480" height="270" alt="Soup")
+                    .uk-card-body.uk-text-center
+                        h3.uk-card-title Soups
+                        p
+                .uk-card.uk-card-default
+                    .uk-card-media-top
+                        a(href="menu.html")
+                            img(src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src='img/small/image-11.jpg',  class="lazyload" width="480" height="270" alt="Curry")
+                    .uk-card-body.uk-text-center
+                        h3.uk-card-title Curries
+                        p
+                .uk-card.uk-card-default
+                    .uk-card-media-top
+                        a(href="kids-menu.html")
+                            img(src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src='img/small/image-12.jpg',  class="lazyload" width="480" height="270" alt="Kids Menu Item")
+                    .uk-card-body.uk-text-center
+                        h3.uk-card-title Kids Menu
+                        a.uk-button.uk-button-default(href='kids-menu.html') View

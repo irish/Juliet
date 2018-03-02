@@ -24,9 +24,16 @@ blockquote, .post-password-form label, a:hover, a:focus, a:active, .post-navigat
 }
 
 .site{
-    background:             #ECF0F1;//≤IE11
+    background:             #710000;//≤IE11
     background:             var(--page-background-color);
-    margin:                 2rem;
+    margin:                 0;
+    background-image:       url(img/branding/vietnam-hills.jpg), linear-gradient(to top, #710000 0%, #710000 50%,#710000 95%, #5c0101 100%);
+    background-position:    bottom;
+    background-repeat:      no-repeat;
+    background-size:        100%;
+    @media screen and (min-width: 56.875em) {
+        margin:                 1em;
+    }
 }
 
 .custom-logo-link {
@@ -45,9 +52,14 @@ blockquote, .post-password-form label, a:hover, a:focus, a:active, .post-navigat
 }
 
 .site-content{
-    padding:                2.625em 7.6923%;
+    padding:                2.625em 4%;
 }
 
 .site-branding{
-    margin-top: 0;
+    margin-top:             0;
+}
+
+.site-header {
+  padding:                  1em 3.6923%;
+  margin-bottom:            1em;
 }

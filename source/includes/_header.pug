@@ -1,25 +1,21 @@
 header#masthead.site-header(role-banner)
-    .site-header-main
-        .site-branding
-            <a href="index.html" class="custom-logo-link" rel="home" itemprop="url"><img src="http://10.10.17.141:8888/local/Juliet/wordpress/wp-content/uploads/2018/02/cropped-juliet-logo-1.png" class="custom-logo" alt="Juliet" itemprop="logo" srcset="http://10.10.17.141:8888/local/Juliet/wordpress/wp-content/uploads/2018/02/cropped-juliet-logo-1.png 240w, http://10.10.17.141:8888/local/Juliet/wordpress/wp-content/uploads/2018/02/cropped-juliet-logo-1-150x150.png 150w" sizes="(max-width: 240px) 85vw, 240px" width="240" height="240"></a>
-            h1.site-title
-                a(href="index.html")|Juliet
-            p.site-description|Just another WordPress site
-            span.supported|Grid
-            span.unsupported|No Grid
-        //site-branding
-        button#menu-toggle.menu-toggle|Menu
-        #site-header-menu.site-header-menu
-            nav#site-navigation.main-navigation(role="navigation" aria-label="Primary Menu")
-                .menu-primary-menu-container
-                    ul#menu-primary-menu.primary-menu
-                        li#menu-item-1697.menu-item.menu-item-type-post_type.menu-item-object-page.menu-item-1697
-                            a(href="index.html")|Front Page
-                        li#menu-item-1763.menu-item.menu-item-type-post_type.menu-item-object-page.menu-item-1763
-                            a(href="blog.html")|Blog
-                        li#menu-item-1763.menu-item.menu-item-type-post_type.menu-item-object-page.menu-item-1763
-                            a(href="about.html")|About The Tests
-                        li#menu-item-1763.menu-item.menu-item-type-post_type.menu-item-object-page.menu-item-1763
-                            a(href="contact.html")|Contact
-        //site-header-menu
-    //site-header-main
+    a(href='index.html' class="logo")
+        img.uk-align-center(src="img/branding/pho-logo.png" width="200")
+    nav#nav.uk-navbar-container.uk-navbar-transparent(uk-navbar='')
+        .uk-navbar-center
+            ul(class="uk-navbar-nav uk-iconnav")
+                li.home-link
+                    a(href="index.html" uk-icon="icon: home; ratio: 1" uk-tooltip="Home" class="uk-icon" title="Home")
+                li.menu-link
+                    a(href="menu.html" uk-icon="icon: menu; ratio: 1" uk-tooltip="The Menu" class="uk-icon" title="The Menu")
+                li.about-link
+                    a(href="about.html" uk-icon="icon: info; ratio: 1" uk-tooltip="About Us" class="uk-icon" title="About Us")
+                li.contact-link
+                    a(href="contact.html" uk-icon="icon: location; ratio: 1" uk-tooltip="Contat Us" class="uk-icon" title="Contact Us")
+                li
+                    a(href="tel:+1-707-445-4735" uk-icon="icon: receiver; ratio: 1" uk-tooltip="Call Us: 707-445-4735" class="uk-icon" title="Call Us")
+                li
+                    a(href="https://www.yelp.com/biz/pho-thien-long-eureka-2" uk-icon="icon: yelp; ratio: 1" uk-tooltip="View our Yelp page" class="uk-icon" title="View our Yelp page" target="_blank")
+                li
+                    a(href="https://www.facebook.com/pages/Pho-Thien-Long/122014994478614" uk-icon="icon: facebook; ratio: 1" uk-tooltip="View our Facebook page" class="uk-icon" title="View our Facebook page" target="_blank")
+                    

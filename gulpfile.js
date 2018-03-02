@@ -2,7 +2,7 @@ var gulp = require('gulp'),
 	sass = require('gulp-sass'),
 	concat = require('gulp-concat'),
 	pug = require('gulp-pug'),
-	//htmlmin = require('gulp-htmlmin'),
+	htmlmin = require('gulp-htmlmin'),
 	htmlbeautify = require('gulp-html-beautify'),
 	validator = require('gulp-html'),
 	imagemin = require('gulp-imagemin'),
@@ -39,11 +39,11 @@ gulp.task('html', function(){
 // 	.pipe(gulp.dest('build'))
 // });
 
-// gulp.task('minify', function() {
-// 	return gulp.src('build/*.html')
-// 		.pipe(htmlmin({collapseWhitespace: false,removeComments:false,useShortDoctype:true}))
-// 		.pipe(gulp.dest('build'));
-// });
+gulp.task('minify', function() {
+	return gulp.src('build/*.html')
+		.pipe(htmlmin({collapseWhitespace: true,removeComments:true,useShortDoctype:true}))
+		.pipe(gulp.dest('build'));
+});
 
 gulp.task('scripts', function () {
 	return gulp.src(paths.jsSource + '**/*.js  ')
@@ -92,13 +92,14 @@ gulp.task('watch', function(){
 	gulp.watch('source/**/*.pug', 	['html']);
 })
 
-gulp.task('default', [
-	'html',
-	'sass',
-	'scripts',
-	'imagemin',
-	// 'htmlbeautify',
-	'copytowp',
-	'connect',
-	'watch'
+gulp.task("default", [
+  "html",
+  "sass",
+  "scripts",
+  "imagemin",
+  "minify",
+  // 'htmlbeautify',
+  "copytowp",
+  "connect",
+  "watch"
 ]);
