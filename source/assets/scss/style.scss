@@ -77,11 +77,11 @@ $global-link-color:         var(--global-link-color);
 
 // 3. Your custom mixin overwrites.
 @mixin                      hook-text-lead() { color: rgb(36, 78, 196); }
-
+@mixin                      hook-card-default() { box-shadow: none; }
 // 4. Import UIkit.
 @import                     'ui/uikit-theme';
 
-@mixin uk-card-default() { box-shadow: none; }
+
 
 // HELPERS
 .supported, .unsupported {
@@ -136,6 +136,24 @@ code{
 @import                     'layout';
 
 @import                     'rkl';
+
+.featurettes{
+    .uk-card-default .uk-card-title{
+        color:#fff;
+    }
+    div:nth-child(1){
+        background-image: linear-gradient(to bottom, #D35836 0%, #E38C00 100%);
+        color:#fff;
+    }
+    div:nth-child(2){
+        background-image: linear-gradient(to bottom, #EF8C12 0%, #EF8C12 100%);
+        color:#fff;
+    }
+    div:nth-child(3){
+        background-image: linear-gradient(to bottom, #F4A720 0%, #FFC65F 100%);
+        color:#fff;
+    }
+}
 
 #colophon{
     background-color: #000;
