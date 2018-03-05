@@ -36,6 +36,11 @@ LAYOUT PROPERTIES INCLUDES THE FOLLOWING RULES:
         grid-template-columns:repeat(3, [column] auto);
         grid-gap: 1em;
     }
+    .trio-nogap{
+        display:grid;
+        grid-template-columns:repeat(3, [column] auto);
+        //grid-gap: 1em;
+    }
     .quad{
         display:grid;
         grid-template-columns:repeat(4, [column] auto);
