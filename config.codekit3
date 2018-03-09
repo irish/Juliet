@@ -38,46 +38,47 @@
 		"oAP": "\/build\/.htaccess",
 		"oF": 0
 		},
-	"\/build\/about.html": {
+	"\/build\/about-us.html": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/build\/about.html",
+		"oAP": "\/build\/about-us.html",
 		"oF": 0
 		},
-	"\/build\/addons.html": {
+	"\/build\/android-chrome-96x96.png": {
+		"ft": 32768,
+		"iS": 7119,
+		"oA": 0,
+		"oAP": "\/build\/android-chrome-96x96.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/build\/apple-touch-icon.png": {
+		"ft": 32768,
+		"iS": 8386,
+		"oA": 0,
+		"oAP": "\/build\/apple-touch-icon.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/build\/browserconfig.xml": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/build\/addons.html",
+		"oAP": "\/build\/browserconfig.xml",
 		"oF": 0
 		},
-	"\/build\/adons.html": {
+	"\/build\/commercial-painting.html": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/build\/adons.html",
-		"oF": 0
-		},
-	"\/build\/beef-noodle-soup.html": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "\/build\/beef-noodle-soup.html",
-		"oF": 0
-		},
-	"\/build\/beverages.html": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "\/build\/beverages.html",
-		"oF": 0
-		},
-	"\/build\/chicken-noodle-soup.html": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "\/build\/chicken-noodle-soup.html",
+		"oAP": "\/build\/commercial-painting.html",
 		"oF": 0
 		},
 	"\/build\/contact.html": {
@@ -87,127 +88,215 @@
 		"oAP": "\/build\/contact.html",
 		"oF": 0
 		},
-	"\/build\/contect.html": {
+	"\/build\/favicon-16x16.png": {
+		"ft": 32768,
+		"iS": 1114,
+		"oA": 0,
+		"oAP": "\/build\/favicon-16x16.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/build\/favicon-32x32.png": {
+		"ft": 32768,
+		"iS": 1697,
+		"oA": 0,
+		"oAP": "\/build\/favicon-32x32.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/build\/favicon.ico": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/build\/contect.html",
+		"oAP": "\/build\/favicon.ico",
 		"oF": 0
 		},
-	"\/build\/img\/branding\/bamboo-2-red.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "\/build\/img\/branding\/bamboo-2-red.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 3758088159,
-		"prP": 0
-		},
-	"\/build\/img\/branding\/bamboo-2.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "\/build\/img\/branding\/bamboo-2.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 3758088159,
-		"prP": 0
-		},
-	"\/build\/img\/branding\/bamboo-red.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "\/build\/img\/branding\/bamboo-red.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 3758088159,
-		"prP": 0
-		},
-	"\/build\/img\/branding\/bamboo.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "\/build\/img\/branding\/bamboo.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 3758088159,
-		"prP": 0
-		},
-	"\/build\/img\/branding\/juliet-logo-medium.png": {
+	"\/build\/img\/branding\/20+.png": {
 		"ft": 32768,
-		"iS": 3991,
+		"iS": 1510,
 		"oA": 0,
-		"oAP": "\/build\/img\/branding\/juliet-logo-medium.png",
+		"oAP": "\/build\/img\/branding\/20+.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
-	"\/build\/img\/branding\/juliet-logo-suggested.png": {
+	"\/build\/img\/branding\/bonded.png": {
 		"ft": 32768,
-		"iS": 4723,
+		"iS": 2178,
 		"oA": 0,
-		"oAP": "\/build\/img\/branding\/juliet-logo-suggested.png",
+		"oAP": "\/build\/img\/branding\/bonded.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
-	"\/build\/img\/branding\/juliet-logo-white.png": {
+	"\/build\/img\/branding\/brush-to-white.png": {
 		"ft": 32768,
-		"iS": 9150,
+		"iS": 273368,
 		"oA": 0,
-		"oAP": "\/build\/img\/branding\/juliet-logo-white.png",
+		"oAP": "\/build\/img\/branding\/brush-to-white.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
-	"\/build\/img\/branding\/juliet-logo.png": {
+	"\/build\/img\/branding\/clock.png": {
 		"ft": 32768,
-		"iS": 12464,
+		"iS": 1701,
 		"oA": 0,
-		"oAP": "\/build\/img\/branding\/juliet-logo.png",
+		"oAP": "\/build\/img\/branding\/clock.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
-	"\/build\/img\/branding\/pho-logo.png": {
+	"\/build\/img\/branding\/estimates.png": {
 		"ft": 32768,
-		"iS": 54820,
+		"iS": 1682,
 		"oA": 0,
-		"oAP": "\/build\/img\/branding\/pho-logo.png",
+		"oAP": "\/build\/img\/branding\/estimates.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
-	"\/build\/img\/branding\/site-logo.png": {
+	"\/build\/img\/branding\/hero.png": {
 		"ft": 32768,
-		"iS": 1976,
+		"iS": 1055266,
 		"oA": 0,
-		"oAP": "\/build\/img\/branding\/site-logo.png",
+		"oAP": "\/build\/img\/branding\/hero.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
-	"\/build\/img\/branding\/vietnam-hills.jpg": {
+	"\/build\/img\/branding\/ip-background-1.jpg": {
 		"ft": 16384,
-		"iS": 516486,
+		"iS": 327667,
 		"oA": 0,
-		"oAP": "\/build\/img\/branding\/vietnam-hills.jpg",
+		"oAP": "\/build\/img\/branding\/ip-background-1.jpg",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
+		"q": 100
+		},
+	"\/build\/img\/branding\/ip-background-2.jpg": {
+		"ft": 16384,
+		"iS": 294459,
+		"oA": 0,
+		"oAP": "\/build\/img\/branding\/ip-background-2.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/build\/img\/branding\/ip-background-3.jpg": {
+		"ft": 16384,
+		"iS": 160635,
+		"oA": 0,
+		"oAP": "\/build\/img\/branding\/ip-background-3.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/build\/img\/branding\/ip-background-4.jpg": {
+		"ft": 16384,
+		"iS": 230681,
+		"oA": 0,
+		"oAP": "\/build\/img\/branding\/ip-background-4.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/build\/img\/branding\/ip-icon-menu.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/build\/img\/branding\/ip-icon-menu.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/build\/img\/branding\/logo.png": {
+		"ft": 32768,
+		"iS": 7406,
+		"oA": 0,
+		"oAP": "\/build\/img\/branding\/logo.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/build\/img\/branding\/operator.png": {
+		"ft": 32768,
+		"iS": 1394,
+		"oA": 0,
+		"oAP": "\/build\/img\/branding\/operator.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/build\/img\/branding\/painter.png": {
+		"ft": 32768,
+		"iS": 293283,
+		"oA": 0,
+		"oAP": "\/build\/img\/branding\/painter.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/build\/img\/branding\/painting-transparent-background-11.png": {
+		"ft": 32768,
+		"iS": 364970,
+		"oA": 0,
+		"oAP": "\/build\/img\/branding\/painting-transparent-background-11.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/build\/img\/branding\/painting.png": {
+		"ft": 32768,
+		"iS": 1410364,
+		"oA": 0,
+		"oAP": "\/build\/img\/branding\/painting.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/build\/img\/branding\/palm.png": {
+		"ft": 32768,
+		"iS": 4291,
+		"oA": 0,
+		"oAP": "\/build\/img\/branding\/palm.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
 		"q": 100
 		},
 	"\/build\/img\/favicons\/android-chrome-192x192.png": {
@@ -843,6 +932,13 @@
 		"oAP": "\/build\/index.html",
 		"oF": 0
 		},
+	"\/build\/industrial-painting.html": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/build\/industrial-painting.html",
+		"oF": 0
+		},
 	"\/build\/js\/app.js": {
 		"ft": 64,
 		"ma": 0,
@@ -853,57 +949,40 @@
 		"sC": 3,
 		"tS": 0
 		},
-	"\/build\/kids-menu.html": {
-		"cB": 0,
-		"ft": 8192,
+	"\/build\/mstile-150x150.png": {
+		"ft": 32768,
+		"iS": 13711,
 		"oA": 0,
-		"oAP": "\/build\/kids-menu.html",
-		"oF": 0
-		},
-	"\/build\/menu.html": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "\/build\/menu.html",
-		"oF": 0
-		},
-	"\/build\/rice-plates.html": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "\/build\/rice-plates.html",
-		"oF": 0
-		},
-	"\/build\/salads.html": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "\/build\/salads.html",
-		"oF": 0
-		},
-	"\/build\/seafood-noodle-soup.html": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "\/build\/seafood-noodle-soup.html",
-		"oF": 0
-		},
-	"\/build\/smoothies.html": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "\/build\/smoothies.html",
-		"oF": 0
-		},
-	"\/build\/style-min.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/build\/style-min-min.css",
+		"oAP": "\/build\/mstile-150x150.png",
 		"oF": 0,
-		"oS": 3
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/build\/parking-lots.html": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/build\/parking-lots.html",
+		"oF": 0
+		},
+	"\/build\/safari-pinned-tab.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/build\/safari-pinned-tab.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/build\/site.webmanifest": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/build\/site.webmanifest",
+		"oF": 0
 		},
 	"\/build\/style.css": {
 		"aP": 1,
@@ -914,27 +993,6 @@
 		"oAP": "\/build\/style-min.css",
 		"oF": 0,
 		"oS": 3
-		},
-	"\/build\/thai-style.html": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "\/build\/thai-style.html",
-		"oF": 0
-		},
-	"\/build\/vegetarian.html": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "\/build\/vegetarian.html",
-		"oF": 0
-		},
-	"\/build\/vermicelli.html": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "\/build\/vermicelli.html",
-		"oF": 0
 		},
 	"\/documentation\/components\/_preview.hbs": {
 		"cB": 0,
@@ -1329,12 +1387,12 @@
 		"oAP": "\/source\/.htaccess",
 		"oF": 0
 		},
-	"\/source\/about.pug": {
+	"\/source\/about-us.pug": {
 		"cB": 0,
 		"cOD": 1,
 		"ft": 512,
 		"oA": 0,
-		"oAP": "\/source\/about.html",
+		"oAP": "\/source\/about-us.html",
 		"oF": 0,
 		"oS": 0
 		},
@@ -1473,6 +1531,61 @@
 		"plM": 3758088159,
 		"prP": 0
 		},
+	"\/source\/assets\/img\/branding\/20+.png": {
+		"ft": 32768,
+		"iS": 2174,
+		"oA": 0,
+		"oAP": "\/source\/assets\/img\/branding\/20+.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/source\/assets\/img\/branding\/bonded.png": {
+		"ft": 32768,
+		"iS": 4243,
+		"oA": 0,
+		"oAP": "\/source\/assets\/img\/branding\/bonded.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/source\/assets\/img\/branding\/brush-to-white.png": {
+		"ft": 32768,
+		"iS": 373091,
+		"oA": 0,
+		"oAP": "\/source\/assets\/img\/branding\/brush-to-white.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/source\/assets\/img\/branding\/clock.png": {
+		"ft": 32768,
+		"iS": 2551,
+		"oA": 0,
+		"oAP": "\/source\/assets\/img\/branding\/clock.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/source\/assets\/img\/branding\/estimates.png": {
+		"ft": 32768,
+		"iS": 2635,
+		"oA": 0,
+		"oAP": "\/source\/assets\/img\/branding\/estimates.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
 	"\/source\/assets\/img\/branding\/hero.png": {
 		"ft": 32768,
 		"iS": 1401751,
@@ -1484,61 +1597,11 @@
 		"oT": 1,
 		"q": 100
 		},
-	"\/source\/assets\/img\/branding\/ip-background-1.jpg": {
-		"ft": 16384,
-		"iS": 394340,
-		"oA": 0,
-		"oAP": "\/source\/assets\/img\/branding\/ip-background-1.jpg",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"q": 100
-		},
-	"\/source\/assets\/img\/branding\/ip-background-2.jpg": {
-		"ft": 16384,
-		"iS": 358530,
-		"oA": 0,
-		"oAP": "\/source\/assets\/img\/branding\/ip-background-2.jpg",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"q": 100
-		},
-	"\/source\/assets\/img\/branding\/ip-background-3.jpg": {
-		"ft": 16384,
-		"iS": 194923,
-		"oA": 0,
-		"oAP": "\/source\/assets\/img\/branding\/ip-background-3.jpg",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"q": 100
-		},
-	"\/source\/assets\/img\/branding\/ip-background-4.jpg": {
-		"ft": 16384,
-		"iS": 272545,
-		"oA": 0,
-		"oAP": "\/source\/assets\/img\/branding\/ip-background-4.jpg",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"q": 100
-		},
 	"\/source\/assets\/img\/branding\/ip-icon-menu.svg": {
 		"ft": 2097152,
 		"miP": 0,
 		"oA": 2,
 		"oAP": "\/source\/assets\/img\/branding\/ip-icon-menu.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 3758088159,
-		"prP": 0
-		},
-	"\/source\/assets\/img\/branding\/ip-logo.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "\/source\/assets\/img\/branding\/ip-logo.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 3758088159,
@@ -1555,31 +1618,296 @@
 		"oT": 1,
 		"q": 100
 		},
-	"\/source\/assets\/img\/full\/image-0.jpg": {
-		"ft": 16384,
-		"iS": 186880,
+	"\/source\/assets\/img\/branding\/operator.png": {
+		"ft": 32768,
+		"iS": 2122,
 		"oA": 0,
-		"oAP": "\/source\/assets\/img\/full\/image-0.jpg",
+		"oAP": "\/source\/assets\/img\/branding\/operator.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/source\/assets\/img\/branding\/painter.png": {
+		"ft": 32768,
+		"iS": 407789,
+		"oA": 0,
+		"oAP": "\/source\/assets\/img\/branding\/painter.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/source\/assets\/img\/branding\/painting-transparent-background-11.png": {
+		"ft": 32768,
+		"iS": 457345,
+		"oA": 0,
+		"oAP": "\/source\/assets\/img\/branding\/painting-transparent-background-11.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/source\/assets\/img\/branding\/painting.png": {
+		"ft": 32768,
+		"iS": 1888789,
+		"oA": 0,
+		"oAP": "\/source\/assets\/img\/branding\/painting.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/source\/assets\/img\/branding\/palm.png": {
+		"ft": 32768,
+		"iS": 6779,
+		"oA": 0,
+		"oAP": "\/source\/assets\/img\/branding\/palm.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/source\/assets\/img\/full\/image-1.jpg": {
+		"ft": 16384,
+		"iS": 401783,
+		"oA": 0,
+		"oAP": "\/source\/assets\/img\/full\/image-1.jpg",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"q": 100
 		},
-	"\/source\/assets\/img\/medium\/image-0.jpg": {
+	"\/source\/assets\/img\/full\/image-2.jpg": {
 		"ft": 16384,
-		"iS": 52944,
+		"iS": 759126,
 		"oA": 0,
-		"oAP": "\/source\/assets\/img\/medium\/image-0.jpg",
+		"oAP": "\/source\/assets\/img\/full\/image-2.jpg",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"q": 100
 		},
-	"\/source\/assets\/img\/small\/image-0.jpg": {
+	"\/source\/assets\/img\/full\/image-3.jpg": {
 		"ft": 16384,
-		"iS": 12128,
+		"iS": 518887,
 		"oA": 0,
-		"oAP": "\/source\/assets\/img\/small\/image-0.jpg",
+		"oAP": "\/source\/assets\/img\/full\/image-3.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/source\/assets\/img\/full\/image-4.jpg": {
+		"ft": 16384,
+		"iS": 563129,
+		"oA": 0,
+		"oAP": "\/source\/assets\/img\/full\/image-4.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/source\/assets\/img\/full\/image-5.jpg": {
+		"ft": 16384,
+		"iS": 1005530,
+		"oA": 0,
+		"oAP": "\/source\/assets\/img\/full\/image-5.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/source\/assets\/img\/full\/image-6.jpg": {
+		"ft": 16384,
+		"iS": 872599,
+		"oA": 0,
+		"oAP": "\/source\/assets\/img\/full\/image-6.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/source\/assets\/img\/full\/image-7.jpg": {
+		"ft": 16384,
+		"iS": 716951,
+		"oA": 0,
+		"oAP": "\/source\/assets\/img\/full\/image-7.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/source\/assets\/img\/full\/image-8.jpg": {
+		"ft": 16384,
+		"iS": 137082,
+		"oA": 0,
+		"oAP": "\/source\/assets\/img\/full\/image-8.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/source\/assets\/img\/medium\/image-1.jpg": {
+		"ft": 16384,
+		"iS": 136138,
+		"oA": 0,
+		"oAP": "\/source\/assets\/img\/medium\/image-1.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/source\/assets\/img\/medium\/image-2.jpg": {
+		"ft": 16384,
+		"iS": 256932,
+		"oA": 0,
+		"oAP": "\/source\/assets\/img\/medium\/image-2.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/source\/assets\/img\/medium\/image-3.jpg": {
+		"ft": 16384,
+		"iS": 164836,
+		"oA": 0,
+		"oAP": "\/source\/assets\/img\/medium\/image-3.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/source\/assets\/img\/medium\/image-4.jpg": {
+		"ft": 16384,
+		"iS": 193722,
+		"oA": 0,
+		"oAP": "\/source\/assets\/img\/medium\/image-4.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/source\/assets\/img\/medium\/image-5.jpg": {
+		"ft": 16384,
+		"iS": 290407,
+		"oA": 0,
+		"oAP": "\/source\/assets\/img\/medium\/image-5.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/source\/assets\/img\/medium\/image-6.jpg": {
+		"ft": 16384,
+		"iS": 278203,
+		"oA": 0,
+		"oAP": "\/source\/assets\/img\/medium\/image-6.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/source\/assets\/img\/medium\/image-7.jpg": {
+		"ft": 16384,
+		"iS": 198160,
+		"oA": 0,
+		"oAP": "\/source\/assets\/img\/medium\/image-7.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/source\/assets\/img\/medium\/image-8.jpg": {
+		"ft": 16384,
+		"iS": 42942,
+		"oA": 0,
+		"oAP": "\/source\/assets\/img\/medium\/image-8.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/source\/assets\/img\/small\/image-1.jpg": {
+		"ft": 16384,
+		"iS": 41965,
+		"oA": 0,
+		"oAP": "\/source\/assets\/img\/small\/image-1.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/source\/assets\/img\/small\/image-2.jpg": {
+		"ft": 16384,
+		"iS": 81267,
+		"oA": 0,
+		"oAP": "\/source\/assets\/img\/small\/image-2.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/source\/assets\/img\/small\/image-3.jpg": {
+		"ft": 16384,
+		"iS": 47487,
+		"oA": 0,
+		"oAP": "\/source\/assets\/img\/small\/image-3.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/source\/assets\/img\/small\/image-4.jpg": {
+		"ft": 16384,
+		"iS": 60224,
+		"oA": 0,
+		"oAP": "\/source\/assets\/img\/small\/image-4.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/source\/assets\/img\/small\/image-5.jpg": {
+		"ft": 16384,
+		"iS": 63067,
+		"oA": 0,
+		"oAP": "\/source\/assets\/img\/small\/image-5.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/source\/assets\/img\/small\/image-6.jpg": {
+		"ft": 16384,
+		"iS": 70597,
+		"oA": 0,
+		"oAP": "\/source\/assets\/img\/small\/image-6.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/source\/assets\/img\/small\/image-7.jpg": {
+		"ft": 16384,
+		"iS": 53132,
+		"oA": 0,
+		"oAP": "\/source\/assets\/img\/small\/image-7.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/source\/assets\/img\/small\/image-8.jpg": {
+		"ft": 16384,
+		"iS": 11960,
+		"oA": 0,
+		"oAP": "\/source\/assets\/img\/small\/image-8.jpg",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
@@ -1595,34 +1923,24 @@
 		"sC": 0,
 		"tS": 0
 		},
-	"\/source\/assets\/js\/modaal.js": {
+	"\/source\/assets\/js\/nav.js": {
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
 		"oA": 0,
-		"oAP": "\/source\/assets\/js\/modaal-min.js",
+		"oAP": "\/source\/assets\/js\/nav-min.js",
 		"oF": 0,
-		"sC": 0,
+		"sC": 3,
 		"tS": 0
 		},
-	"\/source\/assets\/js\/uikit-icons.js": {
+	"\/source\/assets\/js\/pace.min.js": {
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
 		"oA": 0,
-		"oAP": "\/source\/assets\/js\/uikit-icons-min.js",
+		"oAP": "\/source\/assets\/js\/pace.min-min.js",
 		"oF": 0,
-		"sC": 0,
-		"tS": 0
-		},
-	"\/source\/assets\/js\/uikit.js": {
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "\/source\/assets\/js\/uikit-min.js",
-		"oF": 0,
-		"sC": 0,
+		"sC": 3,
 		"tS": 0
 		},
 	"\/source\/assets\/scss\/_box-model.scss": {
@@ -5824,16 +6142,6 @@
 		"oS": 0,
 		"uL": 1
 		},
-	"\/source\/assets\/scss\/style.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/source\/assets\/scss\/style-min.css",
-		"oF": 0,
-		"oS": 3
-		},
 	"\/source\/assets\/scss\/style.scss": {
 		"aP": 1,
 		"bl": 0,
@@ -7726,6 +8034,15 @@
 		"oAP": "\/source\/assets\/styleguide.xd",
 		"oF": 1
 		},
+	"\/source\/commercial-painting.pug": {
+		"cB": 0,
+		"cOD": 1,
+		"ft": 512,
+		"oA": 0,
+		"oAP": "\/source\/commercial-painting.html",
+		"oF": 0,
+		"oS": 0
+		},
 	"\/source\/contact.pug": {
 		"cB": 0,
 		"cOD": 1,
@@ -7780,6 +8097,60 @@
 		"oF": 0,
 		"oS": 0
 		},
+	"\/source\/includes\/_hero-about-us.pug": {
+		"cB": 0,
+		"cOD": 1,
+		"ft": 512,
+		"oA": 1,
+		"oAP": "\/source\/includes\/_hero-about-us.html",
+		"oF": 0,
+		"oS": 0
+		},
+	"\/source\/includes\/_hero-commercial.pug": {
+		"cB": 0,
+		"cOD": 1,
+		"ft": 512,
+		"oA": 1,
+		"oAP": "\/source\/includes\/_hero-commercial.html",
+		"oF": 0,
+		"oS": 0
+		},
+	"\/source\/includes\/_hero-contact-us.pug": {
+		"cB": 0,
+		"cOD": 1,
+		"ft": 512,
+		"oA": 1,
+		"oAP": "\/source\/includes\/_hero-contact-us.html",
+		"oF": 0,
+		"oS": 0
+		},
+	"\/source\/includes\/_hero-industrial.pug": {
+		"cB": 0,
+		"cOD": 1,
+		"ft": 512,
+		"oA": 1,
+		"oAP": "\/source\/includes\/_hero-industrial.html",
+		"oF": 0,
+		"oS": 0
+		},
+	"\/source\/includes\/_hero-parking-lots.pug": {
+		"cB": 0,
+		"cOD": 1,
+		"ft": 512,
+		"oA": 1,
+		"oAP": "\/source\/includes\/_hero-parking-lots.html",
+		"oF": 0,
+		"oS": 0
+		},
+	"\/source\/includes\/_hero.pug": {
+		"cB": 0,
+		"cOD": 1,
+		"ft": 512,
+		"oA": 1,
+		"oAP": "\/source\/includes\/_hero.html",
+		"oF": 0,
+		"oS": 0
+		},
 	"\/source\/includes\/_main-about.pug": {
 		"cB": 0,
 		"cOD": 1,
@@ -7813,6 +8184,24 @@
 		"ft": 512,
 		"oA": 0,
 		"oAP": "\/source\/index.html",
+		"oF": 0,
+		"oS": 0
+		},
+	"\/source\/industrial-painting.pug": {
+		"cB": 0,
+		"cOD": 1,
+		"ft": 512,
+		"oA": 0,
+		"oAP": "\/source\/industrial-painting.html",
+		"oF": 0,
+		"oS": 0
+		},
+	"\/source\/parking-lots.pug": {
+		"cB": 0,
+		"cOD": 1,
+		"ft": 512,
+		"oA": 0,
+		"oAP": "\/source\/parking-lots.html",
 		"oF": 0,
 		"oS": 0
 		},

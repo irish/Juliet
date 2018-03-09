@@ -18,26 +18,27 @@ To retain and build on top of the original styles from the parent theme, bring i
 - enqueue style in child theme functions.php file (see https://gist.github.com/mor10/f2ec3d344331b0789942636248a7ef53)
 */
 
-
 // @import 'libs/reset';
 // @import 'libs/normalize';
-
 //@import             'libs/vars';
-
 :root{
     --black:                    #000000;
     --charcoal:                 #1a1a1a;
     --carbon:                   #686868;
     --white:                    #ffffff;
     --red:                      #710000;
-    --orange:                   #dd9933;
+    --orange:                   #EF8C12;
     --navy:                     #2C3E50;
     --pale:                     #ECF0F1;
     --light-blue:               #007acc;
     --blue:                     #ECF0F1;
     --green:                    #46B29D;
-    --gradientA:                linear-gradient(to top,#000 0%, #09203f 50%, #537895 100%);
-    --gradientB:                linear-gradient(to top, #30cfd0 0%, #330867 100%);
+	--navy:                     #284253;
+    --gradient1:                linear-gradient(to bottom, #D35836 0%, #E38C00 100%);
+    --gradient2:                linear-gradient(to bottom, #EF8C12 0%, #EF8C12 100%);
+    --gradient3:                linear-gradient(to bottom, #F4A720 0%, #FFC65F 100%);
+	--gradient4:                linear-gradient(to bottom, #284253 0%, #2E5574 100%);
+	--gradient5:                linear-gradient(to bottom, #DB6F42 0%, #A2273A 100%);
 
     --background-color:             var(--charcoal);
     --custom-background-color:      var(--red);
@@ -57,15 +58,24 @@ To retain and build on top of the original styles from the parent theme, bring i
     --weight-megabold:			    900;
     --kerning:					    0.01rem;
     --kerning-alt:				    0.1rem;
-    --line-height:				    1.6rem;
+	--line-height:				    1.6rem;
+	
+	 --header-height-S:				60px;
+	 --header-height-M:				70px;
 }
+
+
+$color-2: #99a478; // green dark
+$color-3: #b4d7a8; // green light
+$color-4: #ffffff; // white
+$header-height-S: 60px;
+$header-height-M: 70px;
 
 @import                     'libs/functions';
 @import                     'libs/mixins';
 @import                     'libs/wordpress-mod/2016/style';
 
 @import                     'wp-overides';
-
 
 // 1. CUSTOM VARIABLES AND VARIABLE OVERWRITES
 $base-body-background:      transparent;
@@ -78,10 +88,46 @@ $global-link-color:         var(--global-link-color);
 // 3. Your custom mixin overwrites.
 @mixin                      hook-text-lead() { color: rgb(36, 78, 196); }
 @mixin                      hook-card-default() { box-shadow: none; }
+@mixin						hook-button-secondary(){background-color: #00264A;border-color: #000;}
 // 4. Import UIkit.
 @import                     'ui/uikit-theme';
 
 
+//z-index - order the elements from the lowest z-index(left) to the highest(right)
+$main-elements: main-content, navigation;
+$bg-elements: fixed-bg, scrolling-bg;
+
+// rem fallback - credits: http://zerosixthree.se/
+@function calculateRem($size) {
+    $remSize: $size / 16px;
+    @return $remSize * 1rem;
+}
+
+@mixin font-size($size) {
+    font-size: $size;
+    font-size: calculateRem($size);
+}
+
+// center vertically and/or horizontally an absolute positioned element
+@mixin center($xy:xy) {
+    @if $xy == xy {
+        left: 50%;
+        top: 50%;
+        bottom: auto;
+        right: auto;
+        @include transform(translateX(-50%) translateY(-50%));
+    }
+    @else if $xy == x {
+        left: 50%;
+        right: auto;
+        @include transform(translateX(-50%));
+    }
+    @else if $xy == y {
+        top: 50%;
+        bottom: auto;
+        @include transform(translateY(-50%));
+    }
+}
 
 // HELPERS
 .supported, .unsupported {
@@ -93,7 +139,7 @@ $global-link-color:         var(--global-link-color);
         display:block;
     }
 }
-  
+
 .unsupported {
     color:#D32F2F;
     @supports not (display:grid) {
@@ -101,12 +147,45 @@ $global-link-color:         var(--global-link-color);
     }
 }
 
-.hidden{display: none;}
+.hidden{
+    display: none;
+}
+
+/* This is a compiled file, you should be editing the file in the templates directory */
+.pace {
+	pointer-events: none;
+	user-select: none;
+}
+
+.pace-inactive {
+	display: none;
+}
+
+.pace .pace-progress {
+	background: #22df80;
+	position: fixed;
+	z-index: 2000;
+	top: 0;
+	right: 100%;
+	width: 100%;
+	height: 2px;
+}
+
+
+
+body{
+	background: #fff;//≤IE11
+    background: var(--white);
+}
 
 html {
     font-size:              calc(13px + 0.2vw);
     background:             #000000;//≤IE11
     background:             var(--charcoal);
+    @include                headings{
+        text-transform:     uppercase;
+        font-weight:        bold;
+    }
 }
 
 body, button, input, select, textarea{
@@ -122,39 +201,317 @@ body, button, input, select, textarea{
 code{
     word-wrap:              break-word;
 }
-//  COLORS
-//  1.Background Color
-//  2.Page Background Color
-//  3.Link Color
-//  4.Main Text Color
-//  5.Secondary Text Color
 
-// .site-inner{}
-// .site-header{}
-// .site-content{}
+hr{
+    background-color: 		transparent;
+}
+
+.gradient1{
+    background-image: 		linear-gradient(to bottom, #D35836 0%, #E38C00 100%);//≤IE11
+    background-image: 		var(--gradient1);
+}
+
+.gradient2{
+    background-image: 		linear-gradient(to bottom, #EF8C12 0%, #EF8C12 100%);//≤IE11
+    background-image: 		var(--gradient2);
+}
+
+.gradient3{
+    background-image: 		linear-gradient(to bottom, #F4A720 0%, #FFC65F 100%);//≤IE11
+    background-image: 		var(--gradient3);
+}
+
+.gradient4{
+    background-image: 		linear-gradient(to bottom, #284253 0%, #2E5574 100%);//≤IE11
+    background-image: 		var(--gradient4);
+}
+
+
 
 @import                     'layout';
 
-@import                     'rkl';
-
 .featurettes{
-    .uk-card-default .uk-card-title{
-        color:#fff;
+    .uk-card-default .uk-card-title,p{
+        color:			  #fff;//≤IE11
+        color:				var(--white);
+        
     }
-    div:nth-child(1){
-        background-image: linear-gradient(to bottom, #D35836 0%, #E38C00 100%);
-        color:#fff;
+}
+
+.features-home{
+    background-position: 100% 50%;
+    background-repeat: no-repeat;
+    min-height: 400px;
+    padding: 2em;
+    @include MQ(M) {
+        background-image:url("img/branding/brush-to-white.png");
+        div{
+            width:70%;
+        }
     }
-    div:nth-child(2){
-        background-image: linear-gradient(to bottom, #EF8C12 0%, #EF8C12 100%);
-        color:#fff;
-    }
-    div:nth-child(3){
-        background-image: linear-gradient(to bottom, #F4A720 0%, #FFC65F 100%);
-        color:#fff;
+}
+
+.features-commercial{
+    background-position: 100% 50%;
+    background-repeat: no-repeat;
+    background-color: #ECF0F1;//≤IE11
+    background-color: var(--pale);
+    min-height: 400px;
+    padding: 2em;
+    @include MQ(M) {
+        background-image:url("img/branding/painting-transparent-background-11.png");
+        div{
+            width:70%;
+        }
     }
 }
 
 #colophon{
-    background-color: #000;
+    background-color: #284253;//≤IE11
+    background-color:	var(--navy);
+    text-align:     	center;
+    a{
+        color:      	var(--white);
+        color:		  #fff;
+    }
+}
+
+.bridge-home{
+	background-image: linear-gradient(to bottom, #DB6F42 0%, #A2273A 100%);//≤IE11
+    h3,a{
+        color:		#fff;//≤IE11
+		color:		var(--white);
+	}
+    color:		  #fff;//≤IE11
+	color:			var(--white);
+    div{
+        text-align: left;
+    }
+    @include MQ(M) {
+        div:nth-child(1){
+            text-align: right;
+        }
+        div:nth-child(2){   
+            text-align: center;
+        }
+        div:nth-child(3){
+            text-align: left;
+        }
+    }
+}
+
+.bridge-commercial{
+    min-height: 500px;   
+    background-image:url("img/branding/painting.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 5em;
+}
+
+.icon-points{
+    text-align: center;
+}
+
+.ip-main-nav {
+	float: right;
+	margin-right: 5%;
+	width: 44px;
+	height: 100%;
+	background: url('img/branding/ip-icon-menu.svg') no-repeat center center;
+	background-size: 44px 44px;
+	cursor: pointer;
+
+	ul {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		transform: translateY(-100%);
+        padding-left: 0px;
+		&.is-visible {
+			transform: translateY(70px);
+		}
+	}
+
+	a {
+		display: 		block;
+		height: 		60px;//≤IE11
+		height: 		var(--header-height-S);
+		line-height: 	60px;//≤IE11
+		line-height:	var(--header-height-S);
+		padding-left: 	5%;
+		background: 	rgba(26,26,26,0.97);
+		border-top:		1px solud #1a1a1a;
+		border-top: 	1px solid var(--charcoal);
+		color:		  #fff;
+        color:			var(--white)
+	}
+
+	@include MQ(L) {
+		width: 		auto;
+		height: 	auto;
+		background: none;
+		cursor: 	auto;
+
+		ul {
+			position: 	static;
+			width: 		auto;
+			transform: 	translateY(0);
+			line-height:var(--header-height-S);
+			line-height:70px;
+
+			&.is-visible {
+				transform: translateY(0);
+			}
+		}
+
+		li {
+			display: 		inline-block;
+			margin-left: 	1em;
+		}
+
+		a {
+			display: 		inline-block;
+			height: 		auto;
+			line-height: 	normal;
+			background: 	transparent;
+			padding: 		.6em 1em;
+			border-top: 	none;
+			color:		  #fff;
+			color: 			var(--white);
+			text-transform: uppercase;
+			font-weight: 	bold;
+			@include 		font-size(14px);
+
+			.no-touch &:hover {
+				color: #1a1a1a;
+				color:	var(--charcoal);
+			}
+		}
+	}
+}
+
+.ip-header {
+	position: 			fixed;
+	left: 				0;
+	top: 				0;
+	width: 				100%;
+	height:				var(--header-height-M);
+	height: 			70px;
+	background-image:	linear-gradient(to bottom, #D35836E6 0%, #E38C00 100%);
+	box-shadow: 		0 1px 2px rgba(#000, .2);
+	z-index:			index($main-elements, navigation);
+	&:after {
+		content: 		"";
+		display: 		table;
+		clear: 			both;
+}
+
+	#ip-logo {
+		float: 			left;
+		margin: 		13px 0 0 5%;
+
+		img {
+			display: 	block;
+		}
+	}
+
+	@include MQ(L) {
+		height:			70px;
+		height:			var(--header-height-M);
+
+		#ip-logo {
+			margin: 	13px 0 0 5%;
+		}
+	}
+}
+
+.cta a{
+	margin: 1em 1em 1em 0em;
+}
+
+.ip-main-content {
+	// height: 600px;
+	position: 			relative;
+    z-index: 			index($main-elements, main-content);
+	padding-top: 		70px;
+	background-color:	#fff;
+	background-color:	var(--white);
+	margin-bottom: 		10em;
+}
+
+.ip-fixed-bg {
+	position: 				relative;
+	min-height: 			700px;
+	background-size: 		cover;
+	background-repeat: 		no-repeat;
+	background-position: 	center center;
+	z-index: 				index($bg-elements, fixed-bg);
+	background-color: 		#404040;
+	@include MQ(M) {
+		min-height: 			700px;
+	}
+	@include MQ(L) {
+		min-height: 			800px;
+	}
+	.copy{
+		position: 			absolute;
+		left: 				50%;
+		top: 				50%;
+		bottom: 			auto;
+		right: 				auto;
+		transform: 			translateX(-50%) translateY(-50%);
+		width: 				90%;
+		max-width: 			$L;
+		text-align: 		left;
+		//background-color: rgba(0,0,0,0.3);
+		padding: 			1em;
+		
+		@include headings{
+			color:			$color-4;
+			font-weight: 	bold;
+			text-shadow: 	0px 1px 1px rgba(0,0,0,0.4);
+		}
+		@include MQ(M) {
+			text-align: 	center;
+		}
+	}
+
+	&.ip-bg-1 {
+		background-image: url('img/branding/hero.png');
+	}
+
+	@include MQ(M) {
+		h1{
+			@include font-size(46px);
+		}
+	}
+
+	@include MQ(L) {
+        margin-top: 0px;
+		h1{
+			@include font-size(68px);
+		}
+	}
+}
+.ip-fixed-short {
+	min-height: 200px;
+	margin-top:70px;
+}
+
+.ip-scrolling-bg {
+	position: relative;
+	min-height: 100%;
+	// padding: 4em 0;
+	line-height: 1.6;
+	box-shadow: 0 0 50px rgba(#000, .5);
+    z-index: index($bg-elements, scrolling-bg);
+    
+
+	@include MQ(M) {
+		// padding: 8em 0;
+		@include font-size(20px);
+		line-height: 2;
+		font-weight: 300;
+	}
 }

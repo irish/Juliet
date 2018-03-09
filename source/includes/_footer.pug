@@ -1,9 +1,32 @@
 //- The template for displaying the footer
 //- Contains the closing of the #content div and all content after
+.bridge-home.full
+        .site-meta
+            .uk-card.uk-card-body
+                h3.uk-card-title| Contact Us
+                p
+                    span(class="uk-margin-small-right" uk-icon="location")
+                    |1072 Edens Gate Court, Longwood, FL 32750
+                p
+                    span(class="uk-margin-small-right" uk-icon="receiver")
+                    |Tel: 407-830-4611
+                a(href="https://www.facebook.com/RKLPaintingFlorida/" target="_blank")
+                    span(class="uk-margin-small-right" uk-icon="facebook")
+                a(href="https://www.yelp.com/biz/rkl-painting-contractors-longwood-2" target="_blank")
+                    span(class="uk-margin-small-right" uk-icon="yelp")
+            .uk-card.uk-card-body
+                img(src='img/branding/logo.png', alt='Logo')
+                p|Our live operators are available to take your call and assist you with any questions or concerns you may have. Please contact us for a free estimate on your next painting project!
+            .uk-card.uk-card-body
+                h3.uk-card-title Contractors Licence
+                p|Commercial and Industrial Painting Contractor
+                p|Licence # 12536B MHIC #2131214
 footer#colophon.site-footer(role="contentinfo")
-    .site-info
-        span.site-title
-            a(href="http://10.10.17.141:8888/local/Juliet/wordpress/" rel="home")|Juliet
-        a(href="https://wordpress.org/")|Proudly powered by WordPress
+    .ip-container
+        .site-info
+            span.site-title
+                a(href="http://rklpainting.com" rel="home")|&copy; RKL Painting 2018
+            a(href="https://wordpress.org/")|Powered by WordPress
+        <a href="#" uk-totop uk-scroll></a>
     script(src="js/app.js")
 //.site-footer

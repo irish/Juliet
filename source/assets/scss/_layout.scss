@@ -7,6 +7,43 @@ LAYOUT PROPERTIES INCLUDES THE FOLLOWING RULES:
 5. Media Queries
 ========================================================================== */
 
+// breakpoints
+$S:     320px;   
+$M:     768px;     
+$L:     1170px;     
+
+// media queries
+@mixin MQ($canvas) {
+    @if $canvas == S {
+        @media only screen and (min-width: $S) { @content; } 
+    }
+    @else if $canvas == M {
+        @media only screen and (min-width: $M) { @content; } 
+    }
+    @else if $canvas == L {
+        @media only screen and (min-width: $L) { @content; } 
+    }
+}
+
+// super light grid - it works with the .ip-container class inside style.scss
+@mixin column($percentage, $float-direction:left) {
+    width:                                100% * $percentage;
+    float:                                $float-direction;
+}
+
+
+.ip-container { 
+	width: 90%;
+	max-width: $M;
+	margin: 0 auto;
+
+	&::after { /* clearfix */
+		content: '';
+		display: table;
+		clear: both;
+	}
+}
+
 .site-inner{
     display:                                grid;
     grid-template-columns:                  repeat(12, 1fr);
@@ -15,59 +52,69 @@ LAYOUT PROPERTIES INCLUDES THE FOLLOWING RULES:
 }
 
 .site-header,.site-content,.site-footer{
-    grid-column: span 12;
+    grid-column:                            span 12;
 }
 
 .duo,.trio,.quad{
-    display:grid;
-    grid-template-columns:1fr;
-    grid-gap: 1em;
+    display:                                grid;
+    grid-template-columns:                  1fr 1fr;
+    grid-gap:                               1em;
 }
 
+ .image-grid{
+    display:                            grid;
+    grid-template-columns:              repeat(4, [column] auto);
+    grid-gap:                           1em;
+}
 
-@media screen and (min-width: 56.875em) {
+.site-footer{
+        padding:                            1.5455% 3.5em;
+    }
+
+@include MQ(M) {
+    .full{     
+        display:                            grid;
+        grid-template-columns:              1fr;
+    }
     .duo{     
-        display:grid;
-        grid-template-columns:1fr 1fr;
-        grid-gap: 1em;
+        display:                            grid;
+        grid-template-columns:              1fr 1fr;
+        grid-gap:                           1em;
     }
     .trio{
-        display:grid;
-        grid-template-columns:repeat(3, [column] auto);
-        grid-gap: 1em;
+        display:                            grid;
+        grid-template-columns:              repeat(3, [column] auto);
+        grid-gap:                           1em;
     }
     .trio-nogap{
-        display:grid;
-        grid-template-columns:repeat(3, [column] auto);
-        //grid-gap: 1em;
+        display:                            grid;
+        grid-template-columns:              repeat(3, [column] auto);
     }
     .quad{
-        display:grid;
-        grid-template-columns:repeat(4, [column] auto);
-        grid-gap: 1em;
+        display:                            grid;
+        grid-template-columns:              repeat(4, [column] auto);
+        grid-gap:                           1em;
+    }
+    .site-meta{
+        display:                            grid;
+        grid-template-columns:              1fr 1fr 1fr;
+        grid-gap:                           1em;
+    }
+    .site-footer{
+        padding:                            1.5455% 3.5em;
     }
 }
 
- //REVERSE SIDEBAR LAYOUT
-.content-reversed{
-    details, main {
-        display: block;
-    }
-    article, aside, details, figcaption, figure, footer, header, main, menu, nav, section, summary{
-        display: block;
-    }
-    @media screen and (min-width: 56.875em) {
-        .content-area {
-            float: right;
-            margin-right: 0;
-            width: 70%;
-        }
+.section-1,
+.section-2,
+.section-3{
+    padding:                                2em 0;
+    margin-top:                             5em;
+}
+.bridge-home{
+    padding:                                3em 0;
+}
 
-        .sidebar {
-            float: left;
-            margin-left: 0;
-            padding: 0;
-            width: 25%;
-        }
-    }
+.section-2{
+    background-color:                       var(--pale);
 }

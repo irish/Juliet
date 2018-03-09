@@ -6,19 +6,81 @@ html(lang="en")
 		link(rel="profile" href="http://gmpg.org/xfn/11")
 		link(rel="pingback" href="#")
 		link(rel="stylesheet" href="style.css")
+		link(rel="apple-touch-icon", sizes="120x120", href="/apple-touch-icon.png")
+		link(rel="icon", type="image/png", sizes="32x32", href="/favicon-32x32.png")
+		link(rel="icon", type="image/png", sizes="16x16", href="/favicon-16x16.png")
+		link(rel="manifest", href="/site.webmanifest")
+		link(rel="mask-icon", href="/safari-pinned-tab.svg", color="#5bbad5")
+		meta(name="msapplication-TileColor", content="#121182")
+		meta(name="theme-color", content="#121182")
+		script(src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.40/js/uikit.min.js")
+		script(src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.40/js/uikit-icons.min.js")
 		title| Home
 	//- body.wp-custom-logo
-	body.page-template-default.page.wp-custom-logo.group-blog.no-sidebar
+	body.page-template-default.page.wp-custom-logo.group-blog.no-sidebar.page-home
 		include includes/_header.pug
 		include includes/_hero.pug
 		main.ip-main-content
-			.ip-container
-				h1 Header H1
-				p|Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-				h2 Header H2
-				p|Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-				h3 Header H3
-				p|Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-				h4 Header H4
-				p|Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			.section-1
+				.ip-container
+					h2|Why Choose Us?
+					p|Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+					.uk-card.uk-card-secondary.uk-grid-collapse.uk-margin.gradient4(class='uk-child-width-1-2@s', uk-grid='')
+						.uk-card-media-left.uk-cover-container
+							img(src='img/branding/painter.png', alt='', uk-cover='')
+							canvas(width='600', height='400')
+						div
+							.uk-card-body
+								h3.uk-card-title Customer Service
+								p|Our company is based on the belief that our customers’ needs are of the utmost importance. Our entire team is committed to meeting those needs.
+								p|As a result, a high percentage of our business is from repeat customers and referrals.
+								a(class="uk-button uk-button-default" href="#")
+									span(class="uk-margin-small-right" uk-icon="file-edit")
+									|Get a Free Estimate
+			.section-2
+				.ip-container
+					h2| Latest Projects
+					div(class="image-grid" uk-lightbox="animation: fade")
+						div
+							a.uk-inline(href='img/full/image-1.jpg', caption='Caption 1')
+								img(src='img/small/image-1.jpg', alt='')
+						div
+							a.uk-inline(href='img/full/image-2.jpg', caption='Caption 2')
+								img(src='img/small/image-2.jpg', alt='')
+						div
+							a.uk-inline(href='img/full/image-3.jpg', caption='Caption 3')
+								img(src='img/small/image-3.jpg', alt='')
+						div
+							a.uk-inline(href='img/full/image-4.jpg', caption='Caption 1')
+								img(src='img/small/image-4.jpg', alt='')
+						div
+							a.uk-inline(href='img/full/image-5.jpg', caption='Caption 2')
+								img(src='img/small/image-5.jpg', alt='')
+						div
+							a.uk-inline(href='img/full/image-6.jpg', caption='Caption 3')
+								img(src='img/small/image-6.jpg', alt='')
+						div
+							a.uk-inline(href='img/full/image-7.jpg', caption='Caption 2')
+								img(src='img/small/image-7.jpg', alt='')
+						div
+							a.uk-inline(href='img/full/image-8.jpg', caption='Caption 3')
+								img(src='img/small/image-8.jpg', alt='')
+			.section-3#contact-form
+				.ip-container
+					h2|Get Your Free Quote
+					form
+						fieldset.uk-fieldset(uk-grid='')
+							legend.uk-legend Fill In Your Details Below
+							.uk-margin.uk-width-1-2
+								input.uk-input(type='text', placeholder='Name')
+							.uk-margin.uk-width-1-2
+								input.uk-input(type='text', placeholder='Email')
+							.uk-margin.uk-width-1-2
+								input.uk-input(type='text', placeholder='Subject')
+							.uk-margin.uk-width-1-2
+								input.uk-input(type='text', placeholder='Phone Number')
+							.uk-margin.uk-width-1-1
+								textarea.uk-textarea(rows='5', placeholder='Your Message')
+							.uk-margin.uk-width-1-1
+								a.uk-button.uk-button-secondary(href='#') Submit
 		include includes/_footer.pug
