@@ -81,6 +81,10 @@ $L:     1170px;
         grid-template-columns:              1fr 1fr;
         grid-gap:                           1em;
     }
+    .duo-nogap{
+        display:                            grid;
+        grid-template-columns:              repeat(2, [column] auto);
+    }
     .trio{
         display:                            grid;
         grid-template-columns:              repeat(3, [column] auto);
