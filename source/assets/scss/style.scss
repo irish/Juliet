@@ -19,118 +19,392 @@ To retain and build on top of the original styles from the parent theme, bring i
 */
 
 
-// @import 'libs/reset';
-// @import 'libs/normalize';
+//@import 'libs/reset';
+@import 'libs/sanitize';
 
 //@import             'libs/vars';
 
 :root{
-    --black:                    #000000;
-    --charcoal:                 #1a1a1a;
-    --carbon:                   #686868;
-    --white:                    #ffffff;
-    --red:                      #710000;
-    --orange:                   #dd9933;
-    --navy:                     #2C3E50;
-    --pale:                     #ECF0F1;
-    --light-blue:               #007acc;
-    --blue:                     #ECF0F1;
-    --green:                    #46B29D;
-    --gradientA:                linear-gradient(to top,#000 0%, #09203f 50%, #537895 100%);
-    --gradientB:                linear-gradient(to top, #30cfd0 0%, #330867 100%);
+    --black:                            #000000;
+    --charcoal:                         #1a1a1a;
+    --carbon:                           #686868;
+    --white:                            #ffffff;
+    --red:                              #710000;
+    --blue:                             #1C8EF7;
+    --orange:                           #dd9933;
+    --yellow:                           #d28c14;
+    --navy:                             #2C3E50;
+    --pale:                             #ECF0F1;
+    --light-blue:                       #007acc;
+    --chalk:                            #ECF0F1;
+    --green:                            #38BA57;
+    --lime:                             #70bf40;
+    --purple:                           #b46ae3;
+    --gradientA:                        linear-gradient(to top,#000 0%, #09203f 50%, #537895 100%);
+    --gradientB:                        linear-gradient(to top, #30cfd0 0%, #330867 100%);
 
-    --background-color:             var(--charcoal);
-    --custom-background-color:      var(--red);
-    --page-background-color:        var(--white);
-    --custom-page-background-color: var(--red);
-    --global-link-color:            var(--light-blue);
-    --main-text-color:              var(--charcoal);
-    --secondary-text-color:         var(--carbon);
+    --masthead-identifier:              var(--purple);
+    --page-title-identifier:            var(--light-blue);
+    --main-content-identifier:          var(--lime);
+    --sidebar-identifier:               var(--orange);
+    --footer-content-identifier:        var(--white);
 
-    --letter-spacing:			    0.01rem;
-    --letter-spacing-alt:		    0.5rem;
-    --header-text-transform:	    none;
-    --weight-light:			        100;
-	--weight:					    400;
-	--weight-bold:				    600;
-	--weight-extrabold:			    700;
-    --weight-megabold:			    900;
-    --kerning:					    0.01rem;
-    --kerning-alt:				    0.1rem;
-    --line-height:				    1.6rem;
+    --body-background-color:            var(--white);
+    --body-custom-background-color:     var(--red);
+    --site-page-background-color:       var(--white);
+    --site-custom-page-background-color:var(--red);
+    --global-link-color:                var(--light-blue);
+    --main-text-color:                  var(--charcoal);
+    --secondary-text-color:             var(--carbon);
+
+    --letter-spacing:			        0.01rem;
+    --letter-spacing-alt:		        0.5rem;
+    --header-text-transform:	        none;
+    --weight-light:			            100;
+	--weight:					        400;
+	--weight-bold:				        600;
+	--weight-extrabold:			        700;
+    --weight-megabold:			        900;
+    --kerning:					        0.01rem;
+    --kerning-alt:				        0.1rem;
+    --line-height:				        1.7rem;
+    --os-font-stack:                    -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', Helvetica, Arial, sans-serif;                     
 }
 
-@import                     'libs/functions';
-@import                     'libs/mixins';
-@import                     'libs/wordpress-mod/2016/style';
-
-@import                     'wp-overides';
-
-
+@import                                 'libs/mixins';
+//@import                                 'libs/functions';
+//@import                               'libs/wordpress-mod/2016/style';
+//@import                               wp-overides';
 // 1. CUSTOM VARIABLES AND VARIABLE OVERWRITES
-$base-body-background:      transparent;
-$global-link-color:         var(--global-link-color);
-
+// $base-body-background:               transparent;
+// $global-link-color:                  var(--global-link-color);
 // 2. Import default variables and available mixins.
-@import                     'ui/variables-theme';
-@import                     'ui/mixins-theme';
-
+// @import                              'ui/variables-theme';
+// @import                              'ui/mixins-theme';
 // 3. Your custom mixin overwrites.
-@mixin                      hook-text-lead() { color: rgb(36, 78, 196); }
-
+//@mixin                                hook-text-lead() { color: rgb(36, 78, 196); }
 // 4. Import UIkit.
-@import                     'ui/uikit-theme';
+//@import                               'ui/uikit-theme';
 
+/*--------------------------------------------------------------
+Development Mode
+--------------------------------------------------------------*/
 
-
-// HELPERS
-.supported, .unsupported {
-    display:none;
-}
-  
-.supported {
-    @supports (display:grid) {
-        display:block;
+.dev {
+    .masthead {
+        outline:                        1px dashed #b46ae3;
+        outline:                        1px dashed var(--masthead-identifier);
+    }
+    .page-title {
+        outline:                        1px dashed #51a7fa;
+        outline:                        1px dashed var(--page-title-identifier);
+    }
+    .main-content {
+        outline:                        1px dashed #70bf40;
+        outline:                        1px dashed var(--main-content-identifier);
+    }
+    .sidebar {
+        outline:                        1px dashed #f49018;
+        outline:                        1px dashed var(--sidebar-identifier);
+    }
+    .footer-content {
+        outline:                        1px dashed #0265c0;
+        outline:                        1px dashed var(--footer-content-identifier);
     }
 }
-  
+
+.supported,
 .unsupported {
-    color:#D32F2F;
-    @supports not (display:grid) {
-        display:block;
+    display: none;
+}
+
+.supported {
+    @supports (display: grid) {
+        display: block;
     }
 }
 
-.hidden{display: none;}
+.unsupported {
+    color: #D32F2F;
+    @supports not (display: grid) {
+        display: block;
+    }
+}
 
+ 
+// HELPERS
+.hidden{
+    display:                            none;
+}
+
+ul.unstyled{
+    list-style-type: none;
+    padding-left: 0px;
+}
+
+/*--------------------------------------------------------------
+Accessibility
+--------------------------------------------------------------*/
+/* Highlight accessibility issues  */
+@import 'revenge';
+
+/* Text meant only for screen readers */
+
+.screen-reader-text {
+    clip:                               rect(1px, 1px, 1px, 1px);
+    position:                           absolute !important;
+    height:                             1px;
+    width:                              1px;
+    overflow:                           hidden;
+}
+
+.screen-reader-text:hover,
+.screen-reader-text:active,
+.screen-reader-text:focus {
+    background-color:                   var(--chalk);
+    background-color:                   #ECF0F1;
+    border-radius:                      3px;
+    box-shadow:                         0 0 2px 2px rgba(0, 0, 0, 0.6);
+    clip:                               auto !important;
+    color:                              #21759b;
+    color:                              var(--light-blue);
+    display:                            block;
+    font-size:                          14px;
+    font-weight:                        bold;
+    font-weight:                        var(--weight-bold);
+    height:                             auto;
+    left:                               5px;
+    line-height:                        normal;
+    padding:                            15px 23px 14px;
+    text-decoration:                    none;
+    top:                                5px;
+    width:                              auto;
+    z-index:                            100000;
+    /* Above WP toolbar */
+}
+
+img[alt=""],
+img:not([alt]) {
+    border: 5px dashed var(--red);
+}
+
+/*--------------------------------------------------------------
+Base
+--------------------------------------------------------------*/
 html {
-    font-size:              calc(13px + 0.2vw);
-    background:             #000000;//≤IE11
-    background:             var(--charcoal);
+    font-size:                          calc(13px + 0.2vw);
+    background:                         #000000; //≤IE11
+    background:                         var(--background-color);
 }
 
-body, button, input, select, textarea{
-    font-weight:            400;//≤IE11
-    font-weight:            var(--weight);
-    letter-spacing:         0.01rem;//IE11
-    letter-spacing:         var(--kerning);
-    line-height:            1.6rem;//≤IE11
-    line-height:            calc(var(--line-height)*1);
-    @include                font-smoothing;
+body {
+    margin:                             0;
 }
 
-code{
-    word-wrap:              break-word;
+body,
+button,
+input,
+select,
+textarea {
+    font-family:                        var(--os-font-stack);
 }
-//  COLORS
-//  1.Background Color
-//  2.Page Background Color
-//  3.Link Color
-//  4.Main Text Color
-//  5.Secondary Text Color
 
-// .site-inner{}
-// .site-header{}
-// .site-content{}
+body,
+button,
+input,
+select,
+textarea {
+    font-weight:                        400; //≤IE11
+    font-weight:                        var(--weight);
+    letter-spacing:                     0.01rem; //IE11
+    letter-spacing:                     var(--kerning);
+    line-height:                        1.6rem; //≤IE11
+    line-height:                        calc(var(--line-height)*1);
+    @include                            font-smoothing;
+}
 
-@import                     'layout';
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    clear:                              both;
+}
+
+p {
+    margin-bottom:                      1.5em;
+}
+
+a {
+    transition:                         color .5s;
+}
+
+b,
+strong {
+    font-weight:                        bold;
+}
+
+dfn,
+cite,
+em,
+i {
+    font-style:                         italic;
+}
+
+blockquote {
+    margin:                             0 1.5em;
+}
+
+address {
+    margin:                             0 0 1.5em;
+}
+
+code:last-child {
+    margin-right:                       0;
+}
+
+code:first-child {
+    margin-left:                        0;
+}
+
+code {
+    display:                            inline-block;
+    margin:                             0 .25em;
+    padding:                            0 .5em;
+    font-size:                          .69444em;
+    font-weight:                        400;
+    font-feature-settings:              "liga" 0;
+    color:                              inherit;
+    word-wrap:                          break-word;
+}
+
+pre {
+    display:                            inline-block;
+    font-family:                        Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+    color:                              #ddca7e;
+    background:                         #282c34;
+    padding:                            .5em .8em;
+    border-radius:                      .2em;
+}
+
+code,
+kbd,
+tt,
+var {
+    font:                               15px Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+}
+
+abbr,
+acronym {
+    border-bottom:                      1px dotted #666;
+    cursor:                             help;
+}
+
+mark,
+ins {
+    background:                         #fff9c0;
+    text-decoration:                    none;
+}
+
+sup,
+sub {
+    font-size:                          75%;
+    height:                             0;
+    line-height:                        0;
+    position:                           relative;
+    vertical-align:                     baseline;
+}
+
+sup {
+    bottom:                             1ex;
+}
+
+sub {
+    top:                                .5ex;
+}
+
+small {
+    font-size:                          75%;
+}
+
+big {
+    font-size:                          125%;
+}
+
+figure {
+    margin:                             0;
+}
+
+img {
+    display:                            block;
+    border:                             0;
+    width:                              100%;
+    height:                             auto;
+}
+
+/*--------------------------------------------------------------
+Initiate Theme
+--------------------------------------------------------------*/
+
+.day-mode {
+    background-color:                   #fff;
+    background-color:                   var(--white);
+    color:                              #000;
+    color:                              var(--charcoal);
+    a {
+        color:                          #0265c0;
+        color:                          var(--blue);
+        &:focus {
+            outline:                    1px solid #0265c0;
+            outline:                    1px solid var(--blue);
+        }
+        &:hover {
+            background-color:           rgba(0, 0, 0, 0.1);
+        }
+        &:active {
+            text-decoration:            none;
+        }
+    }
+}
+
+.night-mode {
+    background-color:                   #000;
+    background-color:                   var(--charcoal);
+    color:                              #fff;
+    color:                              var(--white);
+    a {
+        color:                          #dd9933;
+        color:                          var(--orange);
+        &:focus {
+            outline:                    1px solid orange;
+            outline:                    1px solid var(--orange);
+        }
+        &:hover {
+            background-color:           rgba(255, 255, 255, 0.1);
+            text-decoration:            none;
+        }
+        &:active {
+            text-decoration:            none;
+        }
+    }
+}
+
+.constrain{
+    max-width:                          62.5em;
+    margin:                             0 auto;
+}
+
+
+
+
+@import 'layout-basic';
+@import 'layout-gallery';
+
+/*--------------------------------------------------------------
+Component Styles:
+--------------------------------------------------------------*/
+@import 'components/cards';
+@import 'components/cards-alt';
+@import 'components/cards-media';
+@import 'components/shapes';

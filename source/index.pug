@@ -6,18 +6,278 @@ html(lang="en")
 		link(rel="profile" href="http://gmpg.org/xfn/11")
 		link(rel="pingback" href="#")
 		link(rel="stylesheet" href="style.css")
-		title| Home
-	//- body.wp-custom-logo
-	body.page-template-default.page.wp-custom-logo.group-blog.no-sidebar
-		#page.site
-			.site-inner
-				a.skip-link.screen-reader-text(href="#content")|Skip to content
-				include includes/_header.pug
-				//.site-header
-				#content.site-content
-					#primary.content-area
-						include includes/_main.pug
-				//.site-content
-				include includes/_footer.pug
-			//.site-inner
-		//.site
+		title| Home: Basic
+	html
+	body.site.dev.basic.day-mode
+		a.skip-link.screen-reader-text(href='#content') Skip to content
+		header.masthead(role="banner")
+			code.identifier
+				pre|.masthead
+			h2|Basic Layout
+			a(href="https://google.com")|Google
+			ul.cards-alt
+				li.card-item
+					a(href="https://google.com")
+						figure.card-alt
+							//- img(src='https://source.unsplash.com/collection/182565/1000x1000', alt='Lines on a tropical leaf.')
+							img(src='img/image.png', alt='Lines on a tropical leaf.')
+							figcaption.caption
+								h3.caption-title Card Alt
+								p
+									| Everything that grows creates lines; the abstract telling of the story of a life.
+				li.card-item
+					a(href="https://google.com")
+						figure.card-alt
+							//- img(src='https://source.unsplash.com/collection/182565/1000x1000', alt='Lines on a tropical leaf.')
+							img(src='img/image.png', alt='Lines on a tropical leaf.')
+							figcaption.caption
+								h3.caption-title Card Alt
+								p
+									| Everything that grows creates lines; the abstract telling of the story of a life.
+		.page-title
+			code.identifier
+				pre|.page-title
+			h1|Page Title
+			ul.cards-media
+				li.card-item
+					a(href='http://google.com')
+						figure.card-media
+							img(src='img/image.png', alt='Lines on a tropical leaf.')
+							figcaption.caption
+								h3.caption-title Card Media
+								p
+									| Everything that grows creates lines; the abstract telling of the story of a life.
+				li.card-item
+					a(href='http://google.com')
+						figure.card-media
+							img(src='img/image.png', alt='Lines on a tropical leaf.')
+							figcaption.caption
+								h3.caption-title Card Media
+								p
+									| Everything that grows creates lines; the abstract telling of the story of a life.
+				li.card-item
+					a(href='http://google.com')
+						figure.card-media
+							img(src='img/image.png', alt='Lines on a tropical leaf.')
+							figcaption.caption
+								h3.caption-title Card Media
+								p
+									| Everything that grows creates lines; the abstract telling of the story of a life.
+				li.card-item
+					a(href='http://google.com')
+						figure.card-media
+							img(src='img/image.png', alt='Lines on a tropical leaf.')
+							figcaption.caption
+								h3.caption-title Card Media
+								p
+									| Everything that grows creates lines; the abstract telling of the story of a life.
+		main#content.main-content
+			code.identifier
+				pre|.main-content
+			h2|Main content
+			p|This is where the main bulk of the document content would go.
+			ul.cards
+				li.card-item.double
+					a(href="https://google.com")
+						figure.card
+							//- img(src='https://source.unsplash.com/collection/190727/1000x1000', alt='An image title')
+							img(src='img/image.png', alt='Lines on a tropical leaf.')
+							figcaption.caption
+								h3.caption-title|Card
+								p|Hello World
+				li.card-item
+					a(href="https://google.com")
+						figure.card
+							//- img(src='https://source.unsplash.com/collection/190726/1000x1000', alt='An image title')
+							img(src='img/image.png', alt='Lines on a tropical leaf.')
+							figcaption.caption
+								h3.caption-title|Card
+								p|Hello World
+				li.card-item
+					a(href="https://google.com")
+						figure.card
+							//- img(src='https://source.unsplash.com/collection/190725/1000x1000', alt='An image title')
+							img(src='img/image.png', alt='Lines on a tropical leaf.')
+							figcaption.caption
+								h3.caption-title|Card
+								p|Hello World
+				li.card-item
+					a(href="https://google.com")
+						figure.card
+							//- img(src='https://source.unsplash.com/collection/369/1000x1000', alt='An image title')
+							img(src='img/image.png', alt='Lines on a tropical leaf.')
+							figcaption.caption
+								h3.caption-title|Card
+								p|Hello World
+				li.card-item
+					a(href="https://google.com")
+						figure.card
+							//- img(src='https://source.unsplash.com/collection/190728/1000x1000', alt='An image title')
+							img(src='img/image.png', alt='Lines on a tropical leaf.')
+							figcaption.caption
+								h3.caption-title|Card
+								p|Hello World
+				li.card-item
+					a(href="https://google.com")
+						figure.card
+							//- img(src='https://source.unsplash.com/collection/375719/1000x1000', alt='An image title')
+							img(src='img/image.png', alt='Lines on a tropical leaf.')
+							figcaption.caption
+								h3.caption-title|Card
+								p|Hello World
+				li.card-item
+					a(href="https://google.com")
+						figure.card
+							//- img(src='https://source.unsplash.com/collection/910773/1000x1000', alt='An image title')
+							img(src='img/image.png', alt='Lines on a tropical leaf.')
+							figcaption.caption
+								h3.caption-title|Card
+								p|Hello World
+				li.card-item
+					a(href="https://google.com")
+						figure.card
+							//- img(src='https://source.unsplash.com/collection/540518/1000x1000', alt='An image title')
+							img(src='img/image.png', alt='Lines on a tropical leaf.')
+							figcaption.caption
+								h3.caption-title|Card
+								p|Hello World
+				li.card-item
+					a(href="https://google.com")
+						figure.card
+							//- img(src='https://source.unsplash.com/collection/1309006/1000x1000', alt='An image title')
+							img(src='img/image.png', alt='Lines on a tropical leaf.')
+							figcaption.caption
+								h3.caption-title|Card
+								p|Hello World
+				li.card-item
+					a(href="https://google.com")
+						figure.card
+							//- img(src='https://source.unsplash.com/collection/1841259/1000x1000', alt='An image title')
+							img(src='img/image.png', alt='Lines on a tropical leaf.')
+							figcaption.caption
+								h3.caption-title|Card
+								p|Hello World
+				li.card-item
+					a(href="https://google.com")
+						figure.card
+							//- img(src='https://source.unsplash.com/collection/782145/1000x1000', alt='An image title')
+							img(src='img/image.png', alt='Lines on a tropical leaf.')
+							figcaption.caption
+								h3.caption-title|Card
+								p|Hello World
+				li.card-item
+					a(href="https://google.com")
+						figure.card
+							//- img(src='https://source.unsplash.com/collection/827751/1000x1000', alt='An image title')
+							img(src='img/image.png', alt='Lines on a tropical leaf.')
+							figcaption.caption
+								h3.caption-title|Card
+								p|Hello World
+		aside.sidebar
+			code.identifier
+				pre|.sidebar
+			h2|Sidebar
+			p|The place where things of less relevance appears.
+			ul.cards
+				li.card-item.double
+					a(href="https://google.com")
+						figure.card
+							//- img(src='https://source.unsplash.com/collection/782145/1000x1000', alt='An image title')
+							img(src='img/image.png', alt='Lines on a tropical leaf.')
+							figcaption.caption
+								h3.caption-title|Card
+								p|Hello World
+				li.card-item
+					a(href="https://google.com")
+						figure.card
+							//- img(src='https://source.unsplash.com/collection/400620/1000x1000', alt='An image title')
+							img(src='img/image.png', alt='Lines on a tropical leaf.')
+							figcaption.caption
+								h3.caption-title|Card
+								p|Hello World
+				li.card-item
+					a(href="https://google.com")
+						figure.card
+							//- img(src='https://source.unsplash.com/collection/595970/1000x1000', alt='An image title')
+							img(src='img/image.png', alt='Lines on a tropical leaf.')
+							figcaption.caption
+								h3.caption-title|Card
+								p|Hello World
+				li.card-item
+					a(href="https://google.com")
+						figure.card
+							//- img(src='https://source.unsplash.com/collection/416011/1000x1000', alt='An image title')
+							img(src='img/image.png', alt='Lines on a tropical leaf.')
+							figcaption.caption
+								h3.caption-title|Card
+								p|Hello World
+				li.card-item
+					a(href="https://google.com")
+						figure.card
+							//- img(src='https://source.unsplash.com/collection/496241/1000x1000', alt='An image title')
+							img(src='img/image.png', alt='Lines on a tropical leaf.')
+							figcaption.caption
+								h3.caption-title|Card
+								p|Hello World
+				li.card-item
+					a(href="https://google.com")
+						figure.card
+							//- img(src='https://source.unsplash.com/collection/1136512/1000x1000', alt='An image title')
+							img(src='img/image.png', alt='Lines on a tropical leaf.')
+							figcaption.caption
+								h3.caption-title|Card
+								p|Hello World
+				li.card-item
+					a(href="https://google.com")
+						figure.card
+							//- img(src='https://source.unsplash.com/collection/1005812/1000x1000', alt='An image title')
+							img(src='img/image.png', alt='Lines on a tropical leaf.')
+							figcaption.caption
+								h3.caption-title|Card
+								p|Hello World
+				li.card-item
+					a(href="https://google.com")
+						figure.card
+							//- img(src='https://source.unsplash.com/collection/540518/1000x1000', alt='An image title')
+							img(src='img/image.png', alt='Lines on a tropical leaf.')
+							figcaption.caption
+								h3.caption-title|Card
+								p|Hello World
+				li.card-item
+					a(href="https://google.com")
+						figure.card
+							//- img(src='https://source.unsplash.com/collection/629911/1000x1000', alt='An image title')
+							img(src='img/image.png', alt='Lines on a tropical leaf.')
+							figcaption.caption
+								h3.caption-title|Card
+								p|Hello World
+				li.card-item
+					a(href="https://google.com")
+						figure.card
+							//- img(src='https://source.unsplash.com/collection/1532230/1000x1000', alt='An image title')
+							img(src='img/image.png', alt='Lines on a tropical leaf.')
+							figcaption.caption
+								h3.caption-title|Card
+								p|Hello World
+				li.card-item
+					a(href="https://google.com")
+						figure.card
+							//- img(src='https://source.unsplash.com/collection/358545/1000x1000', alt='An image title')
+							img(src='img/image.png', alt='Lines on a tropical leaf.')
+							figcaption.caption
+								h3.caption-title|Card
+								p|Hello World
+				li.card-item
+					a(href="https://google.com")
+						figure.card
+							//- img(src='https://source.unsplash.com/collection/182565/1000x1000', alt='An image title')
+							img(src='img/image.png', alt='Lines on a tropical leaf.')
+							figcaption.caption
+								h3.caption-title|Card
+								p|Hello World
+		footer.footer-content(role="contentinfo")
+			code.identifier
+				pre|.footer-content
+			h2|Footer
+			p
+				span.bg|The place where site nav and other meta info typically appears.

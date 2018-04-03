@@ -6,18 +6,177 @@ html(lang="en")
 		link(rel="profile" href="http://gmpg.org/xfn/11")
 		link(rel="pingback" href="#")
 		link(rel="stylesheet" href="style.css")
-		title| About
-	//- body.wp-custom-logo
-	body.page-template-default.page.wp-custom-logo.group-blog.no-sidebar.custom-background
-		#page.site
-			.site-inner
-				a.skip-link.screen-reader-text(href="#content")|Skip to content
-				include includes/_header.pug
-				//.site-header
-				#content.site-content
-					#primary.content-area
-						include includes/_main-about.pug
-				//.site-content
-				include includes/_footer.pug
-			//.site-inner
-		//.site
+		title| Home
+	html
+	body.site.dev.basic.night-mode
+		a.skip-link.screen-reader-text(href='#content') Skip to content
+		header.masthead(role="banner")
+			ul.unstyled
+				li
+					a(href="#1")|Anatomy
+				li
+					a(href="#2")|Elements
+				li
+					a(href="#3")|Methodology
+				li
+					a(href="#4")|ES6
+				li
+					a(href="#5")|GA Events
+				li
+					a(href="#6")|CSS
+		main#content.main-area
+			h2(id="1")|Anatomy of a Landing Page
+			ol
+				li|Detailed, but concise copy. Be specific about what your product is, does, why it matters, and how it will help your visitors. People won't pay for something they don't understand. But they don't want to have to read an essay first.
+				li
+					ul
+						li|Tell people what you offer.
+						li|What your product/service is.
+						li|What it does.
+						li|Who it's for.
+						li|Why it matters.
+						li|Clear calls to action (CTAs) - your calls to action (buttons and links) should be both visually prominent and clear in meaning, so people know what you expect them to do.
+				li
+					ul
+						li|Use prominent and clear calls to action. Often.
+						li|Genuine tone - sounding like a keyword-spewing robot can scare people away and make your product sound cheap. Write like you speak.
+					ul
+						li|Don't be an infomercial.
+						li|Engaging content - people get bored and intimidated by large blocks of text. Keep their attention with engaging and easy-to-read copy, lists, imagery, and data visualizations.
+					ul
+						li|Keep people engaged.
+						li|Be clear.
+						li|Use visual content.
+						li|Be entertaining.
+						li|Touch close to home.
+					li|Social proof - have big-name or really happy customers? Show them off. Nobody wants to use an app or service that nobody else is using.
+					li|Carefully considered pricing - the right pricing display can sway people’s decision-making.
+					li|Logical progression - the most convincing arguments rely on precise timing. If you dive into price before covering the benefits, you could intimidate people. That said, if you have a free trial or price is a big differentiator from your competition, it’s worth mentioning early.
+				li
+					ul
+						li|Set up a problem.
+						li|Detail a solution.
+						li|Use your social proof.
+						li|Introduce pricing.
+						li|Leave them thinking.
+			h2(id="2")|Elements
+			h3|Strong Headlines
+			p|Headlines will be one of the first things that people see. Make them engaging and consistent to compliment the ad that lead the user there in the first place.
+			h3|Scannable content with a logical visual hierarchy of content
+			p|Cluttered pages create confused users and confused users don’t completed goals. It’s important to keep pages clean, through the correct use of white space and strong readable typography. Something as simple as adjusting the line height or font size of your content will improve the overall readability of the site.
+			h3|Testimonials can make a big impact with conversions
+			p|Including social proof of what you do can be very persuasive to potential customers.
+			h3|Include media, especially if you are selling something
+			p|Invest in high quality custom imagery as opposed to generic stock imagery. Make sure its relevant as images can be powerful story telling elements. Images help reduce a page turning into a wall of text, which often intimidates users. It’s important however to not include an image that not relevant.
+			h3|Social Sharing options
+			p|Include options for users to share content on your site as easily as possible. This allows users to spears the word and drive traffic to your site.
+			h2(id="3")|Methodology: Conversion-Centered Design
+			ol
+				li
+					h3|Attention
+					p|Attention Ratio is the ratio of the number of things you can do on a given page to the number of things you should do. A concise landing page has a ration of 1:1. Some Home pages could have a ration of 57:1
+					P|Removing navigation and social buttons can decrease the ration and improve conversions.
+					p|Exceptions include multiple links to the same goal. Anchor links are not leaks.
+					p|All of this can be tested using <b>A/B Testing</b>.
+				li
+					h3|Context
+					p|Pre-click. Facebook or an Email Ad. Message Match and Design Match.
+					p|The source of the click can give us clues to what the users are expecting. The source sets up the user differently. For example Facebook and Twitter have less preparatory content as opposed to a long form blog post or and email.
+					p|Message Match. The CTA matches the upstream ad or email.
+					p|Design Match. The look and feel is consistent. Colors and typography and tone of voice.
+				li
+					h3|Clarity
+					p|There is a big difference between a Landing page and a Home page.
+					p| A Home page promotes the Unique Value Proposition
+					p| A Landing page promotes the Unique Campaign Proposition which is related to that specific campaign. The 5 second test can be applied to the LP.
+				li
+					h3|Congruence
+					p|Design for the customer, not the multiple stakeholders. Copy all content into a speadsheet to eliminate emotion and rate each element on a scale of 0-2. Total the page and refactor.
+				li
+					h3|Credibility
+					p|Social proof, testimonials, HTTPS, Endorsements. Hyperbole is a credibility killer.
+				li
+					h3|Closing
+					p|Note both Positive and Negative influences.
+				li
+					h3|Continuance
+					p|Should think of what a possible next step could be. Above all though, you must ask for something. Social sharing, subscribe to blog, start a free trial etc…
+			h2(id="4")|Javascript: ES6 Features
+			a(href="https://zellwk.com/blog/es6/")|Source
+			P|Block Scope which has simplified development and reduced issues. Being able to use let and const instead of var has made writing functions much easier.
+			p|Prevent variable hoisting outside of the scope and duplicate variable declarations within functions.
+			p|In ES5 we declared variables with the <code>var</code> keyword. Now use the <code>let</code> and <code>const</code> keywords.
+			h3|LET v VAR
+			p|Once <code>var</code> is declared it can be used anywhere in the current scope.
+			img(src="img/js/let-var-1.png" alt="declare VAR")
+			p|In the example above, I’ve declared <code>me</code> as a global variable. This global <code>me</code> variable can also be used in a function, like this:
+			img(src="img/js/let-var-2.png" alt="Its usage")
+			p|However, the reverse is not true. If I declare a variable in a function, I cannot use it outside the function.
+			img(src="img/js/let-var-3.png" alt="If I declare a variable in a function, I cannot use it outside the function")
+			p|<code>var</code> is function-scoped. Whenever a variable is created with <code>var</code> in a function, it will only exist within the function.
+			p|If the variable is created outside of the function, it’ll exist in the outer scope.
+			img(src="img/js/let-var-4.png")
+			p|<code>let</code>, on the other hand, is block-scoped. This means whenever a variable is created with let, it will only exist within its block.
+			p|A block in JavaScript is anything within a pair of curly braces. 
+			img(src="img/js/let-var-5.png")
+			p|When you use a function-scoped variable, you may accidentally overwrite a variable without intending to do so. Here’s an example:
+			img(src="img/js/let-var-6.png")
+			p|<code>me</code> becomes <code>Plays guitar</code> after running through the if block.
+			P|But anyone who works with <code>var</code> in a <code>for</code> loop situation may run into some weirdness because of the way variables are scoped. Consider the following code that logs the variable <code>i</code> four times, then logs <code>i</code> again with a setTimeout function.
+			img(src="img/js/let-var-7.png")
+			p|This is what happens:
+			img(src="img/js/let-var-7.1.png")
+			p|As var is function-scoped, the value of <code>i</code> became <code>4</code> even before the timeout function runs.
+			p|To get the correct <code>i</code> value within <code>setTimeout</code>, which executes later, we need to create another function, say <code>logLater</code>, to ensure the <code>i</code> value doesn’t get changed by the for loop before <code>setTimeout</code> executes:
+			img(src="img/js/let-var-8.png")
+			img(src="img/js/let-var-8.1.png")
+			p|This is called a closure.
+			p|Function-scoped weirdness like the for <code>loop</code> example I’ve just shown you doesn’t happen with <code>let</code>. The same timeout example we’ve written earlier could be written as this, and it’ll work right out of the box without writing additional functions:
+			img(src="img/js/let-var-9.png")
+			img(src="img/js/let-var-9.1.png")
+			p|block-scoped variables make development much simpler by removing common gotchas with function-scoped variables.
+			h3|LET v CONST
+			p|<code>const</code> is also blocked-scoped. The difference is that <code>const</code> cannot be reassigned once declared.
+			img(src="img/js/let-var-10.png")
+			p|As <code>const</code> cannot be reassigned, they’re good for variables would not change.
+			p|Let’s say I have a button that launches a modal on a website. I know that there’s only going to be one button, and it wouldn’t change. In this case, I can use const.
+			img(src="img/js/let-var-10.1.png")
+			p|When declaring variables, using <code>const</code> over <code>let</code> whenever possible because it receives the extra cue that the variable would not get reassigned. Then, use let for all other situations.
+			h2(id="5")|Google Analytics Events
+			ol
+				li
+					h3|Tracking a Custom Event: Call to Action Clicks
+					p|Our CTA buttons have a class button-cta. Using jQuery, we attach a click listener to it like this:
+					img(src="img/ga-events/event-1.png")
+				li
+					p|So, we can now execute a particular function when our CTA button is clicked. 
+					img(src="img/ga-events/event-2.png")
+				li
+					p|The function "ga" supports various arguments which can be used to determine what data gets sent to the GA servers. 
+				li
+					ul
+						li|<b>eventCategory</b>: [required] Typically the object that was interacted with (e.g. 'CTA click')
+						li|<b>eventAction</b>: [required] The type of interaction (e.g. 'click')
+						li|<b>eventLabel</b>: [optional] Useful for categorizing events (e.g. 'Subscribe now')
+					li|<b>eventValue</b>: [optional] A numeric value associated with the event (e.g. 42)
+					img(src="img/ga-events/event-3.png")
+					img(src="img/ga-events/event-4.png")
+			h2(id="6")|CSS
+			b|Box Model Fix
+			<p data-height="300" data-theme-id="19491" data-slug-hash="BrYjpm" data-default-tab="css,result" data-user="irish" data-embed-version="2" data-pen-title="Box-sizing reset" class="codepen">See the Pen <a href="https://codepen.io/irish/pen/BrYjpm/">Box-sizing reset</a> by Brian Murray (<a href="https://codepen.io/irish">@irish</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+			<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+			b|clearfix
+			<p data-height="300" data-theme-id="19491" data-slug-hash="gevPmR" data-default-tab="html,result" data-user="irish" data-embed-version="2" data-pen-title="Clearfix" class="codepen">See the Pen <a href="https://codepen.io/irish/pen/gevPmR/">Clearfix</a> by Brian Murray (<a href="https://codepen.io/irish">@irish</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+			<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+			b|Flexbox Centering
+			<p data-height="300" data-theme-id="19491" data-slug-hash="EEQPmY" data-default-tab="css,result" data-user="irish" data-embed-version="2" data-pen-title="Flexbox centering" class="codepen">See the Pen <a href="https://codepen.io/irish/pen/EEQPmY/">Flexbox centering</a> by Brian Murray (<a href="https://codepen.io/irish">@irish</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+			<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+			b|Grid Centering
+			<p data-height="300" data-theme-id="19491" data-slug-hash="NYyxjM" data-default-tab="css,result" data-user="irish" data-embed-version="2" data-pen-title="Grid centering" class="codepen">See the Pen <a href="https://codepen.io/irish/pen/NYyxjM/">Grid centering</a> by Brian Murray (<a href="https://codepen.io/irish">@irish</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+			<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+			b|Grid Layout
+			<p data-height="300" data-theme-id="19491" data-slug-hash="aYqdwb" data-default-tab="css,result" data-user="irish" data-embed-version="2" data-pen-title="Grid layout" class="codepen">See the Pen <a href="https://codepen.io/irish/pen/aYqdwb/">Grid layout</a> by Brian Murray (<a href="https://codepen.io/irish">@irish</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+			<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+		footer.colophon(role="contentinfo")
+			p
+				date|March 2018
