@@ -20,7 +20,7 @@ To retain and build on top of the original styles from the parent theme, bring i
 
 
 //@import 'libs/reset';
-@import 'libs/sanitize';
+//@import 'libs/sanitize';
 
 //@import             'libs/vars';
 
@@ -72,19 +72,6 @@ To retain and build on top of the original styles from the parent theme, bring i
 }
 
 @import                                 'libs/mixins';
-//@import                                 'libs/functions';
-//@import                               'libs/wordpress-mod/2016/style';
-//@import                               wp-overides';
-// 1. CUSTOM VARIABLES AND VARIABLE OVERWRITES
-// $base-body-background:               transparent;
-// $global-link-color:                  var(--global-link-color);
-// 2. Import default variables and available mixins.
-// @import                              'ui/variables-theme';
-// @import                              'ui/mixins-theme';
-// 3. Your custom mixin overwrites.
-//@mixin                                hook-text-lead() { color: rgb(36, 78, 196); }
-// 4. Import UIkit.
-//@import                               'ui/uikit-theme';
 
 /*--------------------------------------------------------------
 Development Mode
@@ -146,7 +133,7 @@ ul.unstyled{
 Accessibility
 --------------------------------------------------------------*/
 /* Highlight accessibility issues  */
-@import 'revenge';
+//@import 'revenge';
 
 /* Text meant only for screen readers */
 

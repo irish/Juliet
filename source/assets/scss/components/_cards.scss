@@ -1,10 +1,9 @@
 /*--------------------------------------------------------------
 Cards: .cards > .card-item > .card
 --------------------------------------------------------------*/
-
 .cards {
-	padding: 			0;
-	list-style-type: 	none;
+	padding: 0;
+	list-style-type: none;
 	a {
 		text-decoration: none;
 		display: block;
@@ -13,35 +12,44 @@ Cards: .cards > .card-item > .card
 			opacity: 1;
 		}
 	}
-}
-
-.card {
-	display: 			grid;
-	img{
+	.card {
+		display: grid;
+	}
+	.card img {
 		display: block;
+	}
+	.card img,
+	.card .caption {
 		grid-column: 1;
 		grid-row: 1;
-		color:red;
-		position: relative;
+	}
+	.cards a {
+		text-decoration: none;
+		display: block;
 	}
 	.caption {
-		grid-column: 1;
-		grid-row: 1;
 		display: flex;
 		flex-direction: column;
 		justify-content: flex-end;
-		padding: 2em;
+		padding: 1em;
 		background: rgba(0, 0, 0, 0.3);
+		color: white;
 		color: var(--white);
-		color: #fff;
+		font-size: 1em;
 		opacity: 0;
 		transition: opacity .5s;
-		.caption-title {
-			margin: 0;
-			font-size: 2em;
-		}
-		.caption p {
-			padding: 0;
-		}
 	}
+	a:focus .caption,
+	a:hover .caption {
+		opacity: 1;
+	}
+	.caption-title {
+		margin: 0;
+		font-size: 2em;
+	}
+
+	.caption p {
+		padding: 0;
+	}
+
 }
