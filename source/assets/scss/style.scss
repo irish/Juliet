@@ -25,23 +25,37 @@ To retain and build on top of the original styles from the parent theme, bring i
 //@import             'libs/vars';
 
 :root{
-    --black:                            #000000;
-    --charcoal:                         #1a1a1a;
-    --carbon:                           #686868;
-    --white:                            #ffffff;
-    --red:                              #710000;
-    --blue:                             #1C8EF7;
-    --orange:                           #dd9933;
-    --yellow:                           #d28c14;
-    --navy:                             #2C3E50;
-    --pale:                             #ECF0F1;
-    --light-blue:                       #007acc;
-    --chalk:                            #ECF0F1;
-    --green:                            #38BA57;
-    --lime:                             #70bf40;
-    --purple:                           #b46ae3;
-    --gradientA:                        linear-gradient(to top,#000 0%, #09203f 50%, #537895 100%);
-    --gradientB:                        linear-gradient(to top, #30cfd0 0%, #330867 100%);
+    --black :                           rgb(000, 000, 000);
+    --charcoal :                        rgb(026, 026, 026);
+    --carbon :                          rgb(104, 104, 104);
+    --white :                           rgb(255, 255, 255);
+    --red :                             rgb(113, 000, 000);
+    --blue :                            rgb(028, 142, 247);
+    --orange :                          rgb(221, 153, 051);
+    --yellow :                          rgb(210, 140, 020);
+    --navy :                            rgb(044, 062, 080);
+    --pale :                            rgb(236, 240, 241);
+    --light-blue :                      rgb(000, 122, 204);
+    --chalk :                           rgb(236, 240, 241);
+    --green :                           rgb(056, 186, 087);
+    --lime :                            rgb(112, 191, 064);
+    --purple :                          rgb(180, 106, 277);
+    --gradientA :                       linear-gradient(to top, #000 0%, #09203f 50%, #537895 100%);
+    --gradientB :                       linear-gradient(to top, #30cfd0 0%, #330867 100%);
+
+    --letter-spacing :                  0.01rem;
+    --letter-spacing-alt :              0.5rem;
+    --header-text-transform :           none;
+    --weight-light :                    100;
+    --body-font-weight :                400;
+    --weight-bold :                     600;
+    --weight-extrabold :                700;
+    --weight-megabold :                 900;
+    --kerning :                         0.01rem;
+    --kerning-alt :                     0.1rem;
+    --line-height :                     1.7rem;
+    --os-font-stack :                   -apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen-Sans,Ubuntu,Cantarell,'Helvetica Neue',
+    Helvetica,Arial,sans-serif;
 
     --masthead-identifier:              var(--purple);
     --page-title-identifier:            var(--light-blue);
@@ -56,65 +70,54 @@ To retain and build on top of the original styles from the parent theme, bring i
     --global-link-color:                var(--light-blue);
     --main-text-color:                  var(--charcoal);
     --secondary-text-color:             var(--carbon);
-
-    --letter-spacing:			        0.01rem;
-    --letter-spacing-alt:		        0.5rem;
-    --header-text-transform:	        none;
-    --weight-light:			            100;
-	--weight:					        400;
-	--weight-bold:				        600;
-	--weight-extrabold:			        700;
-    --weight-megabold:			        900;
-    --kerning:					        0.01rem;
-    --kerning-alt:				        0.1rem;
-    --line-height:				        1.7rem;
-    --os-font-stack:                    -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', Helvetica, Arial, sans-serif;                     
+    --screen-reader-text-background:    var(--chalk);
+    --screen-reader-text-color:         var(--blue);
 }
 
 @import                                 'libs/mixins';
-
 /*--------------------------------------------------------------
 Development Mode
 --------------------------------------------------------------*/
 
 .dev {
     .masthead {
-        outline:                        1px dashed #b46ae3;
+        outline:                        1px dashed rgb(180,106,227);
         outline:                        1px dashed var(--masthead-identifier);
     }
     .page-title {
-        outline:                        1px dashed #51a7fa;
+        outline:                        1px dashed rgb(000,122,204);
         outline:                        1px dashed var(--page-title-identifier);
     }
     .main-content {
-        outline:                        1px dashed #70bf40;
+        outline:                        1px dashed rgb(112,106,277);
         outline:                        1px dashed var(--main-content-identifier);
     }
     .sidebar {
-        outline:                        1px dashed #f49018;
+        outline:                        1px dashed rgb(221,153,051);
         outline:                        1px dashed var(--sidebar-identifier);
     }
     .footer-content {
-        outline:                        1px dashed #0265c0;
+        outline:                        1px dashed rgb(255,255,255);
         outline:                        1px dashed var(--footer-content-identifier);
     }
 }
 
 .supported,
 .unsupported {
-    display: none;
+    display:                            none;
 }
 
 .supported {
     @supports (display: grid) {
-        display: block;
+        display:                        block;
     }
 }
 
 .unsupported {
-    color: #D32F2F;
+    color:                              rgb(113,000,000);
+    color:                              var(--red);
     @supports not (display: grid) {
-        display: block;
+        display:                        block;
     }
 }
 
@@ -125,8 +128,8 @@ Development Mode
 }
 
 ul.unstyled{
-    list-style-type: none;
-    padding-left: 0px;
+    list-style-type:                    none;
+    padding-left:                       0px;
 }
 
 /*--------------------------------------------------------------
@@ -148,13 +151,13 @@ Accessibility
 .screen-reader-text:hover,
 .screen-reader-text:active,
 .screen-reader-text:focus {
-    background-color:                   var(--chalk);
-    background-color:                   #ECF0F1;
+    background-color :                  rgb(236, 240, 241);
+    background-color :                  var(--screen-reader-text);
     border-radius:                      3px;
     box-shadow:                         0 0 2px 2px rgba(0, 0, 0, 0.6);
     clip:                               auto !important;
-    color:                              #21759b;
-    color:                              var(--light-blue);
+    color:                              rgb(000, 122, 204);
+    color:                              var(--screen-reader-text-color);
     display:                            block;
     font-size:                          14px;
     font-weight:                        bold;
@@ -172,7 +175,15 @@ Accessibility
 
 img[alt=""],
 img:not([alt]) {
-    border: 5px dashed var(--red);
+    border:                             5px dashed rgb(113, 000, 000);
+    border:                             5px dashed var(--red);
+}
+
+.image{
+    display:                            block;
+    border:                             0;
+    width:                              100%;
+    height:                             auto;
 }
 
 /*--------------------------------------------------------------
@@ -180,8 +191,8 @@ Base
 --------------------------------------------------------------*/
 html {
     font-size:                          calc(13px + 0.2vw);
-    background:                         #000000; //≤IE11
-    background:                         var(--background-color);
+    //background:                         #000000; //≤IE11
+    //background:                         var(--background-color);
 }
 
 body {
@@ -193,7 +204,8 @@ button,
 input,
 select,
 textarea {
-    font-family:                        var(--os-font-stack);
+    font-family:                        -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family :                       var(--os-font-stack);
 }
 
 body,
@@ -221,6 +233,7 @@ h6 {
 
 p {
     margin-bottom:                      1.5em;
+    text-shadow:                        0 1px 0 #fff;
 }
 
 a {
@@ -347,7 +360,7 @@ Initiate Theme
             outline:                    1px solid var(--blue);
         }
         &:hover {
-            background-color:           rgba(0, 0, 0, 0.1);
+            //background-color:           rgba(0, 0, 0, 0.1);
         }
         &:active {
             text-decoration:            none;
@@ -368,7 +381,7 @@ Initiate Theme
             outline:                    1px solid var(--orange);
         }
         &:hover {
-            background-color:           rgba(255, 255, 255, 0.1);
+            //background-color:           rgba(255, 255, 255, 0.1);
             text-decoration:            none;
         }
         &:active {
@@ -395,3 +408,5 @@ Component Styles:
 @import 'components/cards-alt';
 @import 'components/cards-media';
 @import 'components/shapes';
+@import 'components/apple-menu';
+@import 'components/modaal';

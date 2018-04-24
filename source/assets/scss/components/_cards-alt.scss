@@ -3,14 +3,15 @@ Cards-alt Alt: .cards-alt > .card-item > .card-alt
 --------------------------------------------------------------*/
 
 .cards-alt {
-    max-width: 25em;
-    margin: 1em auto;
-    padding: 0;
-    list-style-type: none;
+    max-width:                      25em;
+    margin:                         1em auto;
+    padding:                        0;
+    list-style-type:                none;
     a {
-        display: block;
-        text-decoration: none;
-        color: #fff;
+        display:                    block;
+        text-decoration:            none;
+        color:                      rgba(255,255,255,1);
+        color:                      var(--white);
         &:focus .caption,
         &:hover .caption {
             //background: hsl(0, 0%, 93%);
@@ -18,20 +19,20 @@ Cards-alt Alt: .cards-alt > .card-item > .card-alt
     }
     .card-item{
         img {
-            display: block;
-            border: 0;
-            width: 100%;
-            height: auto;
+            display:                block;
+            border:                 0;
+            width:                  100%;
+            height:                 auto;
         }
         .card-alt .caption {
-            padding: 1em;
-            background-color: #fff;
-            background-color: var(--white);
-            color: #000;
-            color: var(--black);
+            padding:                1em;
+            background-color:       #fff;
+            background-color:       var(--white);
+            color:                  #000;
+            color:                  var(--black);
             .caption-title {
-                margin: 0;
-                font-size: 2em;
+                margin:             0;
+                font-size:          2em;
             }
         }
     }
@@ -42,12 +43,12 @@ Cards-alt Alt: .cards-alt > .card-item > .card-alt
         .cards-alt {
             a:focus,
             a:hover {
-                outline: 1px solid hsl(0, 0%, 80%);
-                background-color: rgba(0,0,0,0.1);
+                outline:            1px solid hsl(0, 0%, 80%);
+                background-color:   rgba(0,0,0,0.1);
             }
             .card-alt {
-                margin: 1em 0;
-                padding: .1em;
+                margin:             1em 0;
+                padding:            0.1em;
             }
         }
     }

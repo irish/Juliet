@@ -2,54 +2,63 @@
 Cards: .cards > .card-item > .card
 --------------------------------------------------------------*/
 .cards {
-	padding: 0;
-	list-style-type: none;
+	padding:				0;
+	list-style-type:		none;
 	a {
-		text-decoration: none;
-		display: block;
+		text-decoration:	none;
+		display: 			block;
 		&:focus .caption,
 		&:hover .caption{
-			opacity: 1;
+			opacity:		1;
 		}
 	}
+	.card-item{
+		transition:			all 300ms;
+		position: 			relative;
+		&:nth-child(odd){}
+		&:nth-child(even) {}
+		 &:hover {
+		 	transform:		translate(0, -2px);
+		 }
+	}
 	.card {
-		display: grid;
+		display: 			grid;
 	}
 	.card img {
-		display: block;
+		display: 			block;
 	}
 	.card img,
 	.card .caption {
-		grid-column: 1;
-		grid-row: 1;
+		grid-column: 		1;
+		grid-row: 			1;
 	}
 	.cards a {
-		text-decoration: none;
-		display: block;
+		text-decoration:	none;
+		display: 			block;
 	}
 	.caption {
-		display: flex;
-		flex-direction: column;
-		justify-content: flex-end;
+		display:			flex;
+		flex-direction: 	column;
+		justify-content:	flex-end;
 		padding: 1em;
-		background: rgba(0, 0, 0, 0.3);
-		color: white;
-		color: var(--white);
-		font-size: 1em;
-		opacity: 0;
-		transition: opacity .5s;
+		background:			rgba(0, 0, 0, 0.3);
+		color: 				rgba(255,255,255,1);
+		color: 				var(--white);
+		font-size:			1em;
+		opacity:			0;
+		transition:			opacity .5s;
 	}
 	a:focus .caption,
 	a:hover .caption {
-		opacity: 1;
+		opacity:			1;
 	}
 	.caption-title {
-		margin: 0;
-		font-size: 2em;
+		margin:				0;
+		font-size:			2em;
 	}
 
 	.caption p {
-		padding: 0;
+		padding:			0;
 	}
 
 }
